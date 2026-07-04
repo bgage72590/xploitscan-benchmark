@@ -1,0 +1,5 @@
+{
+  "description": "requests.get with verify=True — TLS verification on. VC191 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC191"]
+}

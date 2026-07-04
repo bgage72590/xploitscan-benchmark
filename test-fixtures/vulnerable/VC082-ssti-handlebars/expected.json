@@ -1,0 +1,12 @@
+{
+  "description": "Handlebars.compile() called on a user-supplied template string — VC082 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC082",
+      "file": "compile.js",
+      "lineRange": [6, 10],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

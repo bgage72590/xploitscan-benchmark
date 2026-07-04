@@ -1,0 +1,24 @@
+{
+  "description": "Production debug endpoints leaking process.env + stack traces.",
+  "expectedFindings": [
+    {
+      "rule": "VC033",
+      "file": "admin.js",
+      "lineRange": [
+        6,
+        12
+      ],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC037",
+      "file": "admin.js",
+      "lineRange": [
+        14,
+        20
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

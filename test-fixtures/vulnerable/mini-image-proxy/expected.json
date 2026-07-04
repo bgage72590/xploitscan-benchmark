@@ -1,0 +1,7 @@
+{
+  "description": "Image proxy fetching arbitrary URL from req.query — SSRF. VC041 must fire.",
+  "expectedFindings": [
+    { "rule": "VC041", "file": "server.js", "lineRange": [9, 13], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,12 @@
+{
+  "description": "ejs.render() called with a template string taken from req.body — VC082 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC082",
+      "file": "render.js",
+      "lineRange": [8, 10],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

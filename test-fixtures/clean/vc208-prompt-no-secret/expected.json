@@ -1,0 +1,5 @@
+{
+  "description": "Secret kept in SDK config (apiKey), only a username/question in the prompt. VC208 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC208"]
+}

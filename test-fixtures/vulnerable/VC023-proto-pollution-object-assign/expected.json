@@ -1,0 +1,12 @@
+{
+  "description": "Object.assign() with req.body as source — VC023 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC023",
+      "file": "settings.js",
+      "lineRange": [5, 9],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

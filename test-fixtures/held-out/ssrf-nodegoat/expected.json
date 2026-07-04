@@ -1,0 +1,1 @@
+{ "class": "SSRF", "expectedRules": ["VC041"], "source": "OWASP/NodeGoat — app/routes/research.js", "license": "Apache-2.0" }

@@ -1,0 +1,12 @@
+{
+  "description": "User.create({...req.body}) — mass assignment of server-only fields. VC042 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC042",
+      "file": "create-user.js",
+      "lineRange": [5, 9],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

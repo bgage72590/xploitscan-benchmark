@@ -1,0 +1,24 @@
+{
+  "description": "Analytics ingest with log injection (VC044) + Mongo operator injection via req.body (VC048).",
+  "expectedFindings": [
+    {
+      "rule": "VC044",
+      "file": "ingest.js",
+      "lineRange": [
+        8,
+        9
+      ],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC048",
+      "file": "ingest.js",
+      "lineRange": [
+        9,
+        10
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,5 @@
+{
+  "description": "SSN-shaped values that are a placeholder, lack SSN context, or are structurally invalid — VC212 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC212"]
+}

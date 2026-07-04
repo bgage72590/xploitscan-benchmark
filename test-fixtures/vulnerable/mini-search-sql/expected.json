@@ -1,0 +1,7 @@
+{
+  "description": "Search route with raw SQL concatenation in WHERE and ORDER BY — VC006 must fire.",
+  "expectedFindings": [
+    { "rule": "VC006", "file": "route.js", "lineRange": [9, 12], "severityAtLeast": "critical" }
+  ],
+  "mustNotFire": []
+}

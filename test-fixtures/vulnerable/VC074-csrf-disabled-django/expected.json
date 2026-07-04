@@ -1,0 +1,15 @@
+{
+  "description": "Django settings with CsrfViewMiddleware commented out — VC074 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC074",
+      "file": "settings.py",
+      "lineRange": [
+        5,
+        12
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

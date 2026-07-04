@@ -1,0 +1,6 @@
+{
+  "description": "res.render with a literal view name but {...req.body} spread into locals — SSTI/LFI via injected view options. The taint is in the second argument, not the template name.",
+  "expectedFindings": [
+    { "rule": "VC082", "file": "erasure.ts", "lineRange": [5, 11], "severityAtLeast": "high" }
+  ]
+}

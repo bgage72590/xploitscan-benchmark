@@ -1,0 +1,5 @@
+{
+  "description": "API route with requireUserForApi() auth + zod validation — none of VC003/VC065/VC154 should fire. This was the exact pattern that caused the 181→4 false positive purge.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003", "VC065", "VC154"]
+}

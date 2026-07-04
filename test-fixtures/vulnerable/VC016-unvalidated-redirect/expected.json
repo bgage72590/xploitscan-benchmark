@@ -1,0 +1,12 @@
+{
+  "description": "res.redirect(req.query.next) with no allowlist — VC016 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC016",
+      "file": "login.js",
+      "lineRange": [7, 13],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

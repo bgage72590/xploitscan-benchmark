@@ -1,0 +1,1 @@
+{ "class": "NoSQL injection", "expectedRules": ["VC048"], "source": "OWASP/NodeGoat — app/data/allocations-dao.js", "license": "Apache-2.0" }

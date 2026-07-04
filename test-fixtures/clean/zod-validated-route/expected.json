@@ -1,0 +1,5 @@
+{
+  "description": "Textbook-correct Next.js API route: zod body validation, requireUser() auth, Prisma parameterized create. VC003, VC006, VC154 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003", "VC006", "VC154"]
+}

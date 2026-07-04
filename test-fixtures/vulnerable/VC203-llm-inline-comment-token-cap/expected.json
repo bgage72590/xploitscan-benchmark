@@ -1,0 +1,12 @@
+{
+  "description": "OpenAI call with `// max_tokens: 1000` as an inline comment, not a real cap. Locks in the VC203 fix from Macroscope review on PR #309.",
+  "expectedFindings": [
+    {
+      "rule": "VC203",
+      "file": "summarize.ts",
+      "lineRange": [10, 17],
+      "severityAtLeast": "low"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Bare yaml.load(x) in a JS/TS file — safe under js-yaml v4 default schema. VC030 must NOT fire. (Python yaml.load and explicit FULL_SCHEMA still flag elsewhere.)",
+  "expectedFindings": [],
+  "mustNotFire": ["VC030"]
+}

@@ -1,0 +1,12 @@
+{
+  "description": "mark_safe() called on user.bio — non-literal input bypasses Django's auto-escaping. VC194 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC194",
+      "file": "views.py",
+      "lineRange": [9, 12],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

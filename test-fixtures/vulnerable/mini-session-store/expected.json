@@ -1,0 +1,24 @@
+{
+  "description": "Login + client storage with two issues: session fixation (no regenerate) + JWT in localStorage.",
+  "expectedFindings": [
+    {
+      "rule": "VC046",
+      "file": "login.js",
+      "lineRange": [
+        4,
+        12
+      ],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC054",
+      "file": "client.js",
+      "lineRange": [
+        4,
+        6
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

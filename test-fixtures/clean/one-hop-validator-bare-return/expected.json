@@ -1,0 +1,5 @@
+{
+  "description": "Helper validates and returns its param raw (bare return) — not a builder. One-hop must not treat a bare return as a passthrough. VC044 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC044"]
+}

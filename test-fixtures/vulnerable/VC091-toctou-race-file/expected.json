@@ -1,0 +1,15 @@
+{
+  "description": "existsSync/statSync check followed by readFileSync — TOCTOU race. VC091 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC091",
+      "file": "upload.js",
+      "lineRange": [
+        8,
+        12
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

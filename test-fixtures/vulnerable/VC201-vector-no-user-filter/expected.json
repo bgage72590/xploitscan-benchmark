@@ -1,0 +1,12 @@
+{
+  "description": "Pinecone vector query without a user/tenant filter — returns matches from every user's documents. VC201 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC201",
+      "file": "rag.ts",
+      "lineRange": [12, 16],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

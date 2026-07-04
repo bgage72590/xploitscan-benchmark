@@ -1,0 +1,7 @@
+{
+  "description": "Stripe webhook handler that processes events without verifying the signature header — VC005 must fire.",
+  "expectedFindings": [
+    { "rule": "VC005", "file": "handler.js", "lineRange": [7, 17], "severityAtLeast": "critical" }
+  ],
+  "mustNotFire": []
+}

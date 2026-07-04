@@ -1,0 +1,24 @@
+{
+  "description": "Comment route reflects user HTML and logs unsanitized text — VC007 + VC044.",
+  "expectedFindings": [
+    {
+      "rule": "VC044",
+      "file": "routes.js",
+      "lineRange": [
+        8,
+        9
+      ],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC007",
+      "file": "routes.js",
+      "lineRange": [
+        10,
+        11
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

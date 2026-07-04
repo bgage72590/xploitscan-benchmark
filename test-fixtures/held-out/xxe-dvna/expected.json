@@ -1,0 +1,1 @@
+{ "class": "XXE", "expectedRules": ["VC081"], "source": "appsecco/dvna — core/appHandler.js", "license": "MIT" }

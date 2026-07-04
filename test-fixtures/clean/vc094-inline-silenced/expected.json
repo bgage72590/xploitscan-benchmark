@@ -1,0 +1,5 @@
+{
+  "description": "exec() with an interpolated module constant (not user input), annotated // VC094-OK: — a reviewed-safe site. VC094 must NOT fire (inline-silencer support extended to VC094).",
+  "expectedFindings": [],
+  "mustNotFire": ["VC094"]
+}

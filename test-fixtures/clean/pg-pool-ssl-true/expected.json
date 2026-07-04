@@ -1,0 +1,5 @@
+{
+  "description": "pg Pool with ssl: { rejectUnauthorized: true, ca: ... } — VC050 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC050"]
+}

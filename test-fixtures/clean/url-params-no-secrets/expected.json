@@ -1,0 +1,5 @@
+{
+  "description": "URL carries only an opaque lookup id, not the token itself — VC088 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC088"]
+}

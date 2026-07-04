@@ -1,0 +1,5 @@
+{
+  "description": "User.create with explicitly enumerated fields (no spread) — VC042 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC042"]
+}

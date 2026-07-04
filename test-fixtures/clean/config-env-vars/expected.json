@@ -1,0 +1,5 @@
+{
+  "description": "DB config from process.env — VC049 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC049"]
+}

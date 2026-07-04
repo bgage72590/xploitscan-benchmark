@@ -1,0 +1,5 @@
+{
+  "description": "dangerouslySetInnerHTML with DOMPurify.sanitize and with JSON.stringify constants — VC007 and VC063 must NOT fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC007", "VC063"]
+}

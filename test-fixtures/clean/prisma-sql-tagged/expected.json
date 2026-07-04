@@ -1,0 +1,5 @@
+{
+  "description": "$queryRaw with Prisma.sql tagged template — parameterized, not concatenated. VC006 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC006"]
+}

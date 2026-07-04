@@ -1,0 +1,5 @@
+{
+  "description": "typeof x === 'string' is a type guard, not a secret comparison — VC043 must NOT fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC043"]
+}

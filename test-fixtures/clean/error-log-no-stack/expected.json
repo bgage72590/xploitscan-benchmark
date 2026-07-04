@@ -1,0 +1,5 @@
+{
+  "description": "Error handler logs stack server-side but returns a generic message — VC037 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC037"]
+}

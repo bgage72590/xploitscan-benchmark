@@ -1,0 +1,12 @@
+{
+  "description": "pg Pool with ssl: false — VC050 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC050",
+      "file": "pool.js",
+      "lineRange": [6, 12],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

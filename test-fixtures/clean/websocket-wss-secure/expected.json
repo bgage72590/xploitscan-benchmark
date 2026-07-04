@@ -1,0 +1,5 @@
+{
+  "description": "new WebSocket(\"wss://...\") — TLS-wrapped. VC086 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC086"]
+}

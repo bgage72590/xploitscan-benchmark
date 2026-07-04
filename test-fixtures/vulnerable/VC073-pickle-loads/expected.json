@@ -1,0 +1,12 @@
+{
+  "description": "pickle.loads() on untrusted request body — VC073 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC073",
+      "file": "loader.py",
+      "lineRange": [8, 11],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,25 @@
+{
+  "description": "Payment webhook unsigned (VC005) + log injection on customer email (VC044).",
+  "expectedFindings": [
+    {
+      "rule": "VC005",
+      "file": "handler.js",
+      "lineRange": [
+        6,
+        13
+      ],
+      "severityAtLeast": "critical",
+      "knownGap": true
+    },
+    {
+      "rule": "VC044",
+      "file": "handler.js",
+      "lineRange": [
+        8,
+        9
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

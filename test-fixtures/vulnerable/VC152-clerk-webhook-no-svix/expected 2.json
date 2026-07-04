@@ -1,0 +1,7 @@
+{
+  "description": "Real Clerk webhook at /api/webhooks/clerk/ with no svix signature verification. VC152 reports on the POST function declaration line.",
+  "expectedFindings": [
+    { "rule": "VC152", "file": "api/webhooks/clerk/route.ts", "lineRange": [1, 10], "severityAtLeast": "critical" }
+  ],
+  "mustNotFire": []
+}

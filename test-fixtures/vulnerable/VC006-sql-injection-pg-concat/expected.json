@@ -1,0 +1,12 @@
+{
+  "description": "pg.query with string concatenation of user input — VC006 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC006",
+      "file": "users.js",
+      "lineRange": [8, 14],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

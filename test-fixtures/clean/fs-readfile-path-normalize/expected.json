@@ -1,0 +1,5 @@
+{
+  "description": "File download with resolved-path boundary check — VC025 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC025"]
+}

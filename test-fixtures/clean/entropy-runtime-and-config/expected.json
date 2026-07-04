@@ -1,0 +1,5 @@
+{
+  "description": "Non-secret high-entropy strings: runtime template-literal IDs (${...}), a Sentry DSN, an HSTS header value, and a custom ID alphabet. ENTROPY must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["ENTROPY"]
+}

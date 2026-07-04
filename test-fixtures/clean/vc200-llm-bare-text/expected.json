@@ -1,0 +1,5 @@
+{
+  "description": "Bare `.text` property (post.text) rendered in a file that imports an LLM SDK. Not model output — VC200 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC200"]
+}

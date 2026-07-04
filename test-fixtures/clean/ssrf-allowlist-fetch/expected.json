@@ -1,0 +1,5 @@
+{
+  "description": "fetch with explicit hostname allowlist — VC041 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC041"]
+}

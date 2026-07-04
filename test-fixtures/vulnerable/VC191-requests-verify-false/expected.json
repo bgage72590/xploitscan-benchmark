@@ -1,0 +1,12 @@
+{
+  "description": "requests.get(...) called with verify=False — TLS verification disabled. VC191 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC191",
+      "file": "client.py",
+      "lineRange": [8, 13],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

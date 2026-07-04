@@ -1,0 +1,5 @@
+{
+  "description": "Express route fetching by req.params.id but scoped to userId (ownership enforced) — must not fire VC158.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC158"]
+}

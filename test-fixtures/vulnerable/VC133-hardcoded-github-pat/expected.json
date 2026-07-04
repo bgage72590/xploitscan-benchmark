@@ -1,0 +1,12 @@
+{
+  "description": "Hardcoded GitHub PAT (ghp_...) in Octokit client config — VC133 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC133",
+      "file": "octokit-client.ts",
+      "lineRange": [8, 11],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

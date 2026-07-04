@@ -1,0 +1,24 @@
+{
+  "description": "User CRUD with mass assignment on create AND update — two distinct VC042 hits.",
+  "expectedFindings": [
+    {
+      "rule": "VC042",
+      "file": "routes.js",
+      "lineRange": [
+        8,
+        11
+      ],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC042",
+      "file": "routes.js",
+      "lineRange": [
+        13,
+        18
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

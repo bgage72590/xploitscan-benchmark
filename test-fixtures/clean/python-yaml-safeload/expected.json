@@ -1,0 +1,5 @@
+{
+  "description": "yaml.safe_load (not yaml.load) — no arbitrary object construction. VC073 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC073"]
+}

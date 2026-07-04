@@ -1,0 +1,12 @@
+{
+  "description": "OpenAI chat completion call with no max_tokens parameter — denial-of-wallet risk. VC203 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC203",
+      "file": "summarize.ts",
+      "lineRange": [8, 16],
+      "severityAtLeast": "low"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,12 @@
+{
+  "description": "lodash.merge() called with req.body as source — VC023 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC023",
+      "file": "merge.js",
+      "lineRange": [7, 10],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

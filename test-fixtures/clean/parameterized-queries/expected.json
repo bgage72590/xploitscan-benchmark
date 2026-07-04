@@ -1,0 +1,5 @@
+{
+  "description": "SQL queries with ? and $1 placeholders — VC006 must NOT fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC006"]
+}

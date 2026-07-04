@@ -1,0 +1,24 @@
+{
+  "description": "CSV import: path traversal via req.body.path + mass assignment of parsed rows.",
+  "expectedFindings": [
+    {
+      "rule": "VC025",
+      "file": "handler.js",
+      "lineRange": [
+        12,
+        14
+      ],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC042",
+      "file": "handler.js",
+      "lineRange": [
+        15,
+        16
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

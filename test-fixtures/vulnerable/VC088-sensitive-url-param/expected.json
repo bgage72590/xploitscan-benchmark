@@ -1,0 +1,15 @@
+{
+  "description": "Reset token embedded in URL query string — VC088 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC088",
+      "file": "reset-link.js",
+      "lineRange": [
+        5,
+        7
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

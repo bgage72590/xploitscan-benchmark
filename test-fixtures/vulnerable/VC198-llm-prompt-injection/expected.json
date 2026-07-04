@@ -1,0 +1,12 @@
+{
+  "description": "User input (req.body.question) interpolated directly into LLM message content. VC198 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC198",
+      "file": "chat.ts",
+      "lineRange": [12, 14],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

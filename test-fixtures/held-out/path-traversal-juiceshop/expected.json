@@ -1,0 +1,1 @@
+{ "class": "Path traversal", "expectedRules": ["VC093", "VC117", "VC025"], "source": "juice-shop/juice-shop — routes/fileServer.ts", "license": "MIT" }

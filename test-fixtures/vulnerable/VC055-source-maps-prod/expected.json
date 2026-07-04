@@ -1,0 +1,15 @@
+{
+  "description": "Next.js config with productionBrowserSourceMaps: true — VC055 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC055",
+      "file": "next.config.js",
+      "lineRange": [
+        4,
+        11
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,24 @@
+{
+  "description": "OAuth flow with hardcoded client secret (caught via VC001 uppercase-identifier pattern) + open redirect on next param.",
+  "expectedFindings": [
+    {
+      "rule": "VC001",
+      "file": "routes.js",
+      "lineRange": [
+        7,
+        7
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC035",
+      "file": "routes.js",
+      "lineRange": [
+        13,
+        13
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

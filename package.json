@@ -1,0 +1,22 @@
+{
+  "name": "xploitscan-benchmark",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reproducible detection benchmark for XploitScan vs Semgrep vs Bearer: labeled fixture corpus, held-out third-party corpus, and runner scripts.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bgage72590/xploitscan-benchmark"
+  },
+  "license": "MIT",
+  "scripts": {
+    "benchmark": "node scripts/benchmark.js",
+    "benchmark:semgrep": "node scripts/semgrep-benchmark.js",
+    "benchmark:bearer": "node scripts/bearer-benchmark.js",
+    "heldout": "node scripts/benchmark-heldout.js",
+    "heldout:semgrep": "node scripts/benchmark-heldout-thirdparty.js semgrep",
+    "heldout:bearer": "node scripts/benchmark-heldout-thirdparty.js bearer"
+  },
+  "dependencies": {
+    "xploitscan-shared-rules": "^1.14.1"
+  }
+}

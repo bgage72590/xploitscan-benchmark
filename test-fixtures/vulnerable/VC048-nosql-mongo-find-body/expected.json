@@ -1,0 +1,12 @@
+{
+  "description": "Mongo findOne(req.body) — operator injection in auth path. VC048 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC048",
+      "file": "login.js",
+      "lineRange": [5, 9],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

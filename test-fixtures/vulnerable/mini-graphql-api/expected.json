@@ -1,0 +1,24 @@
+{
+  "description": "GraphQL mini-app: introspection enabled in prod + mass assignment in resolver.",
+  "expectedFindings": [
+    {
+      "rule": "VC051",
+      "file": "server.js",
+      "lineRange": [
+        7,
+        11
+      ],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC042",
+      "file": "resolvers.js",
+      "lineRange": [
+        6,
+        9
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

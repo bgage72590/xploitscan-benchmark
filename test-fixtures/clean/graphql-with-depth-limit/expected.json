@@ -1,0 +1,5 @@
+{
+  "description": "Apollo Server with graphql-armor applied (depth + complexity limits). VC204 and VC205 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC204", "VC205"]
+}

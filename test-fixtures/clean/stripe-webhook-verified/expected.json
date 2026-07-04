@@ -1,0 +1,5 @@
+{
+  "description": "Stripe webhook with proper constructEvent() verification — VC005 must NOT fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC005"]
+}

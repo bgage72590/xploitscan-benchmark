@@ -1,0 +1,5 @@
+{
+  "description": "Ruby system() in argument-list form with no string interpolation — no shell. VC094 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC094"]
+}

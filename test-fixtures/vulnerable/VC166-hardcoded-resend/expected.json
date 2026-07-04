@@ -1,0 +1,12 @@
+{
+  "description": "Hardcoded Resend API key (re_*) in email client init — VC166 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC166",
+      "file": "email.ts",
+      "lineRange": [6, 10],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

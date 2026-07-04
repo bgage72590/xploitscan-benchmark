@@ -1,0 +1,5 @@
+{
+  "description": "mergeWith with a customizer that strips __proto__ / constructor / prototype — VC023 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC023"]
+}

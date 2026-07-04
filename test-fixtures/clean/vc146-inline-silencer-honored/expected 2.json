@@ -1,0 +1,5 @@
+{
+  "description": "VC146 must honor // VC146-OK and // scanner-OK inline silencer comments. The token-in-URL pattern still fires when unannotated (covered by separate vulnerable fixture); these three sites are explicitly marked as intentional magic-link flows.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC146"]
+}

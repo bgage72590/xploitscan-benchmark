@@ -1,0 +1,5 @@
+{
+  "description": "Hardcoded Flask SECRET_KEY (Python). VC072 must fire.",
+  "expectedFindings": [{ "rule": "VC072", "file": "app.py", "lineRange": [4, 6], "severityAtLeast": "high" }],
+  "mustNotFire": []
+}

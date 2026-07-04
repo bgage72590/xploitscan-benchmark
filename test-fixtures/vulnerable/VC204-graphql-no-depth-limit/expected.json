@@ -1,0 +1,12 @@
+{
+  "description": "Apollo Server instantiated with no depth limit. VC204 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC204",
+      "file": "server.ts",
+      "lineRange": [17, 22],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

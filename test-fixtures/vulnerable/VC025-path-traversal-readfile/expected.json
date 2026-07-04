@@ -1,0 +1,15 @@
+{
+  "description": "Path traversal: req.query.file joined to uploads dir with no boundary check — VC025 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC025",
+      "file": "download.js",
+      "lineRange": [
+        10,
+        14
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

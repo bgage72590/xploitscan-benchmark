@@ -1,0 +1,11 @@
+{
+  "description": "SSRF through the needle HTTP client with a user-controlled URL — needle.get() is now a recognized fetch sink for the VC041 AST taint layer.",
+  "expectedFindings": [
+    {
+      "rule": "VC041",
+      "file": "research.js",
+      "lineRange": [5, 12],
+      "severityAtLeast": "critical"
+    }
+  ]
+}

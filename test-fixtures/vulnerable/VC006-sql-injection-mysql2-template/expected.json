@@ -1,0 +1,12 @@
+{
+  "description": "mysql2 .query() with template literal containing user input — VC006 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC006",
+      "file": "users.js",
+      "lineRange": [7, 12],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

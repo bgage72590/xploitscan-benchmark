@@ -1,0 +1,7 @@
+{
+  "description": "LLM output (choices[0].message.content) passed into eval(), execSync(), and $queryRawUnsafe() — VC207 must fire (RCE/cmd/SQL injection via model output).",
+  "expectedFindings": [
+    { "rule": "VC207", "file": "agent.ts", "lineRange": [12, 24], "severityAtLeast": "critical" }
+  ],
+  "mustNotFire": []
+}

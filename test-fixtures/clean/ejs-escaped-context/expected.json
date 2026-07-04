@@ -1,0 +1,5 @@
+{
+  "description": "EJS renderFile with a static template path — VC082 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC082"]
+}

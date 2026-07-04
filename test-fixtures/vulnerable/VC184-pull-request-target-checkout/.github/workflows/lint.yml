@@ -1,0 +1,18 @@
+# The "pwn request" — pull_request_target runs with base-repo secrets and
+# write permissions, but this workflow checks out the PR's head and runs
+# whatever's there. VC184 must fire.
+name: Lint
+
+on:
+  pull_request_target:
+    types: [opened, synchronize]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - run: npm ci
+      - run: npm run lint

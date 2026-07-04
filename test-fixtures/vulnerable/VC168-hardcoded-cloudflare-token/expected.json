@@ -1,0 +1,12 @@
+{
+  "description": "Hardcoded Cloudflare API token in CLOUDFLARE_API_TOKEN const — VC168 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC168",
+      "file": "wrangler.ts",
+      "lineRange": [3, 8],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

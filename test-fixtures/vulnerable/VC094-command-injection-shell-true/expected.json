@@ -1,0 +1,12 @@
+{
+  "description": "execSync with shell path + user-interpolated command — VC094 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC094",
+      "file": "runner.ts",
+      "lineRange": [8, 14],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

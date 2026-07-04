@@ -1,0 +1,1 @@
+{ "description": "exec with string-concat of req.body (not template literal) — VC094 string-concat pattern was broken. Must fire.", "expectedFindings": [{ "rule": "VC094", "file": "handler.js", "lineRange": [3,5], "severityAtLeast": "critical" }], "mustNotFire": [] }

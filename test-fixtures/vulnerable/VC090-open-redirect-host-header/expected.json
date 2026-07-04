@@ -1,0 +1,12 @@
+{
+  "description": "Redirect URL composed from req.headers.host without allowlist — VC090 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC090",
+      "file": "absolute-redirect.js",
+      "lineRange": [5, 9],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,5 @@
+{
+  "description": "bcrypt with cost=12 for password hashing — VC060 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC060"]
+}

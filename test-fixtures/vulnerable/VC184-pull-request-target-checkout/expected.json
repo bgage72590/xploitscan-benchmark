@@ -1,0 +1,12 @@
+{
+  "description": "GitHub Actions workflow uses pull_request_target AND checks out the PR's head sha — the canonical pwn-request pattern. VC184 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC184",
+      "file": ".github/workflows/lint.yml",
+      "lineRange": [12, 18],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,5 @@
+{
+  "description": "LLM output parsed as JSON and validated against an allowlist — used as data, never as code/cmd/query/fs. VC207 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC207"]
+}

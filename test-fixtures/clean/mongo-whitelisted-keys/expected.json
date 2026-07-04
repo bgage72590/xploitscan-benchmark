@@ -1,0 +1,5 @@
+{
+  "description": "Mongo filter built from whitelisted, type-checked fields — VC048 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC048"]
+}

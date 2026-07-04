@@ -1,0 +1,5 @@
+{
+  "description": "Authenticated Stripe checkout route at /api/billing/checkout. Imports Clerk (auth) + references session.url (Stripe). NOT a Clerk webhook. Path doesn't contain /webhook, so VC152 must not fire. The narrow billing route fixture intentionally lives at root rather than at /api/webhooks/ to prove path scoping is what's silencing the rule.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC152"]
+}

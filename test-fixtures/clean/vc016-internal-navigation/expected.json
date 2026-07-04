@@ -1,0 +1,5 @@
+{
+  "description": "window.location navigation to hardcoded relative/absolute string literals. Developer-chosen destinations, not untrusted-input redirects — VC016 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC016"]
+}

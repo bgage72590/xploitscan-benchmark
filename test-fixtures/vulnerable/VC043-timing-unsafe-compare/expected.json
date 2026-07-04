@@ -1,0 +1,15 @@
+{
+  "description": "Strict equality used to compare API key against a secret — VC043 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC043",
+      "file": "api-key.js",
+      "lineRange": [
+        7,
+        12
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

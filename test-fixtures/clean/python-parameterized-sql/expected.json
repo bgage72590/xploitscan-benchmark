@@ -1,0 +1,5 @@
+{
+  "description": "Parameterized Python SQL (db.execute with ? placeholder + bound tuple). SQL injection must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC006"]
+}

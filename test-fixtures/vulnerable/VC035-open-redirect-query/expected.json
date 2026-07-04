@@ -1,0 +1,12 @@
+{
+  "description": "res.redirect(req.query.next) — unvalidated open redirect. VC035 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC035",
+      "file": "redirect.js",
+      "lineRange": [5, 9],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

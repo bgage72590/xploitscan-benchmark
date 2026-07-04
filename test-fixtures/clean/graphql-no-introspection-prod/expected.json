@@ -1,0 +1,5 @@
+{
+  "description": "Apollo with introspection disabled in prod + graphql-armor (depth + complexity limits). VC051, VC204, VC205 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC051", "VC204", "VC205"]
+}

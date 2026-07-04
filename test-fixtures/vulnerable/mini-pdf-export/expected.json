@@ -1,0 +1,7 @@
+{
+  "description": "PDF export shelling out via exec with template literal — VC094 must fire.",
+  "expectedFindings": [
+    { "rule": "VC094", "file": "exporter.js", "lineRange": [6, 11], "severityAtLeast": "critical" }
+  ],
+  "mustNotFire": []
+}

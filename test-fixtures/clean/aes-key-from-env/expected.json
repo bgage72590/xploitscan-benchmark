@@ -1,0 +1,5 @@
+{
+  "description": "AES key loaded from env var + per-message random IV — VC062 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC062"]
+}

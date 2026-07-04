@@ -1,0 +1,15 @@
+{
+  "description": "POST /login without rate-limit middleware — VC047 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC047",
+      "file": "login-route.js",
+      "lineRange": [
+        7,
+        13
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

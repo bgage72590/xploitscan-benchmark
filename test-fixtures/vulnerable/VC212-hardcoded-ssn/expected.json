@@ -1,0 +1,12 @@
+{
+  "description": "A structurally-valid, non-placeholder SSN assigned to an ssn field — VC212 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC212",
+      "file": "user-seed.js",
+      "lineRange": [2, 6],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Variables whose names imply hashing/fingerprinting (commit, contentHash, etag, buildId, crc, sri) are never secrets even when high-entropy. ENTROPY must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["ENTROPY"]
+}

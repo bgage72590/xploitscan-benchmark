@@ -1,0 +1,15 @@
+{
+  "description": "Checkout endpoint mass-assigning req.body into Order — attacker controls totalCents.",
+  "expectedFindings": [
+    {
+      "rule": "VC042",
+      "file": "checkout.js",
+      "lineRange": [
+        7,
+        12
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

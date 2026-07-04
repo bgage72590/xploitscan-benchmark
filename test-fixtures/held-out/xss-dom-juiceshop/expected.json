@@ -1,0 +1,1 @@
+{ "class": "Cross-site scripting (DOM)", "expectedRules": ["VC007"], "source": "juice-shop/juice-shop — frontend search-result.component.ts", "license": "MIT" }

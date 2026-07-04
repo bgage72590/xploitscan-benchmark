@@ -1,0 +1,15 @@
+{
+  "description": "SHA1 used for password hashing in Python — VC060 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC060",
+      "file": "legacy-auth.py",
+      "lineRange": [
+        6,
+        8
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

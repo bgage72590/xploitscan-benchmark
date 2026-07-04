@@ -1,0 +1,5 @@
+{
+  "description": "Koa with mergeWith customizer stripping proto-pollution keys — VC023 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC023"]
+}

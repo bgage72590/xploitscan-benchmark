@@ -1,0 +1,12 @@
+{
+  "description": "XSS via dangerouslySetInnerHTML fed a localStorage value with no sanitization — VC007 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC007",
+      "file": "profile-card.tsx",
+      "lineRange": [15, 19],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

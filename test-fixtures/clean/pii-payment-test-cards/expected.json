@@ -1,0 +1,5 @@
+{
+  "description": "Network-published test card numbers in non-test code — VC211 must not fire (excluded by value).",
+  "expectedFindings": [],
+  "mustNotFire": ["VC211"]
+}

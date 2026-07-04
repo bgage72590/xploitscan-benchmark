@@ -1,0 +1,5 @@
+{
+  "description": "Helper interpolates only its first param; the tainted value is the second (uninterpolated) arg. Per-index precision — VC044 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC044"]
+}

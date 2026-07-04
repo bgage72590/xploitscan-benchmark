@@ -1,0 +1,1 @@
+{ "class": "SQL injection", "expectedRules": ["VC006"], "source": "appsecco/dvna — core/appHandler.js", "license": "MIT" }

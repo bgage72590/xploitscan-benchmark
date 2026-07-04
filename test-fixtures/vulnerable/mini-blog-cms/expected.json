@@ -1,0 +1,24 @@
+{
+  "description": "Blog CMS: dangerouslySetInnerHTML on author + body HTML (VC063), mass assignment in create (VC042).",
+  "expectedFindings": [
+    {
+      "rule": "VC063",
+      "file": "post.tsx",
+      "lineRange": [
+        13,
+        18
+      ],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC042",
+      "file": "api.js",
+      "lineRange": [
+        7,
+        10
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

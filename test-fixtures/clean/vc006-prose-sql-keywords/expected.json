@@ -1,0 +1,5 @@
+{
+  "description": "UI copy / labels containing SQL-looking verbs (UPDATE/SELECT/DELETE/INSERT) interpolated with a variable, but with no SQL structural keyword. Not queries — VC006 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC006"]
+}

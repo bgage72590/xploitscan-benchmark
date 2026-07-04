@@ -1,0 +1,5 @@
+{
+  "description": "Matcher includes /api (and the negative lookahead does not exclude 'api') — API routes are covered. VC210 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC210"]
+}

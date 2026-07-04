@@ -1,0 +1,5 @@
+{
+  "description": "JSON-LD structured data via dangerouslySetInnerHTML={{ __html: JSON.stringify(...) }} with NO sanitizer import (single- and multi-line). Standard Next.js SEO pattern, developer-controlled. VC007 and VC063 must NOT fire — VC063 already skips JSON.stringify; this locks in the matching VC007 skip.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC007", "VC063"]
+}

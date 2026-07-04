@@ -1,0 +1,7 @@
+{
+  "description": "Stripe webhook verifies signature then creates a subscription with no idempotency/replay guard — VC209 must fire (low severity advisory).",
+  "expectedFindings": [
+    { "rule": "VC209", "file": "route.ts", "lineRange": [6, 14], "severityAtLeast": "low" }
+  ],
+  "mustNotFire": []
+}

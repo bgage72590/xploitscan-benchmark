@@ -1,0 +1,5 @@
+{
+  "description": "Sequelize build with explicit fields (no req.body spread) — VC042 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC042"]
+}

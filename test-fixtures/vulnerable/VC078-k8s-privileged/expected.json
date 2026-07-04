@@ -1,0 +1,12 @@
+{
+  "description": "Kubernetes Deployment with securityContext.privileged: true — VC078 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC078",
+      "file": "deployment.yml",
+      "lineRange": [17, 20],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

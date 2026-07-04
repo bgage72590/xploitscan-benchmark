@@ -1,0 +1,12 @@
+{
+  "description": "OpenAI completion output rendered via dangerouslySetInnerHTML. Models can emit script tags. VC200 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC200",
+      "file": "Reply.tsx",
+      "lineRange": [22, 26],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

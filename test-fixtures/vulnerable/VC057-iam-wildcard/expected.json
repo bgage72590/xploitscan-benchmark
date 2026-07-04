@@ -1,0 +1,12 @@
+{
+  "description": "IAM/bucket policy granting Principal \"*\" + Action \"*\" + Resource \"*\" — VC057 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC057",
+      "file": "bucket-policy.json",
+      "lineRange": [4, 10],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,12 @@
+{
+  "description": "jwt.verify() allows alg 'none' — signature check bypassable. VC079 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC079",
+      "file": "verify.js",
+      "lineRange": [7, 10],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

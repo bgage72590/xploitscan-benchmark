@@ -1,0 +1,6 @@
+{
+  "description": "Path traversal where the user filename flows through a variable and a helper across a function boundary before path.resolve + sendFile, with no containment check. The Juice Shop fileServer pattern.",
+  "expectedFindings": [
+    { "rule": "VC093", "file": "fileServer.ts", "lineRange": [10, 16], "severityAtLeast": "medium" }
+  ]
+}

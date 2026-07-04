@@ -1,0 +1,7 @@
+{
+  "description": "One-hop inter-procedural: logLine(note) interpolates a raw request field into a template literal; the result is logged. VC044 must fire through the helper.",
+  "expectedFindings": [
+    { "rule": "VC044", "file": "handler.js", "lineRange": [11, 13], "severityAtLeast": "medium" }
+  ],
+  "mustNotFire": []
+}

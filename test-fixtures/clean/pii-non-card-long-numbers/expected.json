@@ -1,0 +1,5 @@
+{
+  "description": "Long numeric IDs / timestamps / phone that resemble card length but lack an issuer prefix — VC211 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC211"]
+}

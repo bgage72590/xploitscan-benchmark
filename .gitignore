@@ -1,0 +1,9 @@
+node_modules/
+benchmark-results.json
+benchmark-history.json
+benchmark-heldout.json
+benchmark-heldout-semgrep.json
+benchmark-heldout-bearer.json
+benchmark-semgrep.json
+benchmark-bearer.json
+.bearer-heldout-out.json

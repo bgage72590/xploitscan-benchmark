@@ -1,0 +1,5 @@
+{
+  "description": "Upload filter checks magic bytes + mimetype + size — VC038 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC038"]
+}

@@ -1,0 +1,1 @@
+{ "class": "Server-side template injection", "expectedRules": ["VC082"], "source": "juice-shop/juice-shop — routes/dataErasure.ts", "license": "MIT" }

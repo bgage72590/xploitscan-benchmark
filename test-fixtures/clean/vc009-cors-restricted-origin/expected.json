@@ -1,0 +1,5 @@
+{
+  "description": "CORS configured with an explicit frontend origin (not '*', not origin:true, not bare cors()). The safe counterpart to VC009 — must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC009"]
+}

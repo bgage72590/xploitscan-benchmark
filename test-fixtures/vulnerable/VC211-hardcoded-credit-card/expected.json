@@ -1,0 +1,12 @@
+{
+  "description": "A Luhn-valid, non-test Visa number hardcoded in source — VC211 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC211",
+      "file": "payment.js",
+      "lineRange": [2, 6],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,15 @@
+{
+  "description": "Unescaped user input interpolated into a log line — VC044 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC044",
+      "file": "audit.js",
+      "lineRange": [
+        6,
+        9
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

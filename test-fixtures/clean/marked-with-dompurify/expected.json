@@ -1,0 +1,5 @@
+{
+  "description": "dangerouslySetInnerHTML fed DOMPurify.sanitize output — sanitization is present, so VC007 and VC063 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC007", "VC063"]
+}

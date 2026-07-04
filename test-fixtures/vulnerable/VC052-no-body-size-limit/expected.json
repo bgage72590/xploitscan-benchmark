@@ -1,0 +1,12 @@
+{
+  "description": "express.json() / urlencoded without a limit option — VC052 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC052",
+      "file": "app.js",
+      "lineRange": [7, 9],
+      "severityAtLeast": "low"
+    }
+  ],
+  "mustNotFire": []
+}

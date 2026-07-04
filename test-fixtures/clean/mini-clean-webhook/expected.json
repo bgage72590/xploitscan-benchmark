@@ -1,0 +1,5 @@
+{
+  "description": "Clean Stripe webhook: signature verified + idempotency check + sanitized log. VC005 + VC044 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC005", "VC044"]
+}

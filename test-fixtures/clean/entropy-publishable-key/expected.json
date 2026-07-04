@@ -1,0 +1,5 @@
+{
+  "description": "Publishable keys (pk_live_, pk_test_, NEXT_PUBLIC_) are high-entropy but explicitly public-by-design. ENTROPY must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["ENTROPY"]
+}

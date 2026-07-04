@@ -1,0 +1,15 @@
+{
+  "description": "GH Actions run: block interpolating ${{ github.event.issue.title }} — VC075 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC075",
+      "file": "release.yml",
+      "lineRange": [
+        11,
+        14
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

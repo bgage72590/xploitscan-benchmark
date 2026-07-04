@@ -1,0 +1,5 @@
+{
+  "description": "User input in an LLM message content, annotated // VC198-OK: — a reviewed-safe site (allowlisted enum). VC198 must NOT fire (inline-silencer support extended to VC198).",
+  "expectedFindings": [],
+  "mustNotFire": ["VC198"]
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Webhook de-dupes on event.id (processedEvents guard) before the side effect — VC209 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC209"]
+}

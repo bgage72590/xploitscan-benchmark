@@ -1,0 +1,7 @@
+{
+  "description": "Express route fetching a record by req.params.id with no ownership or auth check — VC158 must fire.",
+  "expectedFindings": [
+    { "rule": "VC158", "file": "routes.js", "lineRange": [6, 9], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

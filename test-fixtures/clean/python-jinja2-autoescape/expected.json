@@ -1,0 +1,5 @@
+{
+  "description": "Jinja2 Environment with autoescape=True — output HTML-escaped. VC192 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC192"]
+}

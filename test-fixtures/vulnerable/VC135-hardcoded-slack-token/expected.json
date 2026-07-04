@@ -1,0 +1,12 @@
+{
+  "description": "Hardcoded Slack bot token (xoxb-...) in WebClient init — VC135 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC135",
+      "file": "notifier.js",
+      "lineRange": [7, 10],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

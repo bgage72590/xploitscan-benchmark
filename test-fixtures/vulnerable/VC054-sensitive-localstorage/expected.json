@@ -1,0 +1,12 @@
+{
+  "description": "JWT / refresh token / password salt written to localStorage — VC054 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC054",
+      "file": "auth-client.js",
+      "lineRange": [4, 7],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

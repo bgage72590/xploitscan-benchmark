@@ -1,0 +1,12 @@
+{
+  "description": "Next.js list endpoint with findMany + no take/skip/cursor — VC156 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC156",
+      "file": "app/api/items/route.ts",
+      "lineRange": [5, 20],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

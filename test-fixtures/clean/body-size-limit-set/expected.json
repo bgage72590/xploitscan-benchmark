@@ -1,0 +1,5 @@
+{
+  "description": "express.json + urlencoded with { limit: '100kb' } — VC052 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC052"]
+}

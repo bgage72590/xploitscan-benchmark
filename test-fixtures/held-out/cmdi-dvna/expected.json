@@ -1,0 +1,1 @@
+{ "class": "Command injection", "expectedRules": ["VC094"], "source": "appsecco/dvna — core/appHandler.js", "license": "MIT" }

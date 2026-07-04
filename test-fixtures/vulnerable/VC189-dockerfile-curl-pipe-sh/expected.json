@@ -1,0 +1,12 @@
+{
+  "description": "Dockerfile RUN block pipes a curl-fetched script directly to sh — unverified remote code execution at build time. VC189 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC189",
+      "file": "Dockerfile",
+      "lineRange": [6, 11],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,14 @@
+name: Release
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet reporter
+        run: |
+          echo "Thanks for reporting: ${{ github.event.issue.title }}"
+          echo "Body: ${{ github.event.issue.body }}"

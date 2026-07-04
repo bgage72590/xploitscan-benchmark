@@ -1,0 +1,5 @@
+{
+  "description": "req.session.regenerate() called before setting userId — VC046 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC046"]
+}

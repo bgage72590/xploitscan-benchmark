@@ -1,0 +1,12 @@
+{
+  "description": "Mongo find({$where: userInput}) — VC048 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC048",
+      "file": "search.js",
+      "lineRange": [5, 10],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

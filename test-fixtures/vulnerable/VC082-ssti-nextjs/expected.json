@@ -1,0 +1,15 @@
+{
+  "description": "Next.js App Router POST with Handlebars.compile on request-derived template. VC082 must fire (currently knownGap — request.json() is not a tracked taint source; Phase B target).",
+  "expectedFindings": [
+    {
+      "rule": "VC082",
+      "file": "route.ts",
+      "lineRange": [
+        10,
+        11
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

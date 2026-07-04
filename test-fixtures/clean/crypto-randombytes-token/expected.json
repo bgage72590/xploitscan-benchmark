@@ -1,0 +1,5 @@
+{
+  "description": "crypto.randomBytes for session tokens — VC034 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC034"]
+}

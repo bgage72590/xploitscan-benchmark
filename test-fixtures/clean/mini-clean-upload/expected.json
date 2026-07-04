@@ -1,0 +1,5 @@
+{
+  "description": "Clean upload: magic-byte sniff + size cap + boundary-checked path. VC038 and VC025 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC038", "VC025"]
+}

@@ -1,0 +1,15 @@
+{
+  "description": "MD5 used for password hashing — VC060 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC060",
+      "file": "auth.js",
+      "lineRange": [
+        7,
+        9
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

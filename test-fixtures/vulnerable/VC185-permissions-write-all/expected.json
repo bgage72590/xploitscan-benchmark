@@ -1,0 +1,12 @@
+{
+  "description": "GitHub Actions workflow uses `permissions: write-all` — grants every step write access to the entire repo. VC185 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC185",
+      "file": ".github/workflows/release.yml",
+      "lineRange": [7, 10],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

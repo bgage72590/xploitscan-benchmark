@@ -1,0 +1,5 @@
+{
+  "description": "Knex query builder with parameterized bindings — no SQL string interpolation. VC006 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC006"]
+}

@@ -1,0 +1,24 @@
+{
+  "description": "Feature flag admin endpoints with no auth (VC003) + mass assignment (VC042).",
+  "expectedFindings": [
+    {
+      "rule": "VC003",
+      "file": "admin.js",
+      "lineRange": [
+        6,
+        15
+      ],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC042",
+      "file": "admin.js",
+      "lineRange": [
+        7,
+        9
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

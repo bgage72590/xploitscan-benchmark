@@ -1,0 +1,12 @@
+{
+  "description": "Hardcoded AES-256 key + IV in source — VC062 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC062",
+      "file": "crypto-util.js",
+      "lineRange": [7, 11],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

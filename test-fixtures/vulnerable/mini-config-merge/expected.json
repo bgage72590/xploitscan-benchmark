@@ -1,0 +1,7 @@
+{
+  "description": "Tenant config merge handler with lodash.merge of req.body — proto pollution.",
+  "expectedFindings": [
+    { "rule": "VC023", "file": "admin.js", "lineRange": [8, 11], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

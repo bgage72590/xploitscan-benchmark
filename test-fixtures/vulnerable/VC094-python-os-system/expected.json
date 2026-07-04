@@ -1,0 +1,5 @@
+{
+  "description": "User input (request.args) interpolated into os.system f-string (Python command injection). VC094 must fire.",
+  "expectedFindings": [{ "rule": "VC094", "file": "tasks.py", "lineRange": [5, 8], "severityAtLeast": "critical" }],
+  "mustNotFire": []
+}

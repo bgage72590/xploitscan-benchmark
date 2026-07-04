@@ -1,0 +1,15 @@
+{
+  "description": "Apollo Server with introspection: true — VC051 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC051",
+      "file": "server.js",
+      "lineRange": [
+        9,
+        14
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

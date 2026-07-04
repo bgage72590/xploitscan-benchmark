@@ -1,0 +1,5 @@
+{
+  "description": "jwt.verify with a pinned RS256/ES256 allowlist — VC079 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC079"]
+}

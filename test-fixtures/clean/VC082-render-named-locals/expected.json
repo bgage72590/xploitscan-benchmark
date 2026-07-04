@@ -1,0 +1,5 @@
+{
+  "description": "res.render with a literal view and user data passed as named locals (not a spread) — the recommended-safe pattern. Must not fire VC082.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC082"]
+}

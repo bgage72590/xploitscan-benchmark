@@ -1,0 +1,12 @@
+{
+  "description": "Apollo Server with csrfPrevention: false explicitly disables the default CSRF protection. VC206 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC206",
+      "file": "server.ts",
+      "lineRange": [10, 11],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,24 @@
+{
+  "description": "Upload mini-app with two issues: extension-only filter + path traversal via req.body.filename joined to uploads dir.",
+  "expectedFindings": [
+    {
+      "rule": "VC038",
+      "file": "middleware.js",
+      "lineRange": [
+        6,
+        10
+      ],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC025",
+      "file": "handler.js",
+      "lineRange": [
+        10,
+        13
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

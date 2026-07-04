@@ -1,0 +1,5 @@
+{
+  "description": "subprocess.run with an argument vector and shell=False — no shell interpretation. VC094 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC094"]
+}

@@ -1,0 +1,12 @@
+{
+  "description": "knex.raw with string-concatenated user input — bypasses parameter binding. VC006 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC006",
+      "file": "orders.js",
+      "lineRange": [6, 11],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

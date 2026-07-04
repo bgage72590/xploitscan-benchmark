@@ -1,0 +1,1 @@
+{ "class": "Code injection (eval)", "expectedRules": ["VC015"], "source": "OWASP/NodeGoat — app/routes/contributions.js", "license": "Apache-2.0" }

@@ -1,0 +1,1 @@
+{ "description": "exec concatenated with a constant (not user input). VC094 must NOT fire.", "expectedFindings": [], "mustNotFire": ["VC094"] }

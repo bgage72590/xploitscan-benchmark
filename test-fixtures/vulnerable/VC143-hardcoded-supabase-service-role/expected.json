@@ -1,0 +1,12 @@
+{
+  "description": "Supabase service role key (bypasses RLS) hardcoded in admin client — VC143 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC143",
+      "file": "supabase-admin.ts",
+      "lineRange": [9, 9],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

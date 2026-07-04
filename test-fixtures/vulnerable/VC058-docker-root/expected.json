@@ -1,0 +1,12 @@
+{
+  "description": "Dockerfile without a USER directive — container runs as root. VC058 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC058",
+      "file": "Dockerfile",
+      "lineRange": [1, 1],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

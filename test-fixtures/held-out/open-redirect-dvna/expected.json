@@ -1,0 +1,1 @@
+{ "class": "Open redirect", "expectedRules": ["VC016","VC035"], "source": "appsecco/dvna — core/appHandler.js", "license": "MIT" }

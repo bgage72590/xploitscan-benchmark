@@ -1,0 +1,5 @@
+{
+  "description": "conn.exec() is a better-sqlite3 database method, not child_process.exec — VC094 must NOT fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC094"]
+}

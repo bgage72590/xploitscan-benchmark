@@ -1,0 +1,5 @@
+{
+  "description": "CSV rows spread into bulkCreate, but read from a constant server-side path (not req-derived). The fs-read/parse taint-preserving chain must not originate taint — VC042 must NOT fire. Counter-fixture to mini-csv-import.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC042"]
+}

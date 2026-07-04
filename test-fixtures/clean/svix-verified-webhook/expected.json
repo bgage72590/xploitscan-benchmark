@@ -1,0 +1,5 @@
+{
+  "description": "Clerk webhook verified via Svix (wh.verify). Signature verification IS present — just with a non-Stripe library — so VC005 and VC152 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC005", "VC152"]
+}

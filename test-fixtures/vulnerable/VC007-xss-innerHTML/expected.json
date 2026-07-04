@@ -1,0 +1,12 @@
+{
+  "description": "dangerouslySetInnerHTML with user-supplied variable (not static constant) — VC007 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC007",
+      "file": "Comment.tsx",
+      "lineRange": [8, 28],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

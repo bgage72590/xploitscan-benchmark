@@ -1,0 +1,5 @@
+{
+  "description": "Stripe session_id in a URL query, annotated // VC088-OK: — a reviewed-safe site. VC088 must NOT fire (inline-silencer support).",
+  "expectedFindings": [],
+  "mustNotFire": ["VC088"]
+}

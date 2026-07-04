@@ -1,0 +1,5 @@
+{
+  "description": "Constant in-code array .map'd and spread into bulkCreate. Array-element taint requires a tainted receiver array, which a literal is not — VC042 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC042"]
+}

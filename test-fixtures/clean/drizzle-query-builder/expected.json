@@ -1,0 +1,5 @@
+{
+  "description": "Drizzle query builder + sql`` tagged template — parameterized, no string concatenation. VC006 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC006"]
+}

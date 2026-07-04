@@ -1,0 +1,15 @@
+# Single-line run: form of expression injection. The previous VC186
+# regex required block-scalar `run: |` and silently missed this shape.
+# See macroscope review on PR #306. VC186 must fire.
+name: Branch checkout test
+
+on:
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  echo-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print branch name
+        run: echo "PR branch: ${{ github.head_ref }}"

@@ -1,0 +1,12 @@
+{
+  "description": "Drizzle sql.raw() with template-literal user input — bypasses parameter binding. VC006 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC006",
+      "file": "delete.ts",
+      "lineRange": [11, 14],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

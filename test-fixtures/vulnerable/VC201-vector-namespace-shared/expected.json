@@ -1,0 +1,12 @@
+{
+  "description": "Pinecone query with namespace=\"shared\" (not user-scoped). Locks in the VC201 fix from Macroscope review on PR #309.",
+  "expectedFindings": [
+    {
+      "rule": "VC201",
+      "file": "rag.ts",
+      "lineRange": [11, 15],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

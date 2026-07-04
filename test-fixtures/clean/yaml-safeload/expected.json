@@ -1,0 +1,5 @@
+{
+  "description": "yaml.load with an explicit FAILSAFE_SCHEMA — VC030 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC030"]
+}

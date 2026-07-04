@@ -1,0 +1,5 @@
+{
+  "description": "POST /login gated by express-rate-limit — VC047 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC047"]
+}

@@ -1,0 +1,12 @@
+{
+  "description": "GitHub Actions run: block interpolates ${{ github.event.issue.title/body }} directly into shell — classic expression-injection pattern. VC186 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC186",
+      "file": ".github/workflows/issue-comment.yml",
+      "lineRange": [13, 17],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,24 @@
+{
+  "description": "Password reset using Math.random for token + token in URL query string.",
+  "expectedFindings": [
+    {
+      "rule": "VC034",
+      "file": "controller.js",
+      "lineRange": [
+        5,
+        9
+      ],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC088",
+      "file": "controller.js",
+      "lineRange": [
+        17,
+        18
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

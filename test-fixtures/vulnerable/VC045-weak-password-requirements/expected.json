@@ -1,0 +1,15 @@
+{
+  "description": "password.length < 4 threshold — VC045 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC045",
+      "file": "signup.js",
+      "lineRange": [
+        4,
+        6
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

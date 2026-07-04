@@ -1,0 +1,12 @@
+{
+  "description": "child_process.exec() with user input via template literal and concat — VC094 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC094",
+      "file": "backup.js",
+      "lineRange": [5, 20],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

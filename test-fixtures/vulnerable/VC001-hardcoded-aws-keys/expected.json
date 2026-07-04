@@ -1,0 +1,12 @@
+{
+  "description": "Hardcoded AWS access key (AKIA...) in a config file — VC001 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC001",
+      "file": "config.js",
+      "lineRange": [4, 10],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

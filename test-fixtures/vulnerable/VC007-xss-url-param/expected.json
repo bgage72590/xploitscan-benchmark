@@ -1,0 +1,12 @@
+{
+  "description": "Reflected XSS: URL search param rendered via dangerouslySetInnerHTML with no sanitization — VC007 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC007",
+      "file": "search-results.tsx",
+      "lineRange": [13, 18],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

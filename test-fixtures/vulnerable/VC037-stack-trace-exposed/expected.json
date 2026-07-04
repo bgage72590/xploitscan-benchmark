@@ -1,0 +1,15 @@
+{
+  "description": "Error handler sends err.stack in the response body — VC037 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC037",
+      "file": "errors.js",
+      "lineRange": [
+        4,
+        9
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

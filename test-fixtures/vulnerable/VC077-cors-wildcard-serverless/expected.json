@@ -1,0 +1,15 @@
+{
+  "description": "Serverless Framework config with cors.origin \"*\" + allowCredentials: true — VC077 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC077",
+      "file": "serverless.yml",
+      "lineRange": [
+        14,
+        19
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

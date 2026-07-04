@@ -1,0 +1,5 @@
+{
+  "description": "User input rendered via render_template_string (Python SSTI). VC082 must fire.",
+  "expectedFindings": [{ "rule": "VC082", "file": "views.py", "lineRange": [5, 7], "severityAtLeast": "critical" }],
+  "mustNotFire": []
+}

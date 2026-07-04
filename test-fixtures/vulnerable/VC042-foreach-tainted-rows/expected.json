@@ -1,0 +1,12 @@
+{
+  "description": "Mass assignment reached via for-of element taint: req.body.records is a tainted array, the loop variable inherits the taint, and each element is passed straight to User.create. VC042 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC042",
+      "file": "handler.js",
+      "lineRange": [9, 12],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

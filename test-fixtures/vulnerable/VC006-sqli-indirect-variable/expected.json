@@ -1,0 +1,11 @@
+{
+  "description": "SQL built from user input in an intermediate variable, then passed to .query() — the held-out DVNA pattern. Detected by the VC006 AST taint layer, not the inline-literal regexes.",
+  "expectedFindings": [
+    {
+      "rule": "VC006",
+      "file": "handler.js",
+      "lineRange": [3, 10],
+      "severityAtLeast": "critical"
+    }
+  ]
+}

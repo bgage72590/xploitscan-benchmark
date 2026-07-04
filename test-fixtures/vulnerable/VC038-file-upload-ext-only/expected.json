@@ -1,0 +1,15 @@
+{
+  "description": "multer fileFilter gates only on filename extension — VC038 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC038",
+      "file": "upload.js",
+      "lineRange": [
+        7,
+        12
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

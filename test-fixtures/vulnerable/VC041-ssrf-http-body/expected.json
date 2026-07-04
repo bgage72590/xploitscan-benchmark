@@ -1,0 +1,12 @@
+{
+  "description": "http.get() called with a URL taken directly from req.body — VC041 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC041",
+      "file": "webhook.js",
+      "lineRange": [7, 12],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

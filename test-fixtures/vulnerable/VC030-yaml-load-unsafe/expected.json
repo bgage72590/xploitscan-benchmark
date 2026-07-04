@@ -1,0 +1,12 @@
+{
+  "description": "yaml.load() with an explicit DEFAULT_FULL_SCHEMA (the unsafe path in js-yaml v4) on untrusted input — VC030 must fire. A bare yaml.load(x) is safe in v4 — see clean/vc030-jsyaml-v4-load.",
+  "expectedFindings": [
+    {
+      "rule": "VC030",
+      "file": "config.js",
+      "lineRange": [7, 12],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

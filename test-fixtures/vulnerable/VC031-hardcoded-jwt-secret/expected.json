@@ -1,0 +1,12 @@
+{
+  "description": "JWT signing secret hardcoded as a string literal — VC031 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC031",
+      "file": "auth.js",
+      "lineRange": [6, 8],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

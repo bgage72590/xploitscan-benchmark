@@ -1,0 +1,1 @@
+{ "class": "Hardcoded credentials", "expectedRules": ["VC001"], "source": "juice-shop/juice-shop — lib/insecurity.ts", "license": "MIT" }

@@ -1,0 +1,7 @@
+{
+  "description": "Realtime client over plain ws:// — VC086 must fire.",
+  "expectedFindings": [
+    { "rule": "VC086", "file": "client.js", "lineRange": [3, 4], "severityAtLeast": "medium" }
+  ],
+  "mustNotFire": []
+}

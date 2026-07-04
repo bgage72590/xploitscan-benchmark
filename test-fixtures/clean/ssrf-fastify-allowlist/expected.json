@@ -1,0 +1,5 @@
+{
+  "description": "Fastify proxy with hostname allowlist — VC041 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC041"]
+}

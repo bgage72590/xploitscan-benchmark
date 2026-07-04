@@ -1,0 +1,12 @@
+{
+  "description": "docker-compose.yml exposing 5432/6379 on all interfaces — VC059 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC059",
+      "file": "docker-compose.yml",
+      "lineRange": [8, 14],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

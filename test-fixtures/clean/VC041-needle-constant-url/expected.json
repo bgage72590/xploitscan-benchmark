@@ -1,0 +1,5 @@
+{
+  "description": "needle.get() with a constant server-side URL in an Express handler — no taint, must not fire VC041.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC041"]
+}

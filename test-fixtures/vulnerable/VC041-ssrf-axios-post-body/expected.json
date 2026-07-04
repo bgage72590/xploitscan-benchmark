@@ -1,0 +1,12 @@
+{
+  "description": "axios.post(forwardUrl, ...) where forwardUrl is destructured from req.body — VC041 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC041",
+      "file": "webhook-handler.js",
+      "lineRange": [6, 9],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

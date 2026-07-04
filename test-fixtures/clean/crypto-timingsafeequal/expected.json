@@ -1,0 +1,5 @@
+{
+  "description": "API key comparison via crypto.timingSafeEqual with prior length check — VC043 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC043"]
+}

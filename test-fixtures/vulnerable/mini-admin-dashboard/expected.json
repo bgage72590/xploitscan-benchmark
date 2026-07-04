@@ -1,0 +1,33 @@
+{
+  "description": "Admin dashboard with no auth on destructive routes + stack trace in error response + hardcoded DB password.",
+  "expectedFindings": [
+    {
+      "rule": "VC003",
+      "file": "routes.js",
+      "lineRange": [
+        6,
+        18
+      ],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC037",
+      "file": "routes.js",
+      "lineRange": [
+        11,
+        12
+      ],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC001",
+      "file": "db.config.js",
+      "lineRange": [
+        7,
+        7
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

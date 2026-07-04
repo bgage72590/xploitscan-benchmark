@@ -1,0 +1,15 @@
+{
+  "description": "Math.random() used to generate session tokens — VC034 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC034",
+      "file": "session.js",
+      "lineRange": [
+        5,
+        10
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,5 @@
+{
+  "description": "JWT secret loaded from env — VC031 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC031"]
+}

@@ -1,0 +1,5 @@
+{
+  "description": "SVG path data (d=\"M ... L ... C ...\") is high-entropy coordinate data, never a secret. ENTROPY must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["ENTROPY"]
+}

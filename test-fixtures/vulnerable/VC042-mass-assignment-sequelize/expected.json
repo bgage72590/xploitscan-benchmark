@@ -1,0 +1,12 @@
+{
+  "description": "User.build({ ...req.body }) — Sequelize mass assignment. VC042 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC042",
+      "file": "create-user.js",
+      "lineRange": [6, 9],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

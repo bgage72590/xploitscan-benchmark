@@ -1,0 +1,1 @@
+{ "description": "libxmljs parseXmlString with noent:true — XXE. VC081 was blind to parseXmlString (only parseXml). Must fire.", "expectedFindings": [{ "rule": "VC081", "file": "handler.js", "lineRange": [3,5], "severityAtLeast": "high" }], "mustNotFire": [] }

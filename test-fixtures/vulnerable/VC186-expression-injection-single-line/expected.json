@@ -1,0 +1,12 @@
+{
+  "description": "Single-line run: with ${{ github.head_ref }} interpolation. Locks in the regex fix from Macroscope review on PR #306. VC186 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC186",
+      "file": ".github/workflows/branch-echo.yml",
+      "lineRange": [13, 15],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

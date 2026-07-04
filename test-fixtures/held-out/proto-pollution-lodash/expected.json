@@ -1,0 +1,1 @@
+{ "class": "Prototype pollution", "expectedRules": ["VC023"], "source": "kimmobrunfeldt/lodash-merge-pollution-example — index.js", "license": "ISC" }

@@ -1,0 +1,5 @@
+{
+  "description": "Ruby command injection: interpolated user input into system(). VC094 must fire.",
+  "expectedFindings": [{ "rule": "VC094", "file": "jobs.rb", "lineRange": [3, 5], "severityAtLeast": "critical" }],
+  "mustNotFire": []
+}

@@ -1,0 +1,8 @@
+{
+  "description": "Cron runner exec'ing template-literal command + logging stdout. VC094 + VC044.",
+  "expectedFindings": [
+    { "rule": "VC094", "file": "runner.js", "lineRange": [11, 14], "severityAtLeast": "critical" },
+    { "rule": "VC044", "file": "runner.js", "lineRange": [12, 13], "severityAtLeast": "medium", "knownGap": true }
+  ],
+  "mustNotFire": []
+}

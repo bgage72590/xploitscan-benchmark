@@ -1,0 +1,1 @@
+{ "class": "Weak password hashing", "expectedRules": ["VC060"], "source": "juice-shop/juice-shop — lib/insecurity.ts, routes/login.ts", "license": "MIT" }

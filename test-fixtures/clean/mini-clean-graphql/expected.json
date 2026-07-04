@@ -1,0 +1,5 @@
+{
+  "description": "Apollo with prod-only introspection, CSRF on, explicit field allowlist in resolver, graphql-armor for depth + complexity limits. VC051, VC042, VC204, VC205, VC206 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC051", "VC042", "VC204", "VC205", "VC206"]
+}

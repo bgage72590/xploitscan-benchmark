@@ -1,0 +1,12 @@
+{
+  "description": "Fastify handler with fetch(request.query.url) — cross-framework SSRF. VC041 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC041",
+      "file": "server.js",
+      "lineRange": [7, 10],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

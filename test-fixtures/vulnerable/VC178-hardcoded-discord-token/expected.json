@@ -1,0 +1,12 @@
+{
+  "description": "Hardcoded Discord bot token (3-segment base64 format) in client.login() — VC178 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC178",
+      "file": "bot.js",
+      "lineRange": [10, 14],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

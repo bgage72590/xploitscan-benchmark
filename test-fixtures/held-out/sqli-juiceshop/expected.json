@@ -1,0 +1,1 @@
+{ "class": "SQL injection", "expectedRules": ["VC006"], "source": "juice-shop/juice-shop — routes/login.ts", "license": "MIT" }

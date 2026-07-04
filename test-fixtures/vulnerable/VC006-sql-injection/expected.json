@@ -1,0 +1,12 @@
+{
+  "description": "SQL queries built with template literals and string concat — VC006 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC006",
+      "file": "users.js",
+      "lineRange": [4, 18],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

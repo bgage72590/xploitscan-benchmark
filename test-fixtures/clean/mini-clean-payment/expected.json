@@ -1,0 +1,5 @@
+{
+  "description": "Clean checkout: server computes total, Stripe key from env, idempotency key required. VC042 + VC031 + VC005 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC042", "VC031", "VC005"]
+}

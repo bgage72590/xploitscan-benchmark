@@ -1,0 +1,12 @@
+{
+  "description": "Reflected Origin header + Allow-Credentials: true — VC153 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC153",
+      "file": "cors-middleware.js",
+      "lineRange": [5, 14],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

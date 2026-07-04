@@ -1,0 +1,5 @@
+{
+  "description": "Tailwind JIT class-name fingerprints (css-xxx, tw-xxx, jss-xxx) are high-entropy but not secrets. ENTROPY must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["ENTROPY", "VC001"]
+}

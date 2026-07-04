@@ -1,0 +1,12 @@
+{
+  "description": "jwt.decode() called without an algorithms= allowlist — accepts alg:none and lets attackers forge tokens. VC197 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC197",
+      "file": "auth.py",
+      "lineRange": [8, 10],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

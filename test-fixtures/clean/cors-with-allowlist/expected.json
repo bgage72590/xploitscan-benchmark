@@ -1,0 +1,5 @@
+{
+  "description": "CORS with explicit ALLOWED_ORIGINS allowlist — VC153 must NOT fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC153"]
+}

@@ -1,0 +1,6 @@
+{
+  "description": "Angular DomSanitizer.bypassSecurityTrustHtml on a query param — DOM XSS. The 'DomSanitizer' import must not cause the file to be skipped.",
+  "expectedFindings": [
+    { "rule": "VC007", "file": "search.component.ts", "lineRange": [10, 16], "severityAtLeast": "high" }
+  ]
+}

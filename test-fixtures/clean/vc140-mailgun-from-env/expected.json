@@ -1,0 +1,5 @@
+{
+  "description": "Mailgun API key sourced from process.env.MAILGUN_API_KEY, no key-<hex> literal in the source. The safe counterpart to VC140 — must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC140"]
+}

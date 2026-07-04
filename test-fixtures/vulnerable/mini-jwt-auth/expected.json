@@ -1,0 +1,42 @@
+{
+  "description": "Mini JWT auth app: hardcoded secret in two files + alg:none accepted + login without rate limit. Realistic multi-file fixture with 3 distinct issues.",
+  "expectedFindings": [
+    {
+      "rule": "VC031",
+      "file": "login.js",
+      "lineRange": [
+        9,
+        9
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC031",
+      "file": "middleware.js",
+      "lineRange": [
+        6,
+        6
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC079",
+      "file": "middleware.js",
+      "lineRange": [
+        11,
+        14
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC047",
+      "file": "login.js",
+      "lineRange": [
+        10,
+        18
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

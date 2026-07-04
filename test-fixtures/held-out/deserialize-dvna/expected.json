@@ -1,0 +1,1 @@
+{ "class": "Insecure deserialization", "expectedRules": ["VC030"], "source": "appsecco/dvna — core/appHandler.js", "license": "MIT" }

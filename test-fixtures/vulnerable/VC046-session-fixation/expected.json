@@ -1,0 +1,15 @@
+{
+  "description": "Login sets req.session.userId without calling req.session.regenerate — VC046 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC046",
+      "file": "login.js",
+      "lineRange": [
+        5,
+        11
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

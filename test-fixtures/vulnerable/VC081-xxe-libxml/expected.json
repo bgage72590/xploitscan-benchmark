@@ -1,0 +1,12 @@
+{
+  "description": "libxmljs parseXml with noent:true + dtdload:true — XXE enabled. VC081 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC081",
+      "file": "parse.js",
+      "lineRange": [7, 11],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

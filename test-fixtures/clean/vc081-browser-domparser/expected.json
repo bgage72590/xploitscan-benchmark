@@ -1,0 +1,5 @@
+{
+  "description": "Browser DOMParser().parseFromString — XXE-safe by spec. VC081 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC081"]
+}

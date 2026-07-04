@@ -1,0 +1,5 @@
+{
+  "description": "12+ char minimum + complexity regex — VC045 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC045"]
+}

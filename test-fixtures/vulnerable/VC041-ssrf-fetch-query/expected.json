@@ -1,0 +1,12 @@
+{
+  "description": "fetch() called with a raw URL from req.query — VC041 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC041",
+      "file": "server.js",
+      "lineRange": [6, 9],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

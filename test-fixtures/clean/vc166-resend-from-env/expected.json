@@ -1,0 +1,5 @@
+{
+  "description": "Resend API key sourced from process.env.RESEND_API_KEY, no re_<...> literal in the source. The safe counterpart to VC166 — must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC166"]
+}

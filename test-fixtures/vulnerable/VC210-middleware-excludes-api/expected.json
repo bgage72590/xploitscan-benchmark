@@ -1,0 +1,7 @@
+{
+  "description": "Auth middleware matcher uses a negative lookahead that excludes 'api' — API routes bypass the middleware. VC210 must fire (info advisory).",
+  "expectedFindings": [
+    { "rule": "VC210", "file": "middleware.ts", "lineRange": [4, 6] }
+  ],
+  "mustNotFire": []
+}

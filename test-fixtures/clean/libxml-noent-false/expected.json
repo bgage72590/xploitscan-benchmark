@@ -1,0 +1,5 @@
+{
+  "description": "libxmljs with noent:false + dtdload:false + nonet:true — XXE mitigated. VC081 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC081"]
+}

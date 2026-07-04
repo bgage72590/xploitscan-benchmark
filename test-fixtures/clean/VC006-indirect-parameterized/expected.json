@@ -1,0 +1,5 @@
+{
+  "description": "SQL text in a variable but with parameterized binding (? placeholder + replacements) — must not fire VC006.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC006"]
+}

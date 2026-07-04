@@ -1,0 +1,12 @@
+{
+  "description": "eval() called directly on req.body input — VC015 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC015",
+      "file": "handler.js",
+      "lineRange": [5, 8],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

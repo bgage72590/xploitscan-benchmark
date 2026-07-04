@@ -1,0 +1,5 @@
+{
+  "description": "Two safe sendFile patterns: a static __dirname-rooted path, and a user-controlled name guarded by a startsWith containment check. Neither must fire VC093.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC093", "VC117"]
+}

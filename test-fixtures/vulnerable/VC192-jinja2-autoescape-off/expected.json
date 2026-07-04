@@ -1,0 +1,12 @@
+{
+  "description": "Jinja2 Environment constructed with autoescape=False — XSS sink for every template rendered. VC192 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC192",
+      "file": "templates.py",
+      "lineRange": [7, 11],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,12 @@
+{
+  "description": "ObjectInputStream.readObject() on untrusted request bytes — VC083 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC083",
+      "file": "Deserializer.java",
+      "lineRange": [9, 13],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

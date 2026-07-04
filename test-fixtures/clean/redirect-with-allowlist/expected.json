@@ -1,0 +1,5 @@
+{
+  "description": "Redirect destinations checked against a strict path allowlist — VC035 and VC090 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC035", "VC090"]
+}

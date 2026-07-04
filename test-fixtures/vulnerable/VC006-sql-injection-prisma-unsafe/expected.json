@@ -1,0 +1,12 @@
+{
+  "description": "Prisma $queryRawUnsafe with template-literal interpolation — VC006 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC006",
+      "file": "reports.ts",
+      "lineRange": [9, 14],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

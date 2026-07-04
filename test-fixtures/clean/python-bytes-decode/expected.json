@@ -1,0 +1,5 @@
+{
+  "description": "bytes.decode() and base64.b64decode() must not trigger VC197 — they're not jwt.decode().",
+  "expectedFindings": [],
+  "mustNotFire": ["VC197"]
+}

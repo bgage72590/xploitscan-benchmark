@@ -1,0 +1,24 @@
+{
+  "description": "Error middleware leaking stack + log injection on req.body / req.user.email.",
+  "expectedFindings": [
+    {
+      "rule": "VC044",
+      "file": "middleware.js",
+      "lineRange": [
+        4,
+        5
+      ],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC037",
+      "file": "middleware.js",
+      "lineRange": [
+        6,
+        10
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Express route behind requireAuth middleware — VC158 skips when an auth signal is present (precision-first), must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC158"]
+}

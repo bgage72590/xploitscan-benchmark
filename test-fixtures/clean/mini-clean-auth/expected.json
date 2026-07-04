@@ -1,0 +1,5 @@
+{
+  "description": "Realistic clean auth: env secret + bcrypt + rate limit + session regenerate + RS256.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC031", "VC047", "VC046", "VC079", "VC060"]
+}

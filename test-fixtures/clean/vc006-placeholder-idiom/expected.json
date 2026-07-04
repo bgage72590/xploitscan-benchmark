@@ -1,0 +1,5 @@
+{
+  "description": "Standard parameterized SQL IN-clause idiom with `placeholders = ids.map(() => '?').join(', ')`. Fully safe — interpolation is of `?` markers, actual values pass through args[]. VC006 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC006"]
+}

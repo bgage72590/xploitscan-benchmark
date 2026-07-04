@@ -1,0 +1,15 @@
+{
+  "description": "Notification service config with multiple hardcoded API keys (SendGrid, Twilio, Slack).",
+  "expectedFindings": [
+    {
+      "rule": "VC001",
+      "file": "config.js",
+      "lineRange": [
+        3,
+        14
+      ],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

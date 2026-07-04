@@ -1,0 +1,5 @@
+{
+  "description": "Two legitimate dangerouslySetInnerHTML sites (theme-flash-prevention script, server-built embed preview). Both silenced via // VC063-OK inline markers. VC063 must honor them.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC063"]
+}

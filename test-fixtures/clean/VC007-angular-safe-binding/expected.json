@@ -1,0 +1,5 @@
+{
+  "description": "Angular component that imports DomSanitizer but uses plain interpolation (auto-escaped) — no bypassSecurityTrust call. Must not fire VC007.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC007"]
+}

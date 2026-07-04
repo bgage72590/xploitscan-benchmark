@@ -1,0 +1,12 @@
+{
+  "description": "PyJWT decode() called bare (after `from jwt import decode`) without algorithms= allowlist. Locks in the regex fix from Macroscope review on PR #308.",
+  "expectedFindings": [
+    {
+      "rule": "VC197",
+      "file": "auth.py",
+      "lineRange": [9, 11],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

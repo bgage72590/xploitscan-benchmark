@@ -1,0 +1,7 @@
+{
+  "description": "Express route fetching a record by a body-supplied object reference (req.body.orderId) with no ownership check — VC158 must fire.",
+  "expectedFindings": [
+    { "rule": "VC158", "file": "api.js", "lineRange": [6, 9], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

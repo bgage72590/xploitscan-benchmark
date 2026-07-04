@@ -1,0 +1,12 @@
+{
+  "description": "spawn() with shell:true and user-interpolated command string — VC094 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC094",
+      "file": "thumbnail.js",
+      "lineRange": [8, 15],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

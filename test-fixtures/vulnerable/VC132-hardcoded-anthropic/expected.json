@@ -1,0 +1,12 @@
+{
+  "description": "Hardcoded Anthropic API key (sk-ant-api03-...) in client config — VC132 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC132",
+      "file": "client.ts",
+      "lineRange": [8, 11],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

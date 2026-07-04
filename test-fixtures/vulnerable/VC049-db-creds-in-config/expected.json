@@ -1,0 +1,15 @@
+{
+  "description": "Hardcoded DB password in config file — caught via VC001 generic secret detector.",
+  "expectedFindings": [
+    {
+      "rule": "VC001",
+      "file": "db.config.js",
+      "lineRange": [
+        9,
+        9
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}
