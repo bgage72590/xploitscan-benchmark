@@ -1,5 +1,0 @@
-{
-  "description": "VC001 must not fire on SCREAMING_CASE _KEY assignments whose value is a kebab-case identifier (localStorage keys, cookie names, cache keys). These are NOT credentials.",
-  "expectedFindings": [],
-  "mustNotFire": ["VC001"]
-}

@@ -1,7 +1,0 @@
-{
-  "description": "Bare token-in-URL with no // VC146-OK silencer. The rule must still catch this (silencer only applies when explicitly opted in).",
-  "expectedFindings": [
-    { "rule": "VC146", "file": "leak.ts", "lineRange": [2, 5], "severityAtLeast": "critical" }
-  ],
-  "mustNotFire": []
-}
