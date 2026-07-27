@@ -1,0 +1,25 @@
+{
+  "description": "Counter-fixture for the vendored path exclusions. Three files sit one character away from an exempt path and must all keep counting toward the grade: a prop-fed <style dangerouslySetInnerHTML> at an ordinary component path (structurally identical to shadcn's ChartStyle — the case that proved per-rule suppression can't work), a `components/uikit/` directory that must not match `components/ui/`, and a file NAMED generated-* that must not match the `generated/` directory pattern. If the exclusion list is ever widened into a prefix or substring match, these fail.",
+  "expectedFindings": [
+    {
+      "rule": "VC063",
+      "file": "src/components/TenantTheme.tsx",
+      "lineRange": [16, 24],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC063",
+      "file": "src/components/uikit/PreviewPane.tsx",
+      "lineRange": [11, 18],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC094",
+      "file": "src/lib/generated-invoice.ts",
+      "lineRange": [8, 14],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": [],
+  "mustBeGraded": ["VC063", "VC007", "VC094"]
+}

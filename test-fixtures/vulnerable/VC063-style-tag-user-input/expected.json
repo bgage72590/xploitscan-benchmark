@@ -1,0 +1,25 @@
+{
+  "description": "Three <style dangerouslySetInnerHTML> sites whose __html is attacker-influenced: a query-string accent colour plus a raw ?css= blob, a tenant-supplied stylesheet body passed in as a prop, and a ?skin= value read off window.location.search. Hosting the sink in a <style> element does not make it safe — CSS injection alone exfiltrates data via attribute selectors, and `</style><img src=x onerror=...>` breaks straight back out into a live event handler. This fixture pins that behaviour so any future attempt to exempt constant-derived theming blocks (e.g. shadcn/ui's ChartStyle) cannot silence the rule wholesale.",
+  "expectedFindings": [
+    {
+      "rule": "VC063",
+      "file": "sample.tsx",
+      "lineRange": [25, 30],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC063",
+      "file": "sample.tsx",
+      "lineRange": [39, 44],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC063",
+      "file": "sample.tsx",
+      "lineRange": [46, 51],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": [],
+  "mustBeGraded": ["VC063"]
+}

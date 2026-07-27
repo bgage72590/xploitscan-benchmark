@@ -1,0 +1,6 @@
+{
+  "description": "shadcn/ui's `chart` primitive at the path every AI app builder copies it to. Its ChartStyle component writes CSS custom properties into a <style> element through dangerouslySetInnerHTML, interpolating a module constant and the typed `config` prop — no user input and no script execution, but structurally identical to a real XSS sink. In a 20-repo field study this single file drove VC063 (critical) in 16 of 20 repos and VC007 (high) in 17, and because calculateGrade caps a project at D for one critical, it graded a majority of scanned projects on library code their authors never wrote. The findings must still be REPORTED — no file-local rule can tell this apart from a genuine prop-fed <style> sink, and pretending otherwise was tried and reverted. They must simply not drive the grade.",
+  "expectedFindings": [],
+  "mustNotFire": [],
+  "mustNotAffectGrade": ["VC063", "VC007"]
+}

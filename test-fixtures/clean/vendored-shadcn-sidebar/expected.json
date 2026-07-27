@@ -1,0 +1,6 @@
+{
+  "description": "shadcn/ui's `sidebar` primitive, the second half of the vendored FP cluster. Its one cookie stores a boolean UI preference and is intentionally JS-readable, which trips VC017 (Insecure Cookie Settings) in 15 of 20 repos in the field study — 79% of all VC017 firings across the corpus were this one file. Reported, not graded.",
+  "expectedFindings": [],
+  "mustNotFire": [],
+  "mustNotAffectGrade": ["VC017"]
+}

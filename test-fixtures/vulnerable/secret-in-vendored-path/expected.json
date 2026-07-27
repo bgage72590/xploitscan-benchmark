@@ -1,0 +1,31 @@
+{
+  "description": "Committed credentials sitting inside vendored paths — one in `__generated__/` codegen output, one in the `components/ui/` directory where shadcn primitives live. Those paths are held out of the grade for code-pattern rules, and this fixture pins the exception: a credential in the repository is live and is the author's leak no matter which directory produced the file. 'The generator wrote it' is a true statement about the surrounding code and a meaningless one about the key. Without this carve-out, the vendored-path fix would have quietly stopped grading hardcoded API keys — a worse failure than the false positives it exists to remove.",
+  "expectedFindings": [
+    {
+      "rule": "VC001",
+      "file": "src/__generated__/client.ts",
+      "lineRange": [8, 15],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC133",
+      "file": "src/__generated__/client.ts",
+      "lineRange": [10, 16],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC143",
+      "file": "src/__generated__/client.ts",
+      "lineRange": [8, 13],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC001",
+      "file": "src/components/ui/theme-config.ts",
+      "lineRange": [5, 10],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": [],
+  "mustBeGraded": ["VC001", "VC133", "VC143"]
+}

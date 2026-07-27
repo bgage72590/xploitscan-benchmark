@@ -1,0 +1,6 @@
+{
+  "description": "A docs page whose code blocks are deliberate anti-pattern examples. Production scans markdown on purpose — READMEs really do leak live keys — so the answer is not to stop reading .md files. But example code in prose is not deployed code, and in the 20-repo field study 458 findings came from rules matching documentation. The VC061 hit here is critical, which alone would cap the whole project at D on the strength of a code block that exists to tell contributors what NOT to do.",
+  "expectedFindings": [],
+  "mustNotFire": [],
+  "mustNotAffectGrade": ["VC061", "VC097"]
+}
