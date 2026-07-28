@@ -1,0 +1,5 @@
+{
+  "description": "A `{/* scanner-OK: ... */}` JSX comment directly above a dangerouslySetInnerHTML. The leading brace must not stop the silencer walk — the line above a match is always tested, whatever it looks like.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC063", "VC007"]
+}

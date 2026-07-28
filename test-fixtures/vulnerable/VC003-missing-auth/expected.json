@@ -1,0 +1,11 @@
+{
+  "description": "Next.js route handlers with no authentication and no inline silencer. The counter-fixture to clean/VC003-inline-silenced: identical code, markers removed, so it must still fire. Proves the `// VC003-OK:` support suppresses per-site rather than disabling the rule.",
+  "expectedFindings": [
+    {
+      "rule": "VC003",
+      "file": "route.ts",
+      "lineRange": [1, 12],
+      "severityAtLeast": "high"
+    }
+  ]
+}

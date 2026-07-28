@@ -1,0 +1,11 @@
+{
+  "description": "High-entropy literal with no inline silencer — the control half of the ENTROPY-OK pair. Must fire so that clean/entropy-inline-silenced passing is attributable to the marker rather than to the scanner missing the string.",
+  "expectedFindings": [
+    {
+      "rule": "ENTROPY",
+      "file": "config.ts",
+      "lineRange": [1, 10],
+      "severityAtLeast": "high"
+    }
+  ]
+}

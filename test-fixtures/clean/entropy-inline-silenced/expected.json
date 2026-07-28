@@ -1,0 +1,5 @@
+{
+  "description": "High-entropy literal carrying an inline `// ENTROPY-OK: <reason>` marker in a multi-line comment block above it. Must not fire ENTROPY. The multi-line placement is the point: a single-line lookback would miss it, which is the trap this fixture locks down.",
+  "expectedFindings": [],
+  "mustNotFire": ["ENTROPY"]
+}

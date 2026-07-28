@@ -1,0 +1,5 @@
+{
+  "description": "Unauthenticated Next.js route handlers that carry an explicit `// VC003-OK: <reason>` marker. The rule is correct that there is no auth here — the developer has reviewed and accepted it, which is exactly what the inline silencer is for. Must not fire VC003.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003"]
+}
