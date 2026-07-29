@@ -1,0 +1,5 @@
+{
+  "description": "camelCase webhook receivers, which VC003 has skipped since the rule was written via its `/webhook` path test. When the webhook skip was rewritten as `(?:^|[/_-])webhooks?(?:[/_.-]|$)` to reach the hyphenated one-directory-per-function serverless layout, the bounded trailing class stopped matching an uppercase next character and every file here started earning a fresh high-severity 'missing authentication' finding on code that had not changed. The skip is now the union of the two tests, so it is a superset of the original by construction rather than by argument.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003"]
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Signature-verified webhook receiver deployed as an edge function. VC003's webhook skip matched only a `/webhook` path segment, which never occurs in the Supabase layout: functions live one directory deep and are named `stripe-webhook`, `clerk-webhook`, `resend-webhook`. Without a segment-aware skip the edge-function widening would have put a high-severity 'missing authentication' finding on every correctly-implemented webhook in the corpus.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003"]
+}

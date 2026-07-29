@@ -1,0 +1,5 @@
+{
+  "description": "A Node/Hono bootstrap file whose `serve({ fetch, port })` call binds a port rather than handling a request. Pins the Deno-context guard on VC003's edge-function shape: the bare token `serve(` is ambiguous, so the rule requires the file to prove it is a Deno edge function (a `Deno.serve` call, or a std-http `serve` import) before treating the call as a request entry point.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003"]
+}

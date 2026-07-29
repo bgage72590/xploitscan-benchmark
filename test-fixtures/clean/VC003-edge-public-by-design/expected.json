@@ -1,0 +1,5 @@
+{
+  "description": "The four ways an edge function is legitimately callable without a user session: a health probe, a social preview image, a scheduler-invoked job, and a signature-verified receiver whose directory name gives no hint that it is one. Pins the public-by-design path list and the content-based signature check that keep the VC003 edge-function shape off endpoints the research classifier never counted as 'no authentication at all'.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003"]
+}

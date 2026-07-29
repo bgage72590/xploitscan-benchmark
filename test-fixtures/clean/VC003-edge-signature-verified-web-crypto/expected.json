@@ -1,0 +1,5 @@
+{
+  "description": "Two edge functions that DO authenticate their caller, by verifying a signature. Neither carries a token, a session or a user, so the only thing standing between them and a high-severity 'this edge function does not establish who is calling it' finding is the signature vocabulary — and the first version of that vocabulary was materially narrower than the research classifier's SIGNATURE_VERIFY list it was documented as copying. It had no bare `hmac`, so Web Crypto verification (the idiomatic path in Deno, which has no node:crypto createHmac) matched nothing; and its quoted-header pattern required the literal to end at `-signature`, so `X-Hub-Signature-256` — the header GitHub actually sends — matched nothing either.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003"]
+}

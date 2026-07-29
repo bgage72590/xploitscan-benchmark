@@ -1,0 +1,5 @@
+{
+  "description": "`Deno.serve(` outside `supabase/functions/`. VC003's edge-function shape ran on every file that cleared the server-side gate, so a Deno HTTP bootstrap or a local dev proxy collected a high-severity finding whose text says 'this edge function' and whose fix advice tells the author to build a Supabase client they do not have. The shape is now constrained to the path shape the research measured and the finding text describes. Detection inside supabase/functions/ is unaffected — the vulnerable/VC003-supabase-edge-no-auth fixture pins it.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003"]
+}

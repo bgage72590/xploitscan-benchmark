@@ -1,0 +1,5 @@
+{
+  "description": "The two safe Supabase Edge Function shapes, pinned against the VC003 edge-function widening: ownership delegated to row-level security by constructing the client with the caller's token, and an explicit auth.getUser() check with a 401. Note that both files carry the same boilerplate CORS allow-list containing the word 'authorization' as the vulnerable fixture does, so passing this proves the rule is reading the actual auth handling and not that string.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003", "VC065"]
+}

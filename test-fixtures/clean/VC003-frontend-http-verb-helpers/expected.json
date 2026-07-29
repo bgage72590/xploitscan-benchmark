@@ -1,0 +1,5 @@
+{
+  "description": "Frontend HTTP verb helpers exported as arrow constants named GET/POST/PUT/DELETE. Pins the path gate on VC003's App Router arrow-const shape: the token alone is not evidence of a route handler, and `src/api/` is a server-side-looking path in nearly every Vite project.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003"]
+}

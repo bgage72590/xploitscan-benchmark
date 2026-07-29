@@ -1,0 +1,18 @@
+{
+  "description": "Supabase Edge Functions with no caller check, in both scaffolded forms (`serve()` from the Deno std http server and `Deno.serve()`). This is the dominant server surface on Vite-based AI-builder apps, which have no Next.js route handlers at all — docs/research/class-a-detection.md measured it as the single largest 'no authentication at all' shape the rule set could not see.",
+  "expectedFindings": [
+    {
+      "rule": "VC003",
+      "file": "supabase/functions/get-leads/index.ts",
+      "lineRange": [10, 16],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC003",
+      "file": "supabase/functions/delete-item/index.ts",
+      "lineRange": [3, 9],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}
