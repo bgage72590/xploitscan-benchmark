@@ -24,7 +24,7 @@
 
 const fs = require("node:fs");
 const path = require("node:path");
-const { execSync, spawnSync } = require("node:child_process");
+const { spawnSync } = require("node:child_process");
 
 const ROOT = path.resolve(__dirname, "..");
 const FIXTURES_DIR = path.join(ROOT, "test-fixtures");
@@ -32,6 +32,41 @@ const RESULTS_PATH = path.join(ROOT, "benchmark-bearer.json");
 
 // Lines of slack for TP matching, matches the Semgrep comparison.
 const LINE_SLACK = 10;
+
+/**
+ * Read the Bearer CLI's version.
+ *
+ * `bearer version` prints through cobra's cmd.Printf, which routes to
+ * Command.OutOrStderr(). Bearer never calls SetOut, so the version line lands
+ * on STDERR and stdout comes back empty. Reading stdout alone therefore yields
+ * "" from a command that exited 0, which is why a try/catch fallback around it
+ * never fires. That shipped `"bearerVersion": ""` into the public benchmark
+ * JSON, and /benchmark rendered it as a literally empty <code></code> chip.
+ *
+ * Two rules keep this honest:
+ *   - Read BOTH streams. Which one carries the banner is the tool's choice.
+ *   - Match the version by pattern, never by line index. Bearer prints an
+ *     "You are running an outdated version" notice to stderr FIRST, so
+ *     split("\n")[0] would capture the warning instead of the version.
+ *
+ * Real CI output (run 32878206827, the run behind the shipped empty value):
+ *   You are running an outdated version of bearer v2.1.1 is now available. ...
+ *   bearer version 1.50.0, build fe8fb9fb871891ab313a6f02940ccd31385f3f6b
+ */
+function detectBearerVersion() {
+  const probe = spawnSync("bearer", ["version"], { encoding: "utf8", timeout: 30000 });
+  if (probe.error || probe.status !== 0) return "unknown";
+  return parseBearerVersion(probe.stdout, probe.stderr);
+}
+
+/** Split out from detectBearerVersion so the parsing is testable without the binary. */
+function parseBearerVersion(stdout, stderr) {
+  const combined = `${stdout || ""}\n${stderr || ""}`;
+  // [^\s,]* not \S* -- the real line is "bearer version 1.50.0, build <sha>",
+  // and a greedy \S* swallows the comma and ships "1.50.0," as the version.
+  const m = combined.match(/^\s*bearer version\s+v?([^\s,]+)/im);
+  return m ? m[1] : "unknown";
+}
 
 function ensureBearer() {
   const probe = spawnSync("bearer", ["version"], { encoding: "utf8" });
@@ -41,8 +76,7 @@ function ensureBearer() {
     console.error(probe.stderr || probe.error?.message || "(no error output)");
     process.exit(2);
   }
-  const v = (probe.stdout || "").trim();
-  console.log("Using " + v);
+  console.log("Using bearer " + parseBearerVersion(probe.stdout, probe.stderr));
 }
 
 function walkFiles(dir, acc = [], root = dir) {
@@ -304,12 +338,7 @@ function main() {
 
   const summary = aggregate(perFixtureResults);
 
-  let bearerVersion = "unknown";
-  try {
-    bearerVersion = execSync("bearer version", { encoding: "utf8" }).trim().split("\n")[0];
-  } catch {
-    // noop
-  }
+  const bearerVersion = detectBearerVersion();
 
   const output = {
     generatedAt: new Date().toISOString(),

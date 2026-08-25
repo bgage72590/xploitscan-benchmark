@@ -63,13 +63,54 @@ const SEMGREP_CONFIGS = [
   "p/react",
 ];
 
+/**
+ * Pull a version string out of a CLI's version output.
+ *
+ * Two things this must not assume, both learned the hard way:
+ *
+ *   1. WHICH STREAM. `semgrep --version` writes to stdout; `bearer version`
+ *      writes to STDERR (cobra's Print -> OutOrStderr). Reading stdout alone
+ *      gave semgrep "1.86.0" and bearer "", and the empty string shipped into
+ *      public benchmark JSON. Scan both streams.
+ *
+ *   2. WHICH LINE. Bearer prints "You are running an outdated version of
+ *      bearer v2.1.1 is now available..." to stderr BEFORE the version line,
+ *      so line [0] is the warning. That warning also contains a version-shaped
+ *      token (v2.1.1 -- the LATEST release, not the one running), so a loose
+ *      "first thing resembling a version" scan reports the wrong number.
+ *
+ * Hence: match whole lines against version-line SHAPES, in priority order, and
+ * ignore anything prose-shaped. Stays tool-agnostic -- "trivy 0.55.0" works
+ * without special-casing.
+ */
+function parseToolVersion(stdout, stderr) {
+  const lines = `${stdout || ""}\n${stderr || ""}`
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean);
+
+  const shapes = [
+    /^\S+\s+version\s+v?([^\s,]+)/i, // "bearer version 1.50.0, build <sha>"
+    /^v?(\d+\.\d+[^\s,]*)$/, //          "1.86.0"
+    /^\S+\s+v?(\d+\.\d+[^\s,]*)$/, //   "trivy 0.55.0"
+  ];
+
+  for (const shape of shapes) {
+    for (const line of lines) {
+      const m = line.match(shape);
+      if (m) return m[1];
+    }
+  }
+  return "unknown";
+}
+
 function ensureTool(cmd, versionArgs, installHint) {
   const probe = spawnSync(cmd, versionArgs, { encoding: "utf8" });
   if (probe.status !== 0) {
     console.error(`${cmd} CLI not found on PATH. ${installHint}`);
     process.exit(2);
   }
-  return (probe.stdout || "").trim().split("\n")[0];
+  return parseToolVersion(probe.stdout, probe.stderr);
 }
 
 /** Returns findings as { absPath, rule, message } for the whole held-out dir. */
