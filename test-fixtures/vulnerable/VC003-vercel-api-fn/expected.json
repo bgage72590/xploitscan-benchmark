@@ -1,0 +1,14 @@
+{
+  "description": "Vercel serverless function (api/*.ts + default export) with no authentication. Measured as 20 class-A/B handlers on the wedge corpus, 0 of them flagged, all missed for shape_gate.",
+  "expectedFindings": [
+    {
+      "rule": "VC003",
+      "file": "api/user.ts",
+      "lineRange": [
+        1,
+        8
+      ],
+      "severityAtLeast": "high"
+    }
+  ]
+}

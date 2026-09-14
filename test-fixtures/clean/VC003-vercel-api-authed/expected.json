@@ -1,0 +1,5 @@
+{
+  "description": "Authenticated Vercel function. Guards the direction that would hurt — adding the shape must not flag endpoints that do check a session.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003"]
+}

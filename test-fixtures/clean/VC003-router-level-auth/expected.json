@@ -1,0 +1,5 @@
+{
+  "description": "router.use(requireAuth) applies to every handler in the file. App-level auth must keep suppressing whole-file, or narrowing the auth check to each handler would flood correctly-protected Express apps with findings.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003"]
+}

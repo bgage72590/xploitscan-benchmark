@@ -39,8 +39,7 @@ const MAX_HISTORY = 90;
 const {
   runCustomRules,
   allCustomRules,
-  scanEntropy,
-} = require("xploitscan-shared-rules");
+  scanEntropy, buildProjectContext} = require("xploitscan-shared-rules");
 
 // The config analyzer still lives in packages/api and hasn't been ported to
 // shared-rules yet. Once it is, add it here. For now the benchmark exercises
@@ -87,8 +86,23 @@ function loadFixtures() {
 function scanFixture(fixture) {
   const findings = [];
   const proOnlyRules = allCustomRules.filter(r => !isFreeRule(r.id));
+  // Cross-file context, as the CLI builds it. Read from disk rather than from
+  // fixture.files because the fixture loader keeps only scannable source
+  // extensions, and supabase/config.toml is configuration rather than code.
+  // Without this, a fixture whose verdict depends on another file scores as a
+  // miss here while passing the regression suite — which is exactly what
+  // happened to VC003-supabase-verify-jwt-off before this change.
+  let projectContext;
+  try {
+    const configPath = path.join(fixture.dir, "supabase", "config.toml");
+    if (fs.existsSync(configPath)) {
+      projectContext = buildProjectContext([
+        { path: "supabase/config.toml", content: fs.readFileSync(configPath, "utf8") },
+      ]);
+    }
+  } catch { /* context is an optimisation; never fail a benchmark over it */ }
   for (const file of fixture.files) {
-    const fileFindings = runCustomRules(file.content, file.path, [], "pro", proOnlyRules);
+    const fileFindings = runCustomRules(file.content, file.path, [], "pro", proOnlyRules, projectContext);
     findings.push(...fileFindings);
   }
   // Entropy scanner runs over the whole fixture at once (it doesn't need

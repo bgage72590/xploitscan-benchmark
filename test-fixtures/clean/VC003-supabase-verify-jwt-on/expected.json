@@ -1,0 +1,5 @@
+{
+  "description": "Same edge function, byte-identical, but verify_jwt = true. Supabase rejects unauthenticated callers before the handler runs, so the endpoint IS authenticated and reporting missing authentication would be a false positive. 30 of 82 function declarations in the wedge corpus are in this state.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003"]
+}

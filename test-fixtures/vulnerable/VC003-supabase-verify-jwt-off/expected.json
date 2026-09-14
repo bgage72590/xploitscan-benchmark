@@ -1,0 +1,6 @@
+{
+  "description": "Supabase Edge Function with verify_jwt = false in supabase/config.toml — the platform performs no JWT check, so the endpoint is reachable by anyone and the function establishes no identity of its own. The function source is byte-identical to clean/VC003-supabase-verify-jwt-on; only the config differs. That is the point: this fact lives in another file and cannot be inferred from the handler.",
+  "expectedFindings": [
+    { "rule": "VC003", "file": "supabase/functions/list-orders/index.ts", "lineRange": [1, 6], "severityAtLeast": "high" }
+  ]
+}

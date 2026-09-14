@@ -1,0 +1,6 @@
+{
+  "description": "Two handlers in one route file: GET resolves a session, DELETE does not. VC003 used to test the whole file for auth vocabulary, so GET's getServerSession() exempted DELETE. Only the unprotected handler should be reported.",
+  "expectedFindings": [
+    { "rule": "VC003", "file": "route.ts", "lineRange": [10, 16], "severityAtLeast": "high" }
+  ]
+}

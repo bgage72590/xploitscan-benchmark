@@ -1,0 +1,5 @@
+{
+  "description": "Authenticated server action. Matching every export in a 'use server' file is correct, but only when the handler itself has no auth — this proves the per-handler check still applies.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003"]
+}

@@ -1,0 +1,4 @@
+project_id = "demo"
+
+[functions.list-orders]
+verify_jwt = true

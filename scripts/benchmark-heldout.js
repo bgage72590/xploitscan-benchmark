@@ -19,7 +19,7 @@ const ROOT = path.resolve(__dirname, "..");
 const DIR = path.join(ROOT, "test-fixtures/held-out");
 const OUT = path.join(ROOT, "benchmark-heldout.json");
 
-const { runCustomRules, allCustomRules } = require(
+const { runCustomRules, allCustomRules, buildProjectContext} = require(
   "xploitscan-shared-rules",
 );
 
@@ -28,10 +28,24 @@ function scoreFixture(name) {
   const expected = JSON.parse(fs.readFileSync(path.join(dir, "expected.json"), "utf8"));
   const wanted = new Set(expected.expectedRules);
   const firedAll = new Set();
+  // Same cross-file context the CLI and the regression suite build. No
+  // held-out fixture needs it today, but wiring it here means a future one
+  // that does will not silently score as a miss — which is precisely how
+  // VC003-supabase-verify-jwt-off behaved in scripts/benchmark.js until it
+  // was fixed.
+  let projectContext;
+  try {
+    const configPath = path.join(dir, "supabase", "config.toml");
+    if (fs.existsSync(configPath)) {
+      projectContext = buildProjectContext([
+        { path: "supabase/config.toml", content: fs.readFileSync(configPath, "utf8") },
+      ]);
+    }
+  } catch { /* context is an optimisation, never a requirement */ }
   for (const f of fs.readdirSync(dir)) {
     if (f === "expected.json") continue;
     const content = fs.readFileSync(path.join(dir, f), "utf8");
-    for (const finding of runCustomRules(content, f, [], "pro", allCustomRules)) {
+    for (const finding of runCustomRules(content, f, [], "pro", allCustomRules, projectContext)) {
       firedAll.add(finding.rule);
     }
   }

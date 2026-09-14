@@ -1,0 +1,14 @@
+{
+  "description": "Netlify function exporting a bare handler with no authentication. Path-gated on a functions/ directory rather than on a bare Deno.serve/handler token, which previously fired on dev proxies and server bootstraps.",
+  "expectedFindings": [
+    {
+      "rule": "VC003",
+      "file": "netlify/functions/users.ts",
+      "lineRange": [
+        1,
+        6
+      ],
+      "severityAtLeast": "high"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "description": "Next.js server action with no authentication. 15 such handlers on the wedge corpus, 0 flagged. Server actions are a genuinely under-scanned surface: no route file exists, so route-derived tooling never sees them.",
+  "expectedFindings": [
+    { "rule": "VC003", "file": "notes.ts", "lineRange": [1, 9], "severityAtLeast": "high" }
+  ]
+}
