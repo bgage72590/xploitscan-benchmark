@@ -48,11 +48,19 @@ node scripts/benchmark-heldout-thirdparty.js bearer
 
 The XploitScan rules come from the published
 [`xploitscan-shared-rules`](https://www.npmjs.com/package/xploitscan-shared-rules)
-npm package — the same rule set the CLI, web scanner, and API run. `npm
-install` pulls the latest published rules, so your local scores track the
-current engine; the live page at
-[xploitscan.com/benchmark](https://xploitscan.com/benchmark) shows the scores
-for the currently deployed version.
+npm package — the same rule set the CLI, web scanner, and API run. This repo
+pins the **exact** version the published scores were generated with
+(currently `1.20.0`), so a fresh clone reproduces those
+numbers rather than whatever happens to be latest that day. The pin is
+refreshed automatically whenever a new rule version ships, and the live page
+at [xploitscan.com/benchmark](https://xploitscan.com/benchmark) shows the
+scores for the currently deployed version.
+
+To score against a different engine version, override the pin:
+
+```sh
+npm install xploitscan-shared-rules@latest
+```
 
 ## Methodology (short version)
 
