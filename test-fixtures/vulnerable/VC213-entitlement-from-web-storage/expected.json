@@ -1,0 +1,6 @@
+{
+  "description": "Plan and role read from localStorage and branched on. A user sets localStorage.isPro = 'true' in devtools and the Pro feature unlocks — the store is theirs, not the app's. Entitlement has to be decided server-side.",
+  "expectedFindings": [
+    { "rule": "VC213", "file": "Billing.tsx", "lineRange": [1, 12], "severityAtLeast": "high" }
+  ]
+}

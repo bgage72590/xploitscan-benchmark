@@ -1,0 +1,5 @@
+{
+  "description": "Theme and sidebar width are per-device by nature. The file is auth-aware and uses localStorage, so it sits right next to VC214's trigger — and must still stay silent, because the KEY is what decides, not the presence of storage.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC214", "VC213"]
+}

@@ -1,0 +1,5 @@
+{
+  "description": "An anonymous cookie banner remembering its own dismissal. Per-device is correct here — there is no account for it to be wrong about, and the file is not auth-aware. The precision gate on VC214 exists for exactly this file.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC214", "VC213"]
+}

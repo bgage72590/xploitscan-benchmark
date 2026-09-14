@@ -1,0 +1,6 @@
+{
+  "description": "Onboarding state is a fact about the ACCOUNT but is read only from localStorage, in a file that already knows whether the user is signed in. The server can answer it; the browser cannot. This is the shape of the real bug it was written for. Named WelcomePanel rather than Onboarding on purpose: runCustomRules skips any path matching /onboarding/i, so a fixture with the obvious name is silently never scanned.",
+  "expectedFindings": [
+    { "rule": "VC214", "file": "WelcomePanel.tsx", "lineRange": [1, 14], "severityAtLeast": "info" }
+  ]
+}
