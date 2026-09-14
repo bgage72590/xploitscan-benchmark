@@ -1,1 +1,10 @@
-{ "class": "IDOR / broken access control (BOLA)", "expectedRules": ["VC158"], "source": "appsecco/dvna — core/appHandler.js", "license": "MIT" }
+{
+  "class": "IDOR / broken access control (BOLA)",
+  "expectedRules": [
+    "VC158"
+  ],
+  "source": "appsecco/dvna \u2014 core/appHandler.js",
+  "license": "MIT",
+  "inspectedAt": "2026-09-14",
+  "inspectionNote": "NO LONGER BLIND. This case was read in full and VC158 was then changed with knowledge of exactly why it failed (whole-file ownership/auth greps matching res.render output in a sibling branch). It still measures that the rule works, but it can no longer measure generalisation to unseen code. Excluded from the blind recall figure; restore a blind count by adding a BOLA case nobody has looked at."
+}

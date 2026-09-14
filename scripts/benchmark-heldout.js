@@ -43,6 +43,10 @@ function scoreFixture(name) {
     license: expected.license,
     expectedRules: expected.expectedRules,
     detected,
+    // Propagated so main() can split blind from inspected. Undefined for every
+    // fixture that has never been read, which is the normal case.
+    inspectedAt: expected.inspectedAt,
+    inspectionNote: expected.inspectionNote,
   };
 }
 
@@ -54,15 +58,34 @@ function main() {
   const results = names.map(scoreFixture);
   const total = results.length;
   const detected = results.filter((r) => r.detected).length;
+
+  // A fixture whose expected.json carries `inspectedAt` has been read, and a
+  // rule was then changed knowing why it failed. It still proves the rule
+  // works; it can no longer prove the rule GENERALISES, which is the only
+  // thing a held-out corpus exists to measure. Counting it would quietly
+  // convert a calibration number into a generalisation claim.
+  const blindResults = results.filter((r) => !r.inspectedAt);
+  const blindTotal = blindResults.length;
+  const blindDetected = blindResults.filter((r) => r.detected).length;
   const output = {
     generatedAt: new Date().toISOString(),
     total,
     detected,
     recall: total ? detected / total : null,
+    blindTotal,
+    blindDetected,
+    blindRecall: blindTotal ? blindDetected / blindTotal : null,
+    inspectedCount: total - blindTotal,
     results,
   };
   fs.writeFileSync(OUT, JSON.stringify(output, null, 2) + "\n");
   console.log(`Held-out: ${detected}/${total} detected (${((detected / total) * 100).toFixed(0)}% recall)`);
+  if (blindTotal !== total) {
+    console.log(
+      `  BLIND:  ${blindDetected}/${blindTotal} (${((blindDetected / blindTotal) * 100).toFixed(0)}%) — ` +
+      `${total - blindTotal} case(s) inspected and excluded. The blind figure is the one to quote.`,
+    );
+  }
   for (const r of results) {
     console.log(`  ${r.detected ? "✓" : "✗"} ${r.class.padEnd(26)} ${r.source}`);
   }

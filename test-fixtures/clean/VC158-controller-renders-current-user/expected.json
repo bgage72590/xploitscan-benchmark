@@ -1,0 +1,5 @@
+{
+  "description": "Ownership IS enforced inside the query (userId: req.user.id), and req.user is additionally read for rendering. VC158 must not fire. Guards the false-positive direction of the query-scoping change.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC158"]
+}

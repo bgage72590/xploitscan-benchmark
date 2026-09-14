@@ -1,0 +1,6 @@
+{
+  "description": "Express controller module (routes registered elsewhere) reading a record by a caller-supplied id with no ownership scoping. Covers the shape VC158's Next.js and inline-route paths both miss.",
+  "expectedFindings": [
+    { "rule": "VC158", "file": "userController.js", "lineRange": [5, 15], "severityAtLeast": "high" }
+  ]
+}
