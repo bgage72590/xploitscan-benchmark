@@ -1,0 +1,12 @@
+{
+  "description": "Shopify Admin API access token (shpat_...) hardcoded in an order-sync client and sent as the X-Shopify-Access-Token header. Such a token grants full store access to orders and customer PII — VC137 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC137",
+      "file": "shopify-client.js",
+      "lineRange": [4, 10],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}
