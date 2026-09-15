@@ -1,0 +1,12 @@
+{
+  "description": "A staging dotenv file gives server-only credentials (Supabase service-role key, SendGrid API token) a NEXT_PUBLIC_ prefix, which inlines them into the client bundle. VC011 must fire on the service-role and SendGrid lines; the NEXT_PUBLIC_SUPABASE_ANON_KEY line above them is a genuinely public key and is excluded by the rule.",
+  "expectedFindings": [
+    {
+      "rule": "VC011",
+      "file": "staging.env",
+      "lineRange": [9, 14],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,12 @@
+{
+  "description": "GitLab personal access token (glpat-...) hardcoded in a release-mirror job and sent as the PRIVATE-TOKEN header. Such a token grants repository and CI/CD access — VC138 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC138",
+      "file": "gitlab-mirror.ts",
+      "lineRange": [4, 10],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

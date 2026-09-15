@@ -1,0 +1,12 @@
+{
+  "description": "A committed terraform.tfstate. State files record every resource attribute in plaintext, including database passwords and generated secrets, which is why VC126 is critical. This fixture also covers a reachability fix: .tfstate was collected by no scan path — not the CLI, not the API, not this harness — so VC126 could never fire on a real project no matter how the rule was written. Adding the extension is the part that makes the rule do anything.",
+  "expectedFindings": [
+    {
+      "rule": "VC126",
+      "file": "terraform.tfstate",
+      "lineRange": [1, 25],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

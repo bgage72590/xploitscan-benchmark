@@ -1,0 +1,12 @@
+{
+  "description": "A Next.js client component ('use client', .tsx) builds its Supabase client with the service_role key and then calls auth.admin / .rpc(). The service_role key bypasses Row Level Security and is shipped to the browser, so any visitor can read and delete every row — VC004 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC004",
+      "file": "AdminUsersPanel.tsx",
+      "lineRange": [8, 18],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

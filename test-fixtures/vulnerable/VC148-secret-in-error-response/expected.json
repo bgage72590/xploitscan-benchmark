@@ -1,0 +1,12 @@
+{
+  "description": "An Express payment proxy returns the upstream API key in its 502 error body so callers can 'debug' failures. Anyone who can trigger the error reads the credential. VC148 must fire on the res.status(502).json(...) call.",
+  "expectedFindings": [
+    {
+      "rule": "VC148",
+      "file": "billing-proxy.js",
+      "lineRange": [19, 24],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

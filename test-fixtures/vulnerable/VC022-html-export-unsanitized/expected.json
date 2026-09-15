@@ -1,0 +1,12 @@
+{
+  "description": "A document export helper concatenates stored note fields (title, body) into an HTML template literal and writes the file to disk with no sanitizer anywhere in the module, giving stored script execution when the export is opened — VC022 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC022",
+      "file": "export-document.js",
+      "lineRange": [8, 16],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

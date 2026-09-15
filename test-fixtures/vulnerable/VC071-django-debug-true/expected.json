@@ -1,0 +1,12 @@
+{
+  "description": "Django settings.py with DEBUG hardcoded to True (no environment lookup), which serves stack traces, source code, settings and SQL to any visitor in production — VC071 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC071",
+      "file": "settings.py",
+      "lineRange": [6, 12],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

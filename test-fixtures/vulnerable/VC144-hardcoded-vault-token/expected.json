@@ -1,0 +1,18 @@
+{
+  "description": "A node-vault client that hardcodes a HashiCorp Vault service token (hvs.*) in the client config, plus a legacy-format token (s.*) assigned to a VAULT_TOKEN constant. Either token grants read access to every secret path its policy covers — here the production Postgres and Stripe credentials. VC144 must fire on both forms.",
+  "expectedFindings": [
+    {
+      "rule": "VC144",
+      "file": "vault-client.js",
+      "lineRange": [7, 12],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC144",
+      "file": "vault-client.js",
+      "lineRange": [11, 16],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

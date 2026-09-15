@@ -1,0 +1,12 @@
+{
+  "description": "A Firebase Admin bootstrap module that inlines a full GCP service account JSON key (type: service_account plus the PEM private key) in source instead of loading it from a secrets manager or using Workload Identity Federation. The key grants project-level access to Firestore, Storage, and IAM. VC136 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC136",
+      "file": "firebase-admin.ts",
+      "lineRange": [6, 14],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

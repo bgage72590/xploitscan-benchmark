@@ -1,0 +1,12 @@
+{
+  "description": "A Google OAuth client_secret hardcoded in the OAuth callback config object instead of read from the environment. Anyone with the secret can impersonate the application during token exchange — VC119 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC119",
+      "file": "google-oauth.js",
+      "lineRange": [8, 13],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

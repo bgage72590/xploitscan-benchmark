@@ -1,0 +1,12 @@
+{
+  "description": "Terraform aws_security_group with an ingress rule opening every port (from_port = 0, protocol -1) to 0.0.0.0/0, exposing the instance to the entire internet — VC108 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC108",
+      "file": "main.tf",
+      "lineRange": [6, 13],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

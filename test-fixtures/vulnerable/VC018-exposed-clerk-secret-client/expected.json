@@ -1,0 +1,12 @@
+{
+  "description": "A Next.js client component ('use client', .tsx) that reads a Clerk secret key to call the Clerk backend API from the browser, shipping the auth provider secret in the client bundle — VC018 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC018",
+      "file": "AdminUsers.tsx",
+      "lineRange": [12, 18],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

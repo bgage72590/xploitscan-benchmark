@@ -1,0 +1,12 @@
+{
+  "description": "A 'use client' component reads server-only env vars (MAILER_API_TOKEN, MAILER_LIST_ID) to call the mail provider straight from the browser. Next.js inlines those values into the client bundle, exposing the credential. VC066 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC066",
+      "file": "NewsletterSignup.tsx",
+      "lineRange": [18, 27],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

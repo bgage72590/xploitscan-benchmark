@@ -1,0 +1,12 @@
+{
+  "description": "Netlify personal access token (nfp_...) hardcoded in a deploy script and used as a bearer token against the Netlify API. Such a token can deploy any site and read build environment variables — VC170 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC170",
+      "file": "deploy.js",
+      "lineRange": [4, 10],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

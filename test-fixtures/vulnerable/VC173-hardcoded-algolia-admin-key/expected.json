@@ -1,0 +1,12 @@
+{
+  "description": "An Algolia admin (write) API key hardcoded in a catalog reindex job. The admin key allows replacing index records and minting new API keys — VC173 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC173",
+      "file": "search-index.js",
+      "lineRange": [6, 11],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,12 @@
+{
+  "description": "An internal billing HTTP client sets NODE_TLS_REJECT_UNAUTHORIZED=0 and builds an https.Agent with rejectUnauthorized:false, so payment requests accept any certificate and are open to man-in-the-middle — VC061 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC061",
+      "file": "internal-api-client.js",
+      "lineRange": [6, 16],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

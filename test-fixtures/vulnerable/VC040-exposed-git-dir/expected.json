@@ -1,0 +1,12 @@
+{
+  "description": "Express server mounting express.static on the project root with no deny rule for version-control metadata, so the full repository (history and any committed secrets) is downloadable over HTTP — VC040 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC040",
+      "file": "server.ts",
+      "lineRange": [9, 15],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

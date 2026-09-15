@@ -1,0 +1,12 @@
+{
+  "description": "An OpenAI chat call builds the system-role message from a template literal that interpolates tenant-supplied name and custom-instructions text, letting non-literal data rewrite the highest-trust part of the prompt — VC199 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC199",
+      "file": "support-assistant.ts",
+      "lineRange": [16, 22],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

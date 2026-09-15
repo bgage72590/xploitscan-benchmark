@@ -1,0 +1,12 @@
+{
+  "description": "Terraform aws_db_instance created with publicly_accessible = true, giving the Postgres database a public endpoint reachable from the internet — VC109 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC109",
+      "file": "rds.tf",
+      "lineRange": [13, 19],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

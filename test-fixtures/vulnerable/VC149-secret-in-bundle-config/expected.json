@@ -1,0 +1,12 @@
+{
+  "description": "next.config.js leaks secrets into the browser bundle two ways: a live-shaped API key in publicRuntimeConfig, and the same API key baked in via webpack DefinePlugin. Both are readable in page source. VC149 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC149",
+      "file": "next.config.js",
+      "lineRange": [10, 23],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

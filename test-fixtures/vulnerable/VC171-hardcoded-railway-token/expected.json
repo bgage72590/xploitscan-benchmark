@@ -1,0 +1,12 @@
+{
+  "description": "Railway API token hardcoded as RAILWAY_API_TOKEN in a deployment config object and used as a bearer token against the Railway GraphQL API. Such a token exposes project secrets and production services — VC171 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC171",
+      "file": "railway-deploy.ts",
+      "lineRange": [5, 11],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

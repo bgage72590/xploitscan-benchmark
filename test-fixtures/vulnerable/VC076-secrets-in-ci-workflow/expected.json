@@ -1,0 +1,24 @@
+{
+  "description": "A GitHub Actions release workflow that hardcodes an npm publish token, a Docker registry password, and AWS credentials directly in `env:` blocks instead of referencing ${{ secrets.* }}. Anyone with read access to the repo (and anyone reading a fork or the commit history) gets publish rights to the npm package, push rights to the container registry, and the S3 bucket. VC076 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC076",
+      "file": ".github/workflows/release.yml",
+      "lineRange": [20, 27],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC076",
+      "file": ".github/workflows/release.yml",
+      "lineRange": [27, 33],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC076",
+      "file": ".github/workflows/release.yml",
+      "lineRange": [33, 38],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

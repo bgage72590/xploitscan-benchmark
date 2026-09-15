@@ -1,0 +1,12 @@
+{
+  "description": "A Fly.io org-scoped deploy token (FlyV1 fm2_...) hardcoded in a Machines API deploy helper. The token can deploy, reconfigure machines, and read app secrets for the whole org — VC172 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC172",
+      "file": "deploy.ts",
+      "lineRange": [4, 9],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}
