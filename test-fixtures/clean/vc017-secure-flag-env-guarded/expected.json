@@ -1,0 +1,5 @@
+{
+  "description": "httpOnly + sameSite + an environment-guarded `secure` flag. Secure cookies are not sent over plain http, so `secure: process.env.NODE_ENV === 'production'` is the standard idiom rather than a missing flag; VC017 previously required a literal `secure: true` and reported it missing. Must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC017"]
+}

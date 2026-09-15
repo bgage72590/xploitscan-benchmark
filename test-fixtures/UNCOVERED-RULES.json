@@ -1,12 +1,11 @@
 {
-  "_comment": "Rules with no regression fixture. THIS LIST MAY ONLY SHRINK — see src/__tests__/fixture-coverage.test.ts. A new rule must ship with a fixture rather than an entry here.",
+  "_comment": "Rules with no regression fixture. THIS LIST MAY ONLY SHRINK \u2014 see src/__tests__/fixture-coverage.test.ts. A new rule must ship with a fixture rather than an entry here.",
   "count": 97,
   "rules": [
     "VC002",
     "VC008",
     "VC010",
     "VC014",
-    "VC017",
     "VC020",
     "VC032",
     "VC036",

@@ -1,0 +1,5 @@
+{
+  "description": "Endpoints that are public by definition — an Open Graph card renderer, a Next.js app/sitemap.ts, and an embeddable status badge. Anonymous crawlers, unfurlers and README <img> tags are the intended callers, so 'add authentication' would break the feature. VC003 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003"]
+}

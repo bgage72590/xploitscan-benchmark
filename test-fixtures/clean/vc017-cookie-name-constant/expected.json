@@ -1,0 +1,5 @@
+{
+  "description": "A module that only reads and clears a cookie. The single 'cookie =' looking token is the tail of the constant that NAMES the cookie (CLAIM_COOKIE = \"...\"), not a write to document.cookie. VC017 must not fire — there is no cookie being set, so there are no flags to be missing.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC017"]
+}

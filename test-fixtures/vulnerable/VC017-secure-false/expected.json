@@ -1,0 +1,12 @@
+{
+  "description": "Session cookie set with an explicit `secure: false`. Pins the negative lookahead on the widened secure-flag check: any expression counts as 'set' EXCEPT the literal false, which means the cookie travels in cleartext. VC017 must still fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC017",
+      "file": "session.js",
+      "lineRange": [9, 18],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}
