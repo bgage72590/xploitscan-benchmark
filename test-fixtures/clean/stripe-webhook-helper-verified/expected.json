@@ -1,0 +1,5 @@
+{
+  "description": "Stripe webhook whose signature verification lives in a helper rather than inline. Guards the path-based detection added for the App Router shape: making the directory a trigger must not flag a handler that does verify, just because the constructEvent() call is one import away.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC005"]
+}
