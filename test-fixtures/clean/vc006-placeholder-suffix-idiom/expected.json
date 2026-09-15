@@ -1,0 +1,5 @@
+{
+  "description": "The variable-length IN (...) idiom where the placeholder run is held in a name that is not literally `placeholders` — SCREAMING_SNAKE (ENTITLED_STATUSES_PLACEHOLDERS) and camelCase (memberPlaceholders). Both interpolate a run of `?` markers and bind every value through args[], so VC006 must not fire. Before the suffix widening only the exact name `placeholders` was exempt, and both of these were reported as critical SQL injection.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC006"]
+}
