@@ -17,6 +17,6 @@
     "heldout:bearer": "node scripts/benchmark-heldout-thirdparty.js bearer"
   },
   "dependencies": {
-    "xploitscan-shared-rules": "1.31.0"
+    "xploitscan-shared-rules": "1.32.0"
   }
 }
