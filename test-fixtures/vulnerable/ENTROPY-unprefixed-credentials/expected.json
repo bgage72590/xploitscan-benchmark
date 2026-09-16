@@ -1,0 +1,6 @@
+{
+  "description": "A hardcoded credential with no recognisable value prefix, at 4.32 bits — above the entry threshold for its charset but below the 4.5 final gate. Only the credential-named-variable path can catch it, so the fixture cannot pass unless that path works.",
+  "expectedFindings": [
+    { "rule": "ENTROPY", "file": "config.ts", "lineRange": [15, 19], "severityAtLeast": "medium" }
+  ]
+}

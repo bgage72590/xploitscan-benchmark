@@ -1,0 +1,5 @@
+{
+  "description": "Site-ownership verification tokens (Next.js metadata.verification, and the equivalent raw <meta> tag). High-entropy by design and public by design — the mechanism is 'publish this token so anyone can read it'. ENTROPY must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["ENTROPY"]
+}
