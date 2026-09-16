@@ -1,0 +1,5 @@
+{
+  "description": "An authenticated Stripe-API caller whose comments discuss the webhook that handles the same transition and quote a Stripe event name. VC005 tested raw file content, so the prose alone made this read as an unprotected webhook — reported CRITICAL on a route nothing external can even reach.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC005"]
+}
