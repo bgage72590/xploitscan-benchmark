@@ -1,1 +1,10 @@
-{ "class": "Command injection", "expectedRules": ["VC094"], "source": "appsecco/dvna — core/appHandler.js", "license": "MIT" }
+{
+  "class": "Command injection",
+  "expectedRules": [
+    "VC094"
+  ],
+  "source": "appsecco/dvna \u2014 core/appHandler.js",
+  "license": "MIT",
+  "inspectedAt": "2026-06-10",
+  "inspectionNote": "NO LONGER BLIND. Missed on the first held-out run (#475). The miss was studied and VC094's string-concatenation pattern was changed with knowledge of exactly why it failed (#477). It still shows the rule works, but it can no longer measure generalisation to unseen code, so it is excluded from the blind figure."
+}

@@ -1,1 +1,10 @@
-{ "class": "Server-side template injection", "expectedRules": ["VC082"], "source": "juice-shop/juice-shop — routes/dataErasure.ts", "license": "MIT" }
+{
+  "class": "Server-side template injection",
+  "expectedRules": [
+    "VC082"
+  ],
+  "source": "juice-shop/juice-shop \u2014 routes/dataErasure.ts",
+  "license": "MIT",
+  "inspectedAt": "2026-06-11",
+  "inspectionNote": "NO LONGER BLIND. Missed when first scored after being added to the corpus. The miss was studied and VC082 was changed to catch the render-spread pattern Juice Shop uses (#490). It still shows the rule works, but it can no longer measure generalisation to unseen code, so it is excluded from the blind figure."
+}

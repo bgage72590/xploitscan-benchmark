@@ -1,1 +1,12 @@
-{ "class": "Path traversal", "expectedRules": ["VC093", "VC117", "VC025"], "source": "juice-shop/juice-shop — routes/fileServer.ts", "license": "MIT" }
+{
+  "class": "Path traversal",
+  "expectedRules": [
+    "VC093",
+    "VC117",
+    "VC025"
+  ],
+  "source": "juice-shop/juice-shop \u2014 routes/fileServer.ts",
+  "license": "MIT",
+  "inspectedAt": "2026-06-11",
+  "inspectionNote": "NO LONGER BLIND. Missed when first scored after being added to the corpus. The miss was studied and VC093 was changed to follow the path indirection Juice Shop uses (#490). It still shows the rule works, but it can no longer measure generalisation to unseen code, so it is excluded from the blind figure."
+}

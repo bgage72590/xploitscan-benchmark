@@ -1,1 +1,10 @@
-{ "class": "SSRF", "expectedRules": ["VC041"], "source": "OWASP/NodeGoat — app/routes/research.js", "license": "Apache-2.0" }
+{
+  "class": "SSRF",
+  "expectedRules": [
+    "VC041"
+  ],
+  "source": "OWASP/NodeGoat \u2014 app/routes/research.js",
+  "license": "Apache-2.0",
+  "inspectedAt": "2026-06-10",
+  "inspectionNote": "NO LONGER BLIND. Missed on the first held-out run (#475) and still missed after #477. The miss was studied and VC041 was changed to recognise the needle HTTP client NodeGoat uses (#481). It still shows the rule works, but it can no longer measure generalisation to unseen code, so it is excluded from the blind figure."
+}

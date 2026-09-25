@@ -1,1 +1,10 @@
-{ "class": "XXE", "expectedRules": ["VC081"], "source": "appsecco/dvna — core/appHandler.js", "license": "MIT" }
+{
+  "class": "XXE",
+  "expectedRules": [
+    "VC081"
+  ],
+  "source": "appsecco/dvna \u2014 core/appHandler.js",
+  "license": "MIT",
+  "inspectedAt": "2026-06-10",
+  "inspectionNote": "NO LONGER BLIND. Missed on the first held-out run (#475). The miss was studied and VC081's pattern was extended to libxmljs parseXmlString, DVNA's actual sink (#477). It still shows the rule works, but it can no longer measure generalisation to unseen code, so it is excluded from the blind figure."
+}

@@ -1,1 +1,10 @@
-{ "class": "Cross-site scripting (DOM)", "expectedRules": ["VC007"], "source": "juice-shop/juice-shop — frontend search-result.component.ts", "license": "MIT" }
+{
+  "class": "Cross-site scripting (DOM)",
+  "expectedRules": [
+    "VC007"
+  ],
+  "source": "juice-shop/juice-shop \u2014 frontend search-result.component.ts",
+  "license": "MIT",
+  "inspectedAt": "2026-06-11",
+  "inspectionNote": "NO LONGER BLIND. Missed when first scored after being added to the corpus. The miss was studied and VC007 was changed to catch Angular bypassSecurityTrust calls (#490). It still shows the rule works, but it can no longer measure generalisation to unseen code, so it is excluded from the blind figure."
+}
