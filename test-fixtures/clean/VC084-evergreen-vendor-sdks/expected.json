@@ -1,0 +1,5 @@
+{
+  "description": "Vendor SDK loaders that are updated in place and not served with the CORS headers SRI needs (YouTube Playables, Stripe.js, reCAPTCHA, Turnstile). A pinned hash would block each one on the vendor's next update, so VC084 must not tell users to add one.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC084"]
+}

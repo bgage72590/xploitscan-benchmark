@@ -1,0 +1,5 @@
+{
+  "description": "In-memory loops in a file that also uses Array.prototype.find and runs one query outside any loop. VC100 used to see any loop followed by '.find(' anywhere in the file and then report the file's first two loops whatever they contained.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC100"]
+}

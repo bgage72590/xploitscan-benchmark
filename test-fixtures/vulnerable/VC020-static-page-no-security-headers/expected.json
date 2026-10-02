@@ -1,0 +1,8 @@
+{
+  "description": "A static page with no CSP, no nosniff, no referrer policy and nothing against framing. The first fixture for VC020, VC027 and VC056. The fixes for all three were rewritten: the CSP suggestion is now built from the page (its script origins and inline scripts) instead of a fixed policy that blocked this page's import map and SDK, and the nosniff and framing fixes name the HTTP header, because browsers ignore both as <meta> tags.",
+  "expectedFindings": [
+    { "rule": "VC020", "file": "index.html", "lineRange": [1, 1], "severityAtLeast": "high" },
+    { "rule": "VC027", "file": "index.html", "lineRange": [1, 1], "severityAtLeast": "medium" },
+    { "rule": "VC056", "file": "index.html", "lineRange": [1, 1], "severityAtLeast": "medium" }
+  ]
+}

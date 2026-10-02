@@ -1,0 +1,5 @@
+{
+  "description": "Namespaced localStorage keys in a browser game: words joined by '.', ':' or '/', lowercase or camelCase, including the prefix form 'kartrush2.pace.' that a loop appends an id to. VC001's slot-identifier filter only knew kebab/snake case, so every one of these was reported as a critical hardcoded secret, with a fix (process.env) that crashes a browser module.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC001"]
+}

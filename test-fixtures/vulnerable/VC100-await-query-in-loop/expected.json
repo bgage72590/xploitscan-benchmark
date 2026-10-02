@@ -1,0 +1,6 @@
+{
+  "description": "One awaited database query per loop iteration — the N+1 shape. The first VC100 fixture; the rule now reports a loop only when that loop's own body makes the call.",
+  "expectedFindings": [
+    { "rule": "VC100", "file": "orders.js", "lineRange": [5, 5] }
+  ]
+}

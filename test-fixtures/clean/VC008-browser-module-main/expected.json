@@ -1,0 +1,5 @@
+{
+  "description": "A browser game's main.js. VC008 decided a file was an HTTP server with a case-insensitive /next|express|.../ substring test, so identifiers like adNext, nextLap and onNextButton made this an 'API endpoint without rate limiting'. Server evidence now has to be a framework import or a call that starts a server.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC008"]
+}

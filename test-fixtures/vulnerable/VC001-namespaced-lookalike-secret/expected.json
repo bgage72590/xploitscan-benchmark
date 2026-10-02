@@ -1,0 +1,6 @@
+{
+  "description": "Guards the namespaced storage-key exemption from the other side: a dotted value whose segment is a high-entropy mixed-case blob is still a credential and must still be reported.",
+  "expectedFindings": [
+    { "rule": "VC001", "file": "config.js", "lineRange": [4, 4], "severityAtLeast": "critical" }
+  ]
+}

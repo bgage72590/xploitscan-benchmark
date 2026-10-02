@@ -1,0 +1,6 @@
+{
+  "description": "An Express server with a login route and no rate limiting anywhere. The first VC008 fixture: the rule had none, which is how its server test came to match any file containing the letters 'next'.",
+  "expectedFindings": [
+    { "rule": "VC008", "file": "server.js", "lineRange": [1, 1], "severityAtLeast": "medium" }
+  ]
+}
