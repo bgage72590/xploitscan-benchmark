@@ -1,0 +1,6 @@
+{
+  "description": "A guessable, human-chosen Django SECRET_KEY written as dotted camelCase words. The namespaced storage-key exemption added for browser save slots must not swallow it: the variable name says it is a secret.",
+  "expectedFindings": [
+    { "rule": "VC001", "file": "settings.py", "lineRange": [4, 4], "severityAtLeast": "critical" }
+  ]
+}

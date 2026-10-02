@@ -1,0 +1,6 @@
+{
+  "description": "A version-pinned Firebase SDK file on www.gstatic.com, which is immutable and served with CORS, so it can carry an integrity hash. The same host also serves reCAPTCHA, which can't, so the evergreen exemption applies only to unpinned URLs.",
+  "expectedFindings": [
+    { "rule": "VC084", "file": "index.html", "lineRange": [6, 6], "severityAtLeast": "medium" }
+  ]
+}

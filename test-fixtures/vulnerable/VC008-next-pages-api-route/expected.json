@@ -1,0 +1,6 @@
+{
+  "description": "A Next.js Pages Router API route with no rate limiting. Its types come from \"next\", not \"next/server\", which the first version of the tightened server test missed.",
+  "expectedFindings": [
+    { "rule": "VC008", "file": "pages/api/index.ts", "lineRange": [1, 1], "severityAtLeast": "medium" }
+  ]
+}
