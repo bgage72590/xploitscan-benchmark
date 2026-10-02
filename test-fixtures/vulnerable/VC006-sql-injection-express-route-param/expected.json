@@ -1,0 +1,12 @@
+{
+  "description": "Express route with a :id param, a port and a ternary, plus a template-literal query on req.params — VC006 must fire. Before the fix, ':id' alone switched the rule off for the whole file.",
+  "expectedFindings": [
+    {
+      "rule": "VC006",
+      "file": "routes.js",
+      "lineRange": [8, 12],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}
