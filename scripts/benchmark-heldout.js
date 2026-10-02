@@ -19,11 +19,16 @@ const ROOT = path.resolve(__dirname, "..");
 const DIR = path.join(ROOT, "test-fixtures/held-out");
 const OUT = path.join(ROOT, "benchmark-heldout.json");
 
-const { runCustomRules, allCustomRules, buildProjectContext} = require(
+const { runCustomRules, buildProjectContext} = require(
   "xploitscan-shared-rules",
 );
+// Free rules always; the paid rules from packages/pro-rules here, or with a
+// paid API key from the public benchmark repo (lib/rule-sets.js).
+const { loadPaidRules } = require("./lib/rule-sets.js");
 
-function scoreFixture(name) {
+// `extraRules`: [] scores the 30 free rules (runCustomRules always runs them);
+// the paid rules on top score the full catalogue.
+function scoreFixture(name, extraRules) {
   const dir = path.join(DIR, name);
   const expected = JSON.parse(fs.readFileSync(path.join(dir, "expected.json"), "utf8"));
   const wanted = new Set(expected.expectedRules);
@@ -45,7 +50,7 @@ function scoreFixture(name) {
   for (const f of fs.readdirSync(dir)) {
     if (f === "expected.json") continue;
     const content = fs.readFileSync(path.join(dir, f), "utf8");
-    for (const finding of runCustomRules(content, f, [], "pro", allCustomRules, projectContext)) {
+    for (const finding of runCustomRules(content, f, [], "pro", extraRules, projectContext)) {
       firedAll.add(finding.rule);
     }
   }
@@ -64,12 +69,28 @@ function scoreFixture(name) {
   };
 }
 
-function main() {
+function tally(results) {
+  const blind = results.filter((r) => !r.inspectedAt);
+  const detected = results.filter((r) => r.detected).length;
+  const blindDetected = blind.filter((r) => r.detected).length;
+  return {
+    total: results.length,
+    detected,
+    recall: results.length ? detected / results.length : null,
+    blindTotal: blind.length,
+    blindDetected,
+    blindRecall: blind.length ? blindDetected / blind.length : null,
+  };
+}
+
+async function main() {
   const names = fs
     .readdirSync(DIR)
     .filter((n) => fs.statSync(path.join(DIR, n)).isDirectory())
     .sort();
-  const results = names.map(scoreFixture);
+  const paid = await loadPaidRules();
+  const freeOnly = tally(names.map((n) => scoreFixture(n, [])));
+  const results = names.map((n) => scoreFixture(n, paid ? paid.rules : []));
   const total = results.length;
   const detected = results.filter((r) => r.detected).length;
 
@@ -83,6 +104,7 @@ function main() {
   const blindDetected = blindResults.filter((r) => r.detected).length;
   const output = {
     generatedAt: new Date().toISOString(),
+    ruleSet: paid ? "all" : "free",
     total,
     detected,
     recall: total ? detected / total : null,
@@ -90,6 +112,8 @@ function main() {
     blindDetected,
     blindRecall: blindTotal ? blindDetected / blindTotal : null,
     inspectedCount: total - blindTotal,
+    // The 30 free rules alone, same cases and the same blind/inspected split.
+    free: freeOnly,
     results,
   };
   fs.writeFileSync(OUT, JSON.stringify(output, null, 2) + "\n");
@@ -100,10 +124,17 @@ function main() {
       `${total - blindTotal} case(s) inspected and excluded. The blind figure is the one to quote.`,
     );
   }
+  console.log(
+    `  FREE PLAN (30 rules): ${freeOnly.detected}/${freeOnly.total} detected, blind ${freeOnly.blindDetected}/${freeOnly.blindTotal}` +
+    (paid ? "" : "  (paid rules not available; set XPLOITSCAN_API_KEY to a paid plan's key to score all 214)"),
+  );
   for (const r of results) {
     console.log(`  ${r.detected ? "✓" : "✗"} ${r.class.padEnd(26)} ${r.source}`);
   }
   console.log("Wrote " + path.relative(ROOT, OUT));
 }
 
-main();
+main().catch((err) => {
+  console.error(err.message || err);
+  process.exit(1);
+});

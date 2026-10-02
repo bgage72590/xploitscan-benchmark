@@ -37,9 +37,12 @@ const PUBLISHED_HISTORY_PATH = path.join(
 const MAX_HISTORY = 90;
 
 const {
-  runCustomRules,
-  allCustomRules,
+  runCustomRules, freeRules,
   scanEntropy, buildProjectContext} = require("xploitscan-shared-rules");
+// Free rules always; the 184 paid rules from packages/pro-rules here, or with
+// a paid API key from the public benchmark repo (see lib/rule-sets.js). Both
+// sets are scored and published.
+const { loadPaidRules } = require("./lib/rule-sets.js");
 
 // The config analyzer still lives in packages/api and hasn't been ported to
 // shared-rules yet. Once it is, add it here. For now the benchmark exercises
@@ -83,9 +86,10 @@ function loadFixtures() {
   return fixtures;
 }
 
-function scanFixture(fixture) {
+// `extraRules`: [] scores the 30 free rules (runCustomRules always runs them);
+// the paid rules on top score the full catalogue.
+function scanFixture(fixture, extraRules) {
   const findings = [];
-  const proOnlyRules = allCustomRules.filter(r => !isFreeRule(r.id));
   // Cross-file context, as the CLI builds it. Read from disk rather than from
   // fixture.files because the fixture loader keeps only scannable source
   // extensions, and supabase/config.toml is configuration rather than code.
@@ -102,7 +106,7 @@ function scanFixture(fixture) {
     }
   } catch { /* context is an optimisation; never fail a benchmark over it */ }
   for (const file of fixture.files) {
-    const fileFindings = runCustomRules(file.content, file.path, [], "pro", proOnlyRules, projectContext);
+    const fileFindings = runCustomRules(file.content, file.path, [], "pro", extraRules, projectContext);
     findings.push(...fileFindings);
   }
   // Entropy scanner runs over the whole fixture at once (it doesn't need
@@ -112,17 +116,8 @@ function scanFixture(fixture) {
   return findings;
 }
 
-// runCustomRules always includes `freeRules` internally; the `extraRules`
-// argument lets us add the rest. Mirror that logic here to ask for the full
-// 206-rule set.
-const FREE_RULE_IDS = new Set([
-  "VC001","VC002","VC003","VC004","VC005","VC006","VC007","VC008","VC009","VC010",
-  "VC011","VC014","VC015","VC016","VC017","VC018","VC020","VC031","VC032","VC033",
-  "VC034","VC036","VC037","VC039","VC060","VC061","VC063","VC097","VC103","VC104",
-]);
-function isFreeRule(id) {
-  return FREE_RULE_IDS.has(id);
-}
+// The free set is whatever the public package ships, not a copied list.
+const FREE_RULE_IDS = new Set(freeRules.map((r) => r.id));
 
 function findingMatchesExpected(finding, exp) {
   if (finding.rule !== exp.rule) return false;
@@ -298,26 +293,33 @@ function printReport(summary, perFixtureResults) {
   }
 }
 
-function main() {
+async function main() {
   const fixtures = loadFixtures();
   if (fixtures.length === 0) {
     console.error("No fixtures found under " + FIXTURES_DIR);
     process.exit(1);
   }
 
-  const perFixtureResults = [];
-  for (const fixture of fixtures) {
-    const findings = scanFixture(fixture);
-    perFixtureResults.push(evaluateFixture(fixture, findings));
-  }
+  const paid = await loadPaidRules();
+  const score = (extraRules) => fixtures.map((fx) => evaluateFixture(fx, scanFixture(fx, extraRules)));
 
-  const summary = aggregate(perFixtureResults);
+  // Free plan: the 30 public rules against the same labels, so its recall is
+  // what a free user actually catches on this corpus.
+  const freeResults = score([]);
+  const summaryFree = aggregate(freeResults);
+  // Full catalogue when the paid rules are available. `summary` and
+  // `fixtures` keep meaning "everything we ran" — the site reads them.
+  const perFixtureResults = paid ? score(paid.rules) : freeResults;
+  const summary = paid ? aggregate(perFixtureResults) : summaryFree;
 
   const output = {
     generatedAt: new Date().toISOString(),
     corpusSize: fixtures.length,
+    ruleSet: paid ? "all" : "free",
+    ruleCounts: { free: FREE_RULE_IDS.size, paid: paid ? paid.rules.length : 0 },
     fixtures: perFixtureResults,
     summary,
+    summaryFree,
   };
 
   fs.writeFileSync(RESULTS_PATH, JSON.stringify(output, null, 2) + "\n");
@@ -325,7 +327,13 @@ function main() {
 
   updateHistory(output);
 
+  if (!paid) {
+    console.log("Paid rules not available (set XPLOITSCAN_API_KEY to a paid plan's key to score all 214). Scored the 30 free rules.");
+  }
   printReport(summary, perFixtureResults);
+  const f = summaryFree.totals;
+  const pct = (x) => (x == null ? "n/a" : (x * 100).toFixed(1) + "%");
+  console.log(`\nFree plan (${FREE_RULE_IDS.size} rules): TP ${f.tp}  FP ${f.fp}  FN ${f.fn}  precision ${pct(f.microPrecision)}  recall ${pct(f.microRecall)}`);
 }
 
 // Append this run's headline numbers to the trend history (one entry per
@@ -371,4 +379,7 @@ function updateHistory(output) {
   );
 }
 
-main();
+main().catch((err) => {
+  console.error(err.message || err);
+  process.exit(1);
+});
