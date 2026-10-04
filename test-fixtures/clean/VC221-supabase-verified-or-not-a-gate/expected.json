@@ -1,0 +1,5 @@
+{
+  "description": "Supabase getSession() calls that are not trusted identity: a route gated on getUser() that uses getSession() only to forward the access token, refresh-only middleware, a login page that moves a signed-in visitor along, a 'signed in as' greeting, a 'use client' component (getSession is fine in the browser), and an OAuth callback reading the session a successful exchangeCodeForSession() just issued. VC221 must stay silent on all six.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC221"]
+}

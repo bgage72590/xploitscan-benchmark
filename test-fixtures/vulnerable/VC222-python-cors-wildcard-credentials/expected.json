@@ -1,0 +1,9 @@
+{
+  "description": "Python CORS that echoes any origin with credentials: FastAPI CORSMiddleware with allow_origins bound to [\"*\"] and allow_credentials=True in a SessionMiddleware app (high), Flask-CORS supports_credentials=True with no origins (medium), and Starlette Middleware(CORSMiddleware, allow_origin_regex=r\".*\", allow_credentials=True) (medium).",
+  "expectedFindings": [
+    { "rule": "VC222", "file": "main.py", "lineRange": [14, 18], "severityAtLeast": "high" },
+    { "rule": "VC222", "file": "app.py", "lineRange": [6, 10], "severityAtLeast": "medium" },
+    { "rule": "VC222", "file": "regex_app.py", "lineRange": [6, 10], "severityAtLeast": "medium" }
+  ],
+  "mustNotFire": []
+}

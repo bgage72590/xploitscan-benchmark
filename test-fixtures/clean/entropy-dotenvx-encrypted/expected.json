@@ -1,0 +1,7 @@
+{
+  "description": "A dotenvx-encrypted env file, committed on purpose: every value is ECIES ciphertext sealed to DOTENV_PUBLIC_KEY, and the private key lives in the git-ignored .env.keys (Supabase's own dotenvx example ships three such files). Fails without the fix: the entropy scanner reported the encrypted: values on lines 8 and 9 as critical leaked secrets (line 10 is past the dotenv value cap), and the public key on line 5 as well.",
+  "expectedFindings": [],
+  "mustNotFire": [
+    "ENTROPY"
+  ]
+}

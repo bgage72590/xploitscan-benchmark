@@ -1,0 +1,51 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    // Owner-only private data.
+    match /users/{userId} {
+      allow read, write: if isOwner(userId);
+
+      // Recursive wildcard, but under the user's own document: scoped.
+      match /{document=**} {
+        allow read, write: if isOwner(userId);
+      }
+    }
+
+    // Public content is a normal design: anyone may read posts, only the
+    // author may change them.
+    match /posts/{postId} {
+      allow read: if true;
+      allow create: if isSignedIn() && request.resource.data.authorId == request.auth.uid;
+      allow update, delete: if isSignedIn() && resource.data.authorId == request.auth.uid;
+    }
+
+    // Collection-group read of published comments.
+    match /{path=**}/comments/{commentId} {
+      allow read: if true;
+    }
+
+    // A feed every member can see (named collection, not the whole database).
+    match /announcements/{id} {
+      allow read: if isSignedIn();
+      allow write: if false;
+    }
+
+    // Default deny for everything else.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Old test-mode rule, commented out when real rules were written:
+    // match /{document=**} {
+    //   allow read, write: if request.time < timestamp.date(2099, 1, 1);
+    // }
+  }
+}

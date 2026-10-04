@@ -1,0 +1,5 @@
+{
+  "description": "Safe uses next to user-editable metadata: an admin gate on Supabase app_metadata with user_metadata used only for a display name, a Clerk publicMetadata admin check with unsafeMetadata shown as a label and compared only against UI state, and a self-chosen candidate/recruiter role branched on in the browser, which escalates nothing.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC219"]
+}

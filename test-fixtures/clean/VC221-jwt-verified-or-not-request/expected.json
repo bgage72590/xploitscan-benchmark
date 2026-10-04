@@ -1,0 +1,5 @@
+{
+  "description": "JWT decodes that are not trusted identity: decode to read the key id followed by jwt.verify, an OAuth callback decoding the ID token it just received from the provider's token endpoint, a browser hook reading exp for a refresh timer, a Supabase Edge Function (verify_jwt on by default, so the platform verified the token), and a NextAuth session callback decoding the provider access token it stored in its own encrypted JWT. VC221 must stay silent.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC221"]
+}

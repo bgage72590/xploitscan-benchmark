@@ -1,0 +1,8 @@
+{
+  "description": "Client SDK keys that Vite and Expo apps must ship, each documented by its vendor as safe in the client (review round 2, item 5). Fails without the fix: VC011 reported every one as a critical secret (its public-by-design list only knew the NEXT_PUBLIC_-era vendors), and the entropy scanner reported the RevenueCat appl_/goog_ keys and the other high-entropy values as critical too.",
+  "expectedFindings": [],
+  "mustNotFire": [
+    "VC011",
+    "ENTROPY"
+  ]
+}

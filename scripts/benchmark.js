@@ -39,7 +39,7 @@ const MAX_HISTORY = 90;
 const {
   runCustomRules, freeRules,
   scanEntropy, buildProjectContext} = require("xploitscan-shared-rules");
-// Free rules always; the 184 paid rules from packages/pro-rules here, or with
+// Free rules always; the 193 paid rules from packages/pro-rules here, or with
 // a paid API key from the public benchmark repo (see lib/rule-sets.js). Both
 // sets are scored and published.
 const { loadPaidRules } = require("./lib/rule-sets.js");
@@ -328,7 +328,7 @@ async function main() {
   updateHistory(output);
 
   if (!paid) {
-    console.log("Paid rules not available (set XPLOITSCAN_API_KEY to a paid plan's key to score all 214). Scored the 30 free rules.");
+    console.log("Paid rules not available (set XPLOITSCAN_API_KEY to a paid plan's key to score all 223). Scored the 30 free rules.");
   }
   printReport(summary, perFixtureResults);
   const f = summaryFree.totals;

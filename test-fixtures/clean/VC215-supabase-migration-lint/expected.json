@@ -1,0 +1,5 @@
+{
+  "description": "Safe Supabase migration shapes VC215 must not report: owner-scoped policies, public SELECT, service_role / supabase_auth_admin policies, a restrictive always-true policy, an admin-gated UPDATE with WITH CHECK (true), app_metadata roles, an open policy dropped later in the same file, disable then re-enable, an RLS-off table with privileges revoked from anon and authenticated, an internal schema, RLS DDL inside a function body and a comment, a reviewed open insert marked with -- VC215-OK, and a permissive using (true) that a restrictive owner policy on the same table narrows.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC215"]
+}

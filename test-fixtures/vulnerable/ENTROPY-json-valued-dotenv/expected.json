@@ -1,0 +1,24 @@
+{
+  "description": "Fails without the fix: in a non-example dotenv file the entropy scanner took the whole value as one candidate and skipped values over 256 characters, so a quoted secret inside a JSON-valued variable was never examined (line 4, ~420 characters). A short JSON value (line 5) was examined as one blob, not member by member. Now a value over the cap, or one starting with { or [, is read for its quoted members, each judged by its own key.",
+  "expectedFindings": [
+    {
+      "rule": "ENTROPY",
+      "file": "production.env",
+      "lineRange": [
+        4,
+        4
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "ENTROPY",
+      "file": "production.env",
+      "lineRange": [
+        5,
+        5
+      ],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

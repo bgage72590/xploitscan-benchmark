@@ -1,0 +1,10 @@
+{
+  "description": "Prefix-only containment guards: the CVE-2025-53110 shape (allowedDirectories.some(dir => p.startsWith(dir))), a sandbox write checked with startsWith(path.resolve(root)), and a Python realpath(...).startswith(FILES_DIR). Each admits a sibling path that shares the prefix. VC117 also fires on the Python handler: the prefix-only guard beside it used to silence it.",
+  "expectedFindings": [
+    { "rule": "VC223", "file": "fs-tools.ts", "lineRange": [11, 15], "severityAtLeast": "medium" },
+    { "rule": "VC223", "file": "fs-tools.ts", "lineRange": [20, 24], "severityAtLeast": "medium" },
+    { "rule": "VC223", "file": "files.py", "lineRange": [13, 17], "severityAtLeast": "medium" },
+    { "rule": "VC117", "file": "files.py", "lineRange": [12, 16], "severityAtLeast": "critical" }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,7 @@
+{
+  "description": "PyJWT decode with verify_signature False and NO algorithms= argument. VC197 already reports this exact call (critical), so VC221 must not report it a second time.",
+  "expectedFindings": [
+    { "rule": "VC197", "file": "app/auth.py", "lineRange": [7, 7], "severityAtLeast": "critical" }
+  ],
+  "mustNotFire": ["VC221"]
+}

@@ -1,0 +1,16 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Public marketing images: readable by anyone, writable by no client.
+    match /public/{allPaths=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+    // Each user's own folder.
+    match /users/{userId}/{allPaths=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId
+        && request.resource.size < 5 * 1024 * 1024;
+    }
+  }
+}

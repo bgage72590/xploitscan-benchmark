@@ -1,0 +1,8 @@
+{
+  "description": "Unquoted dotenv values are now read by the entropy scanner. Fails without the change: the scanner's literal pattern required quotes, so a bare SECRET=<random> in a committed .env got no finding. VITE_ADMIN_API_SECRET is also reported — a secret-named variable is not public just because its prefix is.",
+  "expectedFindings": [
+    { "rule": "ENTROPY", "file": "production.env", "lineRange": [6, 6], "severityAtLeast": "critical" },
+    { "rule": "ENTROPY", "file": "production.env", "lineRange": [7, 7], "severityAtLeast": "critical" }
+  ],
+  "mustNotFire": []
+}

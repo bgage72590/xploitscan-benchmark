@@ -1,0 +1,33 @@
+{
+  "description": "A dotenv file with CRLF line endings. Fails without the fix: VC011's value pattern ended in (.*)$, '.' does not match the trailing \\r, so every line was skipped and the browser-exposed Stripe secret and OpenAI key got no VC011 finding; the entropy scanner's dotenv parser skipped the unquoted SESSION_SIGNING_SECRET the same way. The file must keep its CRLF endings.",
+  "expectedFindings": [
+    {
+      "rule": "VC011",
+      "file": "windows.env",
+      "lineRange": [
+        5,
+        5
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC011",
+      "file": "windows.env",
+      "lineRange": [
+        6,
+        6
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "ENTROPY",
+      "file": "windows.env",
+      "lineRange": [
+        7,
+        7
+      ],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

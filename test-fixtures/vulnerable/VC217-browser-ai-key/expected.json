@@ -1,0 +1,10 @@
+{
+  "description": "Vite app code that ships provider keys to the browser: an OpenAI client built with dangerouslyAllowBrowser and a VITE_ key, a Supabase admin client reading VITE_SUPABASE_SERVICE_ROLE_KEY, a raw Anthropic fetch with the direct-browser-access header and a VITE_ x-api-key, and a free-tier rotation array of numbered VITE_GEMINI_API_KEY_1..3 keys. VC217 must fire once in each file (the rotation array is one finding that names all three keys); VITE_OPENAI_MODEL in the same file is a public identifier and is not a second finding.",
+  "expectedFindings": [
+    { "rule": "VC217", "file": "src/lib/openai.ts", "lineRange": [8, 11], "severityAtLeast": "critical" },
+    { "rule": "VC217", "file": "src/lib/supabaseAdmin.ts", "lineRange": [6, 8], "severityAtLeast": "critical" },
+    { "rule": "VC217", "file": "src/lib/claude.ts", "lineRange": [8, 12], "severityAtLeast": "critical" },
+    { "rule": "VC217", "file": "src/lib/gemini.ts", "lineRange": [8, 8], "severityAtLeast": "critical" }
+  ],
+  "mustNotFire": []
+}

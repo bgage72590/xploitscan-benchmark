@@ -1,0 +1,21 @@
+{
+  "rules": {
+    "categories": {
+      ".read": true,
+      ".write": "root.child('admins/'+auth.uid).exists()"
+    },
+    "admins": {
+      ".indexOn": "email",
+      ".write": true,
+      ".read": "root.child('admins/'+auth.uid).exists()",
+      "$uid": {
+        ".read": "$uid == auth.uid || root.child('admins/'+auth.uid).exists()",
+        ".write": "$uid == auth.uid || root.child('admins/'+auth.uid).exists()"
+      }
+    },
+    "pages": {
+      ".read": true,
+      ".write": "root.child('admins/'+auth.uid).exists()"
+    }
+  }
+}

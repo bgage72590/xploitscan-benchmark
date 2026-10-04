@@ -1,0 +1,8 @@
+{
+  "description": "Pages Router API routes (`pages/api/**`, default-exported handler) that read a users table and delete orders with no caller check. VC065 never reported this shape: its matcher only knew App Router `export async function GET`. Fails without the Pages Router branch.",
+  "expectedFindings": [
+    { "rule": "VC065", "file": "pages/api/users.ts", "lineRange": [6, 10], "severityAtLeast": "high" },
+    { "rule": "VC065", "file": "pages/api/admin/orders.ts", "lineRange": [10, 13], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

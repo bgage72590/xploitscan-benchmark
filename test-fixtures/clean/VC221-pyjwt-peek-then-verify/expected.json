@@ -1,0 +1,5 @@
+{
+  "description": "Peek-then-verify: an unverified PyJWT decode reads only the issuer to choose a key set, and the identity comes from a second, verifying decode. VC221 must stay silent.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC221"]
+}

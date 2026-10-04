@@ -1,0 +1,9 @@
+{
+  "description": "Express download handler guarded only by target.startsWith(UPLOAD_DIR), a prefix-only check that also admits /app/uploads-private/... VC117 and VC025 used to treat any startsWith as containment and were silenced by it; both must fire, and VC223 must name the broken guard.",
+  "expectedFindings": [
+    { "rule": "VC117", "file": "download.js", "lineRange": [13, 17], "severityAtLeast": "critical" },
+    { "rule": "VC025", "file": "download.js", "lineRange": [17, 21], "severityAtLeast": "medium" },
+    { "rule": "VC223", "file": "download.js", "lineRange": [14, 18], "severityAtLeast": "medium" }
+  ],
+  "mustNotFire": []
+}

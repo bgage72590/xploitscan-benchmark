@@ -1,0 +1,5 @@
+{
+  "description": "Pins the other side of the VC003 outbound-credential fix: a gateway proxy that resolves the caller with getUser() and returns 401 still carries an outbound Bearer header and role: \"user\", and a row-level-security function forwards the caller's Authorization header inside a headers object. Neither may be reported once outbound headers and chat roles are masked.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003", "VC065", "VC220"]
+}

@@ -1,0 +1,5 @@
+{
+  "description": "AI proxy endpoints that do authenticate the caller — getUser + 401 in an edge function, Auth.js auth() in a Next.js route, Lovable's requireSupabaseAuth middleware on a TanStack Start server function, an Express auth middleware passed by name, by a same-file verifyToken(req, res, next) and in an [authenticate] array, an App Router export wrapped in an imported withWorkspace(), a Pages Router export behind apiWrapper(…, { withAuth: true }), a QStash verifySignatureAppRouter() job — plus a bring-your-own-key function where the caller pays and a GET /v1/models listing, which runs nothing billable. VC220 must not fire on any of them.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC220"]
+}

@@ -1,0 +1,7 @@
+{
+  "description": "PyJWT jwt.decode() with an algorithms= allowlist but verify_signature False, used to resolve the caller in a FastAPI dependency. VC197 stays silent because algorithms= is present, so VC221 is the only rule that reports it: one call, one finding.",
+  "expectedFindings": [
+    { "rule": "VC221", "file": "app/deps.py", "lineRange": [8, 14], "severityAtLeast": "medium" }
+  ],
+  "mustNotFire": ["VC197"]
+}

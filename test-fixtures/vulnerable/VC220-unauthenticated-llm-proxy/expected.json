@@ -1,0 +1,11 @@
+{
+  "description": "Endpoints that forward requests to a paid AI model with the owner's key and never check the caller: a Lovable AI-gateway edge function (with verify_jwt = true, which the public anon key passes), a rate-limited Anthropic edge function (medium, not high), a Next.js route using the OpenAI SDK, a TanStack Start server function using the Vercel AI SDK, and an Express route that hands off to a same-file helper.",
+  "expectedFindings": [
+    { "rule": "VC220", "file": "supabase/functions/ai-chat/index.ts", "lineRange": [9, 13], "severityAtLeast": "high" },
+    { "rule": "VC220", "file": "supabase/functions/support-bot/index.ts", "lineRange": [4, 8], "severityAtLeast": "medium" },
+    { "rule": "VC220", "file": "app/api/summarize/route.ts", "lineRange": [4, 8], "severityAtLeast": "high" },
+    { "rule": "VC220", "file": "src/lib/chat.functions.ts", "lineRange": [6, 10], "severityAtLeast": "high" },
+    { "rule": "VC220", "file": "server/index.js", "lineRange": [17, 21], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

@@ -126,7 +126,7 @@ async function main() {
   }
   console.log(
     `  FREE PLAN (30 rules): ${freeOnly.detected}/${freeOnly.total} detected, blind ${freeOnly.blindDetected}/${freeOnly.blindTotal}` +
-    (paid ? "" : "  (paid rules not available; set XPLOITSCAN_API_KEY to a paid plan's key to score all 214)"),
+    (paid ? "" : "  (paid rules not available; set XPLOITSCAN_API_KEY to a paid plan's key to score all 223)"),
   );
   for (const r of results) {
     console.log(`  ${r.detected ? "✓" : "✗"} ${r.class.padEnd(26)} ${r.source}`);

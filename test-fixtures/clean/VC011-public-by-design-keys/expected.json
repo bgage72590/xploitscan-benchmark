@@ -1,0 +1,5 @@
+{
+  "description": "Public-by-design browser keys and key-looking names that hold no credential. The NEXT_PUBLIC_ block at the bottom fails without this change: the old VC011 reported NEXT_PUBLIC_FIREBASE_API_KEY, NEXT_PUBLIC_POSTHOG_KEY, NEXT_PUBLIC_KEYCLOAK_URL (KEY inside KEYCLOAK), NEXT_PUBLIC_CLIENT_PASSWORD_PROTECTION=true (a boolean flag) and NEXT_PUBLIC_TOKEN_ADDRESS (a contract address) as critical secrets.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC011", "ENTROPY"]
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Base44 functions that use asServiceRole safely: after base44.auth.me() (with a \"/api/*\" string above the check that a string-unaware comment masker reads as a block comment), behind a verified Stripe signature, behind a scheduler's shared-secret header, and a read-only function whose name says it is a public feed.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC218"]
+}

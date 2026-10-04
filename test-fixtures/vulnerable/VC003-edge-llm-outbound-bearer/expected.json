@@ -1,0 +1,8 @@
+{
+  "description": "VC003 bug: an unauthenticated Supabase edge function that proxies to an AI gateway was reported as authenticated, because the rule's hint list matched the function's own OUTBOUND `Authorization: Bearer` header, `role: \"user\"` in the forwarded messages, and the word 'user' in its system prompt. This fixture fails without maskOutboundAuthNoise/maskProseStrings in shared-rules.",
+  "expectedFindings": [
+    { "rule": "VC003", "file": "supabase/functions/chat/index.ts", "lineRange": [15, 19], "severityAtLeast": "high" },
+    { "rule": "VC220", "file": "supabase/functions/chat/index.ts", "lineRange": [15, 19], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

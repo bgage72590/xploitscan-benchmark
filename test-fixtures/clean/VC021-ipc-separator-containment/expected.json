@@ -1,0 +1,5 @@
+{
+  "description": "Electron IPC file handlers with correct containment: startsWith(workspaceDir + path.sep) and a path.relative '..' test. VC021 and VC223 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC021", "VC223"]
+}

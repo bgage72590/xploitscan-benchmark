@@ -1,0 +1,9 @@
+{
+  "description": "Authorization decided by metadata the user can edit. Supabase user_metadata and Clerk unsafeMetadata are writable by the signed-in user from the browser, so an admin gate in middleware, an app_metadata-with-user_metadata-fallback gate in a route handler, a Pro paywall in a client component, and a superadmin route after a React Router path=\"/*\" (which a string-unaware comment masker used to hide) can all be opened by the user they are meant to stop.",
+  "expectedFindings": [
+    { "rule": "VC219", "file": "middleware.ts", "lineRange": [11, 16], "severityAtLeast": "high" },
+    { "rule": "VC219", "file": "app/api/export/route.ts", "lineRange": [9, 15], "severityAtLeast": "high" },
+    { "rule": "VC219", "file": "src/components/UpgradeGate.tsx", "lineRange": [5, 9], "severityAtLeast": "medium" },
+    { "rule": "VC219", "file": "src/App.jsx", "lineRange": [9, 13], "severityAtLeast": "medium" }
+  ]
+}

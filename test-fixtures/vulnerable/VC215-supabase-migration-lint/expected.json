@@ -1,0 +1,11 @@
+{
+  "description": "Supabase migration SQL that opens tables to the anon key: a FOR ALL using (true) policy with no TO clause (critical), the same granted to every signed-in user (high), an always-true insert policy (medium), a policy that trusts user_metadata (high), and a later migration that disables row level security (critical). All 214 earlier rules returned nothing on these files.",
+  "expectedFindings": [
+    { "rule": "VC215", "file": "supabase/migrations/20250101000000_init.sql", "lineRange": [26, 27], "severityAtLeast": "critical" },
+    { "rule": "VC215", "file": "supabase/migrations/20250101000000_init.sql", "lineRange": [32, 32], "severityAtLeast": "high" },
+    { "rule": "VC215", "file": "supabase/migrations/20250101000000_init.sql", "lineRange": [35, 35], "severityAtLeast": "medium" },
+    { "rule": "VC215", "file": "supabase/migrations/20250101000000_init.sql", "lineRange": [40, 40], "severityAtLeast": "high" },
+    { "rule": "VC215", "file": "supabase/migrations/20250102000000_fix_signup.sql", "lineRange": [2, 2], "severityAtLeast": "critical" }
+  ],
+  "mustNotFire": []
+}

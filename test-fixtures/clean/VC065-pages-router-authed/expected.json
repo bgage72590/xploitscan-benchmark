@@ -1,0 +1,5 @@
+{
+  "description": "Pages Router API routes VC065's default-export branch must not report: getServerSession + 401, getToken with a wrapped export, the create-next-app hello scaffold (no data), a public product catalogue read, an anonymous counter increment, and an auth flow. Also caller checks named outside the original list: a getToken wrapper that takes the request (linkwarden's payment route), a bare authorize(req, res), and a header compared with a secret bound from process.env.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC065"]
+}

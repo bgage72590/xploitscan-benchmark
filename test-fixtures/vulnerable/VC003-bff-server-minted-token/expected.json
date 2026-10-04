@@ -1,0 +1,7 @@
+{
+  "description": "Guards the delegation fix from the other side: a session token the server mints with its own API key (createSessionToken()) is the server's credential, not the caller's, so the unauthenticated route must still be reported even though its variable is named sessionToken.",
+  "expectedFindings": [
+    { "rule": "VC003", "file": "app/api/heygen/session/route.ts", "lineRange": [16, 16], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,13 @@
+{
+  "description": "Firebase rules that leave the data open, in all three rules files a Firebase project deploys. firestore.rules: a root wildcard with public read (critical) and any-signed-in-user write through a helper function (high), plus open update/delete on a named collection (critical); its owner-scoped /users block cannot help, because Firestore rules are OR-ed. storage.rules: the legacy console default, any signed-in user on the whole bucket (high). database.rules.json: root \".read\": true (critical) and root \".write\": \"auth != null\" (high); Realtime Database rules cascade, so the per-user rule beneath cannot narrow either. cms/database.rules.json (reduced from alexabbott/firebase-cms): a locked root, but \".write\": true on /admins (critical) while every other node's write checks root.child('admins/'+auth.uid), so anyone can make themselves an admin.",
+  "expectedFindings": [
+    { "rule": "VC216", "file": "firestore.rules", "lineRange": [17, 17], "severityAtLeast": "critical" },
+    { "rule": "VC216", "file": "firestore.rules", "lineRange": [18, 18], "severityAtLeast": "high" },
+    { "rule": "VC216", "file": "firestore.rules", "lineRange": [23, 23], "severityAtLeast": "critical" },
+    { "rule": "VC216", "file": "storage.rules", "lineRange": [7, 7], "severityAtLeast": "high" },
+    { "rule": "VC216", "file": "database.rules.json", "lineRange": [4, 4], "severityAtLeast": "critical" },
+    { "rule": "VC216", "file": "database.rules.json", "lineRange": [5, 5], "severityAtLeast": "high" },
+    { "rule": "VC216", "file": "cms/database.rules.json", "lineRange": [9, 9], "severityAtLeast": "critical" }
+  ],
+  "mustNotFire": []
+}

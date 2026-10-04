@@ -1,0 +1,8 @@
+{
+  "description": "Electron IPC read handler guarded only by resolved.startsWith(workspaceDir), a prefix-only check that also admits ~/Notes-archive/... VC021 used to accept startsWith (and path.resolve) as validation; with the broken guard as the only check, it must fire.",
+  "expectedFindings": [
+    { "rule": "VC021", "file": "main.js", "lineRange": [10, 14], "severityAtLeast": "medium" },
+    { "rule": "VC223", "file": "main.js", "lineRange": [12, 16], "severityAtLeast": "medium" }
+  ],
+  "mustNotFire": []
+}

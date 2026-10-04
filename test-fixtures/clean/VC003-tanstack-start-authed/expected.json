@@ -1,0 +1,5 @@
+{
+  "description": "TanStack Start server functions and a server route that are authenticated (auth middleware, a bespoke require* gate, getClaims + 401) or public by design (an insert-only lead form, a published-content read, a capability-token share link, anonymous visitor analytics). Pinned against the VC003 TanStack branch, whose calibration found most unauthenticated server functions are public on purpose.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003"]
+}

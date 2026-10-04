@@ -1,0 +1,5 @@
+{
+  "description": "High-entropy dotenv values that are public by design (public-prefixed names that are not secret-named) or identifiers (an OAuth client id, a price id). ENTROPY must not fire now that unquoted values are scanned.",
+  "expectedFindings": [],
+  "mustNotFire": ["ENTROPY"]
+}

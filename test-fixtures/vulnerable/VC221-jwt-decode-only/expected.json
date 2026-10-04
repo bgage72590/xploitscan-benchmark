@@ -1,0 +1,9 @@
+{
+  "description": "A JWT decoded, never verified, then trusted. jsonwebtoken jwt.decode() in Express auth middleware that installs req.userId (high), jose decodeJwt() keying a Prisma lookup (high), and jwt-decode jwtDecode() reading a role claim to authorise an admin delete (high). None of the three checks a signature.",
+  "expectedFindings": [
+    { "rule": "VC221", "file": "server/middleware/auth.js", "lineRange": [8, 10], "severityAtLeast": "high" },
+    { "rule": "VC221", "file": "app/api/me/route.ts", "lineRange": [6, 8], "severityAtLeast": "high" },
+    { "rule": "VC221", "file": "api/admin.ts", "lineRange": [6, 8], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": ["VC079"]
+}

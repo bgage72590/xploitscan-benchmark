@@ -1,0 +1,7 @@
+project_id = "demo"
+
+# verify_jwt = true does NOT protect this function from strangers: the
+# platform check accepts the public anon key that ships in the browser
+# bundle, and that key is a valid JWT.
+[functions.ai-chat]
+verify_jwt = true

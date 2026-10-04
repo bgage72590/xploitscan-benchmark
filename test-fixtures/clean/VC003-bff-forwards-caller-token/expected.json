@@ -1,0 +1,5 @@
+{
+  "description": "Routes that forward the CALLER's own credential to an upstream API (a session cookie, a token from a helper handed the request, the inbound Authorization header via headers.set), and a queue callback authenticated by its QStash signature. Fails without the fix: maskOutboundAuthNoise blanked every outbound header whose variable was not on a fixed name list (sessionToken, authCookie), and VC003 did not know signature verifiers, so all four routes newly got a high 'missing authentication' finding.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC003"]
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Shapes VC217 must leave alone: bring-your-own-key clients (key from a parameter, localStorage or a settings object), a local Ollama server, a client pointed at the app's own relative proxy, public-by-design Vite config (Supabase URL/publishable/anon keys, model and assistant ids, a token LIMIT), a development-only key read, the recommended fix itself — the key read inside a Supabase Edge Function — and a root-level Express server.js beside a Create React App that reads a REACT_APP_ key: a Node server that calls app.listen() is never bundled for the browser.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC217"]
+}

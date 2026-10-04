@@ -1,0 +1,5 @@
+{
+  "description": "Correctly scoped Firebase rules that share every surface feature of the vulnerable fixture: `if true` on public reads of named collections and folders, a collection-group read, `request.auth != null` on a named collection, a recursive wildcard scoped under the owner's document, a root wildcard that denies, a commented-out test-mode rule, and Realtime Database `.read: true` below the root. None of it opens the whole database to anyone.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC216"]
+}

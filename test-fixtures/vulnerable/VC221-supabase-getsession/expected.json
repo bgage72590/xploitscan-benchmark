@@ -1,0 +1,9 @@
+{
+  "description": "Supabase getSession() trusted in server code. It reads the session from the cookie without verifying it, so a hand-written cookie passes. Route handler gating a service-role client (critical), middleware gating /dashboard (medium), and a Server Component keying a Prisma query (no row level security) on session.user.id (high).",
+  "expectedFindings": [
+    { "rule": "VC221", "file": "app/api/admin/users/route.ts", "lineRange": [11, 16], "severityAtLeast": "critical" },
+    { "rule": "VC221", "file": "middleware.ts", "lineRange": [17, 21], "severityAtLeast": "medium" },
+    { "rule": "VC221", "file": "app/dashboard/page.tsx", "lineRange": [5, 9], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

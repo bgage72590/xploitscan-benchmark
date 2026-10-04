@@ -1,0 +1,9 @@
+{
+  "description": "TanStack Start server functions and a server route that change data with no caller check. Lovable's default stack since 2026-05-13; before this branch VC003 knew none of these shapes and all 214 rules returned nothing for a server function that deletes rows through an admin client.",
+  "expectedFindings": [
+    { "rule": "VC003", "file": "src/lib/orders.functions.ts", "lineRange": [8, 12], "severityAtLeast": "high" },
+    { "rule": "VC003", "file": "src/lib/orders.functions.ts", "lineRange": [17, 21], "severityAtLeast": "high" },
+    { "rule": "VC003", "file": "src/routes/api/users.ts", "lineRange": [8, 12], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

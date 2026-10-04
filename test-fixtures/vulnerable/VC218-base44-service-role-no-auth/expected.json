@@ -1,0 +1,7 @@
+{
+  "description": "Base44 backend functions are public HTTP endpoints, and asServiceRole bypasses every entity access rule. setSuperUser promotes whatever email the request names, through the service role, with no base44.auth.me() check (critical: it updates User). exportCustomers returns every Customer record to any caller (high: read-only).",
+  "expectedFindings": [
+    { "rule": "VC218", "file": "base44/functions/setSuperUser/entry.ts", "lineRange": [10, 18], "severityAtLeast": "critical" },
+    { "rule": "VC218", "file": "base44/functions/exportCustomers/entry.ts", "lineRange": [4, 10], "severityAtLeast": "high" }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "description": "sendFile route guarded only by resolvedPath.startsWith(FILES_ROOT), a prefix-only check that also admits /srv/files-backup/... VC093 used to accept any startsWith as a containment check; it must fire.",
+  "expectedFindings": [
+    { "rule": "VC093", "file": "files.ts", "lineRange": [16, 20], "severityAtLeast": "medium" },
+    { "rule": "VC223", "file": "files.ts", "lineRange": [12, 16], "severityAtLeast": "medium" }
+  ],
+  "mustNotFire": []
+}

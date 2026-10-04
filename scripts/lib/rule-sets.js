@@ -4,7 +4,7 @@
  * Free: the 30 rules in the public xploitscan-shared-rules package. Every run
  * scores them, so anyone can reproduce the free-plan numbers.
  *
- * Paid: the other 184. Inside this monorepo they come from the private
+ * Paid: the other 193. Inside this monorepo they come from the private
  * packages/pro-rules build. From the public xploitscan-benchmark repo (which
  * has no access to that package) they are downloaded with a paid plan's API
  * key — the same request the CLI makes — so the full numbers are reproducible
@@ -24,7 +24,7 @@ const PRO_PACKAGE_DIR = path.join(ROOT, "packages", "pro-rules");
 const PRO_DIST = path.join(PRO_PACKAGE_DIR, "dist", "index.cjs");
 
 /**
- * @returns {Promise<{ rules: object[], source: string } | null>} the 184 paid
+ * @returns {Promise<{ rules: object[], source: string } | null>} the 193 paid
  * rules, or null when they aren't available (public repo, no key).
  */
 async function loadPaidRules() {

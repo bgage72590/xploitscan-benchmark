@@ -28,12 +28,12 @@ and scripts here are the same files the published scores are generated from.
 
 ## Free rules and the full catalogue
 
-XploitScan has 214 rules. The 30 free-plan rules ship in the public
+XploitScan has 223 rules. The 30 free-plan rules ship in the public
 [`xploitscan-shared-rules`](https://www.npmjs.com/package/xploitscan-shared-rules)
-package, so anyone can reproduce the free-plan numbers. The other 184 are
+package, so anyone can reproduce the free-plan numbers. The other 193 are
 available to paid plans: set `XPLOITSCAN_API_KEY` to a paid plan's API key
 (xploitscan.com → Settings → API Keys) and the scripts download them the same
-way the CLI does and score all 214. Every run prints both sets.
+way the CLI does and score all 223. Every run prints both sets.
 
 ## Reproduce the scores
 
@@ -46,7 +46,7 @@ npm install
 # Free rules only:
 node scripts/benchmark.js
 node scripts/benchmark-heldout.js
-# All 214 rules (paid plan's API key):
+# All 223 rules (paid plan's API key):
 XPLOITSCAN_API_KEY=xpls_... node scripts/benchmark.js
 XPLOITSCAN_API_KEY=xpls_... node scripts/benchmark-heldout.js
 
@@ -63,7 +63,7 @@ The XploitScan rules come from the published
 [`xploitscan-shared-rules`](https://www.npmjs.com/package/xploitscan-shared-rules)
 npm package — the same rule set the CLI, web scanner, and API run. This repo
 pins the **exact** version the published scores were generated with
-(currently `2.0.2`), so a fresh clone reproduces those
+(currently `2.1.0`), so a fresh clone reproduces those
 numbers rather than whatever happens to be latest that day. The pin is
 refreshed automatically whenever a new rule version ships, and the live page
 at [xploitscan.com/benchmark](https://xploitscan.com/benchmark) shows the

@@ -1,0 +1,123 @@
+{
+  "description": "Fails without the fix: VC011 treated any name containing FIREBASE/POSTHOG/MIXPANEL/MAPBOX/PUSHER as public by design (dropping server keys, service-account keys, personal, management and master keys), excused every numeric value and every http(s) URL whatever the name (dropping a numeric admin password and a key embedded in an RPC URL), and only counted names that end exactly in KEY/TOKEN (dropping _API_KEYS, _API_KEY_BACKUP, _TOKEN_READONLY, _API_KEY_1, _PRIVATE_KEY_HEX). All 13 were reported by the old VC011.",
+  "expectedFindings": [
+    {
+      "rule": "VC011",
+      "file": "production.env",
+      "lineRange": [
+        5,
+        5
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC011",
+      "file": "production.env",
+      "lineRange": [
+        6,
+        6
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC011",
+      "file": "production.env",
+      "lineRange": [
+        7,
+        7
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC011",
+      "file": "production.env",
+      "lineRange": [
+        8,
+        8
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC011",
+      "file": "production.env",
+      "lineRange": [
+        9,
+        9
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC011",
+      "file": "production.env",
+      "lineRange": [
+        10,
+        10
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC011",
+      "file": "production.env",
+      "lineRange": [
+        11,
+        11
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC011",
+      "file": "production.env",
+      "lineRange": [
+        12,
+        12
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC011",
+      "file": "production.env",
+      "lineRange": [
+        13,
+        13
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC011",
+      "file": "production.env",
+      "lineRange": [
+        14,
+        14
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC011",
+      "file": "production.env",
+      "lineRange": [
+        15,
+        15
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC011",
+      "file": "production.env",
+      "lineRange": [
+        16,
+        16
+      ],
+      "severityAtLeast": "critical"
+    },
+    {
+      "rule": "VC011",
+      "file": "production.env",
+      "lineRange": [
+        17,
+        17
+      ],
+      "severityAtLeast": "critical"
+    }
+  ],
+  "mustNotFire": []
+}

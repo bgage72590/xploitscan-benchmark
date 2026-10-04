@@ -1,0 +1,11 @@
+{
+  "description": "VC011 used to know only NEXT_PUBLIC_. Secrets under the other browser-exposed prefixes (VITE_, EXPO_PUBLIC_, REACT_APP_, PUBLIC_, NUXT_PUBLIC_) are built into the client the same way. Fails without the prefix extension: no finding at all on this file.",
+  "expectedFindings": [
+    { "rule": "VC011", "file": "production.env", "lineRange": [9, 9], "severityAtLeast": "critical" },
+    { "rule": "VC011", "file": "production.env", "lineRange": [10, 10], "severityAtLeast": "critical" },
+    { "rule": "VC011", "file": "production.env", "lineRange": [11, 11], "severityAtLeast": "critical" },
+    { "rule": "VC011", "file": "production.env", "lineRange": [12, 12], "severityAtLeast": "critical" },
+    { "rule": "VC011", "file": "production.env", "lineRange": [13, 13], "severityAtLeast": "critical" }
+  ],
+  "mustNotFire": []
+}

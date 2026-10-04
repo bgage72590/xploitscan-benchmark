@@ -1,0 +1,8 @@
+{
+  "description": "Guards the VC011/ENTROPY regression fix against bringing back false positives: KEY/TOKEN followed by a non-secret tail (_URL, _ENDPOINT, _TTL, _DECIMALS, _TICKER, _SYMBOL, _ADDRESS), plural TOKENS meaning coins, numbers in settings that only mention a password (a min length, a 0/1 flag), plain endpoint URLs, a browser identifier (_CLIENT_ID), a reCAPTCHA site key under a non-key name, and the new qualified words (ADMIN, SERVICE_ACCOUNT, MASTER) without a key word.",
+  "expectedFindings": [],
+  "mustNotFire": [
+    "VC011",
+    "ENTROPY"
+  ]
+}

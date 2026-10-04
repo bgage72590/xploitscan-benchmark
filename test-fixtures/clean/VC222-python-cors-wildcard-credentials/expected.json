@@ -1,0 +1,5 @@
+{
+  "description": "Python CORS that does not echo arbitrary origins with credentials: explicit origin lists (with a commented-out wildcard above one), an env var with a non-wildcard default, a wildcard without credentials, a wildcard only in a DEBUG branch, an origin regex pinned to the app's own domain, and Flask-CORS restricted via origins=, resources={... origins ...} and @cross_origin(origins=...). VC222 must not fire. Also a resources map whose only wildcard origin is on a static-files path (emfcamp/Website).",
+  "expectedFindings": [],
+  "mustNotFire": ["VC222"]
+}

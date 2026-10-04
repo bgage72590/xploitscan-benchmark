@@ -1,0 +1,5 @@
+{
+  "description": "Correct containment checks — separator appended (+ path.sep, `${dir}/`, + os.sep), base defined with a trailing separator, path.relative + '..', boundary character pinned in the same condition, commonpath, is_relative_to — plus a non-guard path classification. VC223 must not fire, and the traversal rules that accept a correct containment check as the fix (VC117, VC025, VC093) must stay silent. Also prefix checks that are only defence in depth because the name cannot reach a sibling: an explicit '..' rejection with path.join, '..' and absolute names rejected before os.path.join, and a path built only from a uuid.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC223", "VC117", "VC025", "VC093"]
+}
