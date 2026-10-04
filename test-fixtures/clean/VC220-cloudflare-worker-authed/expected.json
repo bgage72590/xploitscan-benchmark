@@ -1,0 +1,5 @@
+{
+  "description": "The same Worker, but it verifies the caller's JWT and returns 401 without one.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC220"]
+}

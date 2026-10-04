@@ -1,0 +1,6 @@
+{
+  "description": "django-cors-headers with allow-all origins and credentials on, in a project with session cookies. The middleware echoes back any Origin with credentials allowed, so any site can read a signed-in user's responses.",
+  "expectedFindings": [
+    { "rule": "VC222", "file": "myproject/settings.py", "lineRange": [11, 11], "severityAtLeast": "high" }
+  ]
+}

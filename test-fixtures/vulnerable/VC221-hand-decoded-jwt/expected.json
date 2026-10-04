@@ -1,0 +1,6 @@
+{
+  "description": "A JWT payload decoded by hand with JSON.parse(atob(token.split('.')[1])) and trusted for an admin decision. No library is imported, so the jwt.decode()-shaped checks never saw it; it verifies the signature no more than jwt.decode() does.",
+  "expectedFindings": [
+    { "rule": "VC221", "file": "app/api/admin/route.ts", "lineRange": [6, 6], "severityAtLeast": "high" }
+  ]
+}

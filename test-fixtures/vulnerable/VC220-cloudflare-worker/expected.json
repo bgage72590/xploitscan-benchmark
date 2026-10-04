@@ -1,0 +1,6 @@
+{
+  "description": "A Cloudflare Worker (module syntax) that forwards any caller's chat messages to OpenAI on the owner's key, with no caller check.",
+  "expectedFindings": [
+    { "rule": "VC220", "file": "src/worker.ts", "lineRange": [1, 2], "severityAtLeast": "high" }
+  ]
+}
