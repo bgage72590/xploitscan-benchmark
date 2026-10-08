@@ -1,0 +1,5 @@
+{
+  "description": "Same Server Actions with the caller checked inside each action via NextAuth's auth() — an admin-role guard for the user actions, and owner-scoped project create/delete. VC064 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC064"]
+}

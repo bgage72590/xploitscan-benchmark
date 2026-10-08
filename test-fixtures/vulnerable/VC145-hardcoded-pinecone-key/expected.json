@@ -1,0 +1,12 @@
+{
+  "description": "Pinecone serverless API key (pcsk_ format) hardcoded in the Pinecone client constructor of a RAG vector-store module. Anyone with the key can read, overwrite or delete every user's embedded documents. VC145 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC145",
+      "file": "lib/vector-store.ts",
+      "lineRange": [5, 9],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

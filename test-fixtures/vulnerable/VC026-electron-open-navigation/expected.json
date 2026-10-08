@@ -1,0 +1,12 @@
+{
+  "description": "An Electron RSS reader (vite-plugin-electron layout) renders links from feed content but never handles will-navigate or setWindowOpenHandler. Clicking a malicious link replaces the app window with the attacker's page — inside a trusted app chrome with the app's preload attached — or opens an unrestricted new window. VC026 must fire on the BrowserWindow.",
+  "expectedFindings": [
+    {
+      "rule": "VC026",
+      "file": "electron/main.ts",
+      "lineRange": [6, 12],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

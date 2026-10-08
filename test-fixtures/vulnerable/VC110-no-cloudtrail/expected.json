@@ -1,0 +1,7 @@
+{
+  "description": "A Terraform root module configuring the AWS provider for an API (DynamoDB, Lambda, API Gateway) with no CloudTrail trail, so AWS API calls in the account go unaudited.",
+  "expectedFindings": [
+    { "rule": "VC110", "file": "infra/main.tf", "lineRange": [15, 21], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

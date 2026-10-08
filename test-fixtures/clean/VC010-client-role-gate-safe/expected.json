@@ -1,0 +1,5 @@
+{
+  "description": "The same admin users page as a Next.js App Router Server Component using Auth.js v5: the page resolves the session with await auth() on the server and redirects non-staff, the admin-only controls are rendered on the server from that session, and the server actions re-check the role. The role check is server-side, so VC010 must not fire. It used to be reported: await auth() was not recognised as a server-side session check.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC010"]
+}

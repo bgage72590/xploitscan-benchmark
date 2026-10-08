@@ -1,0 +1,5 @@
+{
+  "description": "The same help-center search with the Cohere key read from the environment (process.env.COHERE_API_KEY in the SDK client, os.environ in the indexing script), as VC159's fix recommends. VC159 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC159"]
+}

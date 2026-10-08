@@ -1,0 +1,18 @@
+{
+  "description": "Plaintext gRPC channels to remote services opened right next to a plaintext channel to a localhost sidecar: Python grpc.insecure_channel(os.environ[\"EMAIL_SERVICE_ADDR\"]) on the line after insecure_channel(\"localhost:8013\"), and a Go grpc.NewClient(cfg.PaymentsAddr, insecure credentials) after the flagd dial. Only the sidecar's own loopback target exempts its channel. VC096 must fire on the remote channels",
+  "expectedFindings": [
+    {
+      "rule": "VC096",
+      "file": "worker/clients.py",
+      "lineRange": [11, 11],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC096",
+      "file": "internal/clients/clients.go",
+      "lineRange": [22, 22],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

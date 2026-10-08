@@ -1,0 +1,5 @@
+{
+  "description": "FP lock-in for VC029: a WebSocket \"message\" listener (a server frame, no sender origin exists), a window listener that checks evt.origin under a non-standard parameter name, one that destructures ({ origin, data }) and checks origin, and a named handler whose parameter is called `incoming` and checks incoming.origin. VC029 must not fire on any of them.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC029"]
+}

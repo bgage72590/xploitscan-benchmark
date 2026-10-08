@@ -1,0 +1,69 @@
+{
+  "description": "Auth routes that write credentials to the log aggregator. Express: the plaintext password from the login body, the freshly issued JWT and the raw Authorization header. FastAPI: the attempted password on a failed login (via Python's logger.warning) and the password-reset token, printed through a `token %s` placeholder. Flask: the submitted admin password read with request.form.get(\"password\"). React: the stored session token printed with console.log(localStorage.getItem(\"token\")) when the auth hook mounts. VC118 must fire on each.",
+  "expectedFindings": [
+    {
+      "rule": "VC118",
+      "file": "src/routes/auth.ts",
+      "lineRange": [
+        9,
+        13
+      ],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC118",
+      "file": "src/routes/auth.ts",
+      "lineRange": [
+        17,
+        21
+      ],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC118",
+      "file": "src/routes/auth.ts",
+      "lineRange": [
+        24,
+        28
+      ],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC118",
+      "file": "app/routers/auth.py",
+      "lineRange": [
+        20,
+        24
+      ],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC118",
+      "file": "app/routers/auth.py",
+      "lineRange": [
+        33,
+        37
+      ],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC118",
+      "file": "app/admin_login.py",
+      "lineRange": [
+        16,
+        20
+      ],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC118",
+      "file": "src/hooks/useAuth.ts",
+      "lineRange": [
+        10,
+        12
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

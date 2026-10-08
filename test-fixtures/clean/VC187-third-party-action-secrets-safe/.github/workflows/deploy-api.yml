@@ -1,0 +1,17 @@
+name: Deploy API
+
+on:
+  push:
+    branches: [main]
+    paths: ["api/**"]
+
+jobs:
+  deploy:
+    # Reusable workflow from this same repository — no outside code sees
+    # the Fly token.
+    uses: ./.github/workflows/fly-deploy.yml
+    with:
+      app-name: acme-api
+      working-directory: api
+    secrets:
+      FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}

@@ -1,0 +1,5 @@
+{
+  "description": "A Next.js App Router Server Component (an async page) that reads the user with supabase.auth.getUser() and their profile's role, then renders an Admin dashboard link for admins. The role is resolved on the server; the client only receives the rendered HTML. Its Supabase client comes from @/lib/supabase, a path that doesn't say \"server\", so VC010 must recognise the async Server Component itself. VC010 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC010"]
+}

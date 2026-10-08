@@ -1,0 +1,5 @@
+{
+  "description": "The same Electron app configured the way VC019's fix says: nodeIntegration off, contextIsolation and sandbox on, webSecurity on, with file access moved behind a contextBridge preload. VC019 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC019"]
+}

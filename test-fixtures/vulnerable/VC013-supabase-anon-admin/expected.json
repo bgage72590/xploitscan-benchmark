@@ -1,0 +1,18 @@
+{
+  "description": "A Next.js client component builds a Supabase client with the anon key and calls supabase.auth.admin.listUsers() / deleteUser() from the browser. The admin API needs elevated privileges the anon key does not have — the usual next step is pasting the service_role key into the client to make it work. VC013 must fire on the auth.admin calls. The findings used to land on the NEXT_PUBLIC_SUPABASE_ANON_KEY line (line 9) instead of the listUsers() call, because the match could start at any earlier 'supabase' across lines.",
+  "expectedFindings": [
+    {
+      "rule": "VC013",
+      "file": "app/admin/UserManagement.tsx",
+      "lineRange": [15, 21],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC013",
+      "file": "app/admin/UserManagement.tsx",
+      "lineRange": [26, 32],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

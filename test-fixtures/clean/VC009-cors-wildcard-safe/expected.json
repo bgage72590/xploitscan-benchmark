@@ -1,0 +1,5 @@
+{
+  "description": "The same Express API with CORS restricted to an allowlist of frontend origins read from CORS_ORIGINS, checked in an origin callback. Not a wildcard, so VC009 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC009"]
+}

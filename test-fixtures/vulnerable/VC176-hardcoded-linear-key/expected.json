@@ -1,0 +1,19 @@
+{
+  "description": "Linear personal API keys (lin_api_ + 40 chars) committed in a Next.js feedback route that files Linear issues, and as a literal fallback after process.env (`process.env.LINEAR_API_KEY ?? \"lin_api_…\"`) in a roadmap sync job. Both are hardcoded keys with full read/write access to the workspace. VC176 fires on the route. The fallback is a knownGap: the shared prefix-rule helper (secretRuleCheck) skips any line that mentions process.env, so a full-format key literal on that same line is never reported — fixing it means changing the placeholder filter for every prefix-based secret rule, not just VC176.",
+  "expectedFindings": [
+    {
+      "rule": "VC176",
+      "file": "app/api/feedback/route.ts",
+      "lineRange": [5, 9],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC176",
+      "file": "lib/linear-sync.ts",
+      "lineRange": [5, 9],
+      "severityAtLeast": "high",
+      "knownGap": true
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Same Express app with the admin and internal allowlists read from environment variables (still annotated / wrapped in a Set) and the payment webhook authenticated by signature instead of a hardcoded IP list. VC053 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC053"]
+}

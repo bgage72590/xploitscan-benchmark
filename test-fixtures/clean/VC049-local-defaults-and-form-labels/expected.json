@@ -1,0 +1,5 @@
+{
+  "description": "FP lock-in for VC049, from a Next.js + Supabase database-dashboard app: a seed script whose fallback URL is the Supabase CLI's fixed local default (postgresql://postgres:postgres@127.0.0.1:54322/postgres, a placeholder password on loopback), and next-intl translation files for the app's \"connect your database\" form, whose host / username / database / password keys hold UI labels (\"Passwort\", \"Contraseña\"), not credentials. VC049 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC049"]
+}

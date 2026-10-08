@@ -1,0 +1,5 @@
+{
+  "description": "The same features written with async/await, plus a Cypress spec whose .then() chain is required (Cypress commands are not promises and cannot be awaited).",
+  "expectedFindings": [],
+  "mustNotFire": ["VC105"]
+}

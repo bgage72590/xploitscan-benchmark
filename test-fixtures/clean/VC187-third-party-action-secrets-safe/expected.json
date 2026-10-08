@@ -1,0 +1,5 @@
+{
+  "description": "Same deploys, done the way VC187's fix recommends: Vercel's own CLI in run steps (token passed via step env, never to a community action), third-party setup actions (pnpm/action-setup, superfly setup-flyctl) that receive no secrets, a third-party test runner (cypress-io/github-action) whose with: and env: blocks hold only plain settings, an official vendor action (aws-actions) for OIDC credentials, and the Fly deploy moved into a reusable workflow in this same repo (uses: ./.github/workflows/...). VC187 must NOT fire — in particular, secrets passed via env: to later run steps must not be attributed to an earlier third-party setup step.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC187"]
+}

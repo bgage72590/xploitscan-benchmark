@@ -1,0 +1,19 @@
+{
+  "description": "Qdrant Cloud API key (JWT-format database key) hardcoded in the env block of a committed .cursor/mcp.json for mcp-server-qdrant (detected once the rule accepts a quoted JSON key), and inline as api_key= in the Python QdrantClient constructor. The constructor form has no QDRANT_API_KEY name for the context-anchored rule to key on — known gap.",
+  "expectedFindings": [
+    {
+      "rule": "VC174",
+      "file": ".cursor/mcp.json",
+      "lineRange": [5, 11],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC174",
+      "file": "rag/vector_store.py",
+      "lineRange": [6, 11],
+      "severityAtLeast": "high",
+      "knownGap": true
+    }
+  ],
+  "mustNotFire": []
+}

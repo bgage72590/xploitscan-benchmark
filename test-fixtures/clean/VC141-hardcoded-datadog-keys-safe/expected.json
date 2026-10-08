@@ -1,0 +1,5 @@
+{
+  "description": "Same Datadog metrics helper with DD_API_KEY / DD_APP_KEY read from process.env and a fail-fast check — the fix VC141 recommends. VC141 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC141"]
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Same thumbnail handler and CSV export using tempfile.TemporaryDirectory() and mkstemp(), which create the file/dir atomically. The only mention of mktemp() is in a comment. VC193 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC193"]
+}

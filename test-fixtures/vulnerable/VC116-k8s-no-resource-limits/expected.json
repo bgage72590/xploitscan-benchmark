@@ -1,0 +1,12 @@
+{
+  "description": "Next.js web Deployment with no `resources:` block at all — a memory leak or traffic spike lets one pod starve every other workload on the node. VC116 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC116",
+      "file": "k8s/deployment.yaml",
+      "lineRange": [1, 5],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

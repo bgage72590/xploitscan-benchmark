@@ -1,0 +1,13 @@
+{
+  "ConnectDatabase": {
+    "title": "Datenbank verbinden",
+    "description": "Gib die Verbindungsdaten deiner PostgreSQL-Datenbank ein.",
+    "host": "Hostname",
+    "port": "Port",
+    "username": "Benutzername",
+    "password": "Passwort",
+    "database": "Datenbank",
+    "ssl": "SSL verwenden",
+    "submit": "Verbinden"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "description": "Next.js App Router Server Actions that mutate data with no authentication or authorization check: admin role changes / user deletion declared as `export async function`, and project create/delete declared as `export const x = async () =>` arrows (which the original rule skipped entirely). VC064 must fire on both files.",
+  "expectedFindings": [
+    { "rule": "VC064", "file": "app/admin/users/actions.ts", "lineRange": [9, 13], "severityAtLeast": "high" },
+    { "rule": "VC064", "file": "app/admin/users/actions.ts", "lineRange": [14, 18], "severityAtLeast": "high" },
+    { "rule": "VC064", "file": "app/dashboard/projects/actions.ts", "lineRange": [14, 18], "severityAtLeast": "high" },
+    { "rule": "VC064", "file": "app/dashboard/projects/actions.ts", "lineRange": [23, 27], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

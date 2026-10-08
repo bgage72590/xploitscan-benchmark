@@ -1,0 +1,9 @@
+{
+  "description": "Next.js client components that listen for window postMessage without checking the sender's origin: an OAuth popup listener that routes to a redirect target taken from the message, and a booking-widget embed that sends with widgetUrl.origin as targetOrigin (an origin on the SENDING side, not a check of who sent a received message) but navigates on any message it receives. VC029 must fire on each. ChatWidgetBridge.tsx is an embedded widget whose ready message carries an `origin` key ({ type, origin: window.location.origin }) — an object being sent, which must not be mistaken for an origin check on the unchecked listener beside it.",
+  "expectedFindings": [
+    { "rule": "VC029", "file": "components/ConnectStripeButton.tsx", "lineRange": [31, 39], "severityAtLeast": "medium" },
+    { "rule": "VC029", "file": "components/BookingWidget.tsx", "lineRange": [24, 32], "severityAtLeast": "medium" },
+    { "rule": "VC029", "file": "components/ChatWidgetBridge.tsx", "lineRange": [17, 21], "severityAtLeast": "medium" }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Same Linear feedback route with the API key read from process.env.LINEAR_API_KEY and a hard failure when it is missing — no lin_api_ literal anywhere. VC176 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC176"]
+}

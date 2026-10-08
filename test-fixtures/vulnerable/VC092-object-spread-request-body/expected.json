@@ -1,0 +1,18 @@
+{
+  "description": "Express profile routes that copy the whole request body into the saved object — { ...req.body, updatedAt } and Object.assign({}, req.body) — so arbitrary keys (role, credits, __proto__) ride along. VC092 must fire on both",
+  "expectedFindings": [
+    {
+      "rule": "VC092",
+      "file": "routes/profile.js",
+      "lineRange": [11, 15],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC092",
+      "file": "routes/profile.js",
+      "lineRange": [18, 22],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

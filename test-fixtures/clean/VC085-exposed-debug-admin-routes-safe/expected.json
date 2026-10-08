@@ -1,0 +1,5 @@
+{
+  "description": "Same Express API with the admin route behind requireAdmin (server-verified JWT role) and the env-dump debug route removed, plus the React admin dashboard's data layer, which CALLS api.get(\"/admin/users\") — a client request, not a route. VC085 must not fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC085"]
+}

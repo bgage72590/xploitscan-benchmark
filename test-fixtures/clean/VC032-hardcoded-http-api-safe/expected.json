@@ -1,0 +1,5 @@
+{
+  "description": "Same app with https:// everywhere, a localhost-only dev fallback, an inline SVG whose w3.org namespace URI is not a request, and a Sketch logo converted to JSX whose camel-cased xmlnsSketch namespace URI is not a request either — VC032 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC032"]
+}

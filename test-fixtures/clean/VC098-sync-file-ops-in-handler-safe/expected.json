@@ -1,0 +1,5 @@
+{
+  "description": "Same report route using fs/promises (readFile / mkdir / writeFile with await) so the handler never blocks the event loop. VC098 must not fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC098"]
+}

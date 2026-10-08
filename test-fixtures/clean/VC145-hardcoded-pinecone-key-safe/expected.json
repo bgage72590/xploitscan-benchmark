@@ -1,0 +1,5 @@
+{
+  "description": "Same RAG vector-store module with the Pinecone client keyed from process.env.PINECONE_API_KEY, as VC145's fix recommends. VC145 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC145"]
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Next.js multi-stage Dockerfile (the base/deps/builder/runner shape of the official with-docker example as shipped in Next.js v14.2) with the external base image pinned to an exact version. The deps/builder/runner stages are built FROM the named `base` stage — a stage reference with no tag by design, not an unpinned registry image. VC112 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC112"]
+}

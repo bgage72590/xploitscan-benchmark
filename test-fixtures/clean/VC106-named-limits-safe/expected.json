@@ -1,0 +1,5 @@
+{
+  "description": "The same limits and timeout as named constants (MAX_UPLOAD_BYTES, ONE_DAY_MS, FREE_PLAN_DAILY_UPLOADS, TOAST_DURATION_MS).",
+  "expectedFindings": [],
+  "mustNotFire": ["VC106"]
+}

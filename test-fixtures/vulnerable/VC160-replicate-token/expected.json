@@ -1,0 +1,12 @@
+{
+  "description": "Replicate API token (r8_ + 37 chars, the real 40-char format) hardcoded in the Replicate client of a Next.js image-generation route. Anyone with the repo can run paid GPU models on the account — VC160 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC160",
+      "file": "app/api/generate-image/route.ts",
+      "lineRange": [7, 13],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

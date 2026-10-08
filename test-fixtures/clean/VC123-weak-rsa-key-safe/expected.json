@@ -1,0 +1,5 @@
+{
+  "description": "The same JWT key generation with a 4096-bit RSA modulus in both Node (modulusLength: 4096) and Python (key_size=4096). VC123 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC123"]
+}

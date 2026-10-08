@@ -1,0 +1,42 @@
+{
+  "description": "Workflows that hand repository secrets to third-party code: a deploy workflow passing the Vercel token to amondnet/vercel-action and the server's SSH private key to appleboy/ssh-action through their with: blocks (both on mutable tags), and the Slack incoming-webhook URL to slackapi/slack-github-action through the step's env: (the action reads it from its environment); a release workflow giving the npm publish token to cycjimmy/semantic-release-action through env: alone, with no with: inputs; and an API workflow calling another org's reusable deploy workflow with the Fly API token in its secrets: block, then that org's Slack-notify workflow with only a secrets: block. A compromised action or workflow (as with tj-actions/changed-files in March 2025) can exfiltrate them. VC187 must fire on each of those six uses: lines. The env:-only step and the secrets:-only call have no with: block, which the old 800-char regex required.",
+  "expectedFindings": [
+    {
+      "rule": "VC187",
+      "file": ".github/workflows/deploy.yml",
+      "lineRange": [32, 36],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC187",
+      "file": ".github/workflows/deploy.yml",
+      "lineRange": [40, 44],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC187",
+      "file": ".github/workflows/deploy.yml",
+      "lineRange": [51, 53],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC187",
+      "file": ".github/workflows/release.yml",
+      "lineRange": [28, 30],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC187",
+      "file": ".github/workflows/deploy-api.yml",
+      "lineRange": [10, 14],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC187",
+      "file": ".github/workflows/deploy-api.yml",
+      "lineRange": [21, 24],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

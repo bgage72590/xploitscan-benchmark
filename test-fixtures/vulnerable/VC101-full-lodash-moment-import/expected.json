@@ -1,0 +1,10 @@
+{
+  "description": "A Vite + React app (vite.config.ts, index.html) pulling the whole of lodash or moment into its client bundle: default imports of both in ActivityFeed, `import * as moment` (the form moment's TypeScript docs use) in lib/dates.ts, and `import { debounce } from \"lodash\"` in useDebouncedSearch — lodash's root is a single CommonJS file, and Vite/Rollup can't tree-shake it, so here a named import still bundles every function. (Next.js is different: it rewrites named lodash imports to lodash/<name> by default, so the rule skips named lodash imports in files that show Next markers.)",
+  "expectedFindings": [
+    { "rule": "VC101", "file": "src/components/ActivityFeed.tsx", "lineRange": [1, 2], "severityAtLeast": "medium" },
+    { "rule": "VC101", "file": "src/components/ActivityFeed.tsx", "lineRange": [3, 6], "severityAtLeast": "medium" },
+    { "rule": "VC101", "file": "src/lib/dates.ts", "lineRange": [1, 5], "severityAtLeast": "medium" },
+    { "rule": "VC101", "file": "src/hooks/useDebouncedSearch.ts", "lineRange": [1, 5], "severityAtLeast": "medium" }
+  ],
+  "mustNotFire": []
+}

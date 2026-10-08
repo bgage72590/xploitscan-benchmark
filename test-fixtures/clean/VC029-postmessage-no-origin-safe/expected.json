@@ -1,0 +1,5 @@
+{
+  "description": "Popup OAuth listener that checks event.origin and event.source and validates the payload shape before acting — VC029 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC029"]
+}

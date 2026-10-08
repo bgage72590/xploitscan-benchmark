@@ -1,0 +1,5 @@
+{
+  "description": "Same Express API server with helmet setting Strict-Transport-Security (max-age one year, includeSubDomains). VC087 must not fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC087"]
+}

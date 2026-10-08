@@ -1,0 +1,18 @@
+{
+  "description": "Vite/React Dockerfile as AI tools write it: the build stage uses node:latest (with the common lowercase `as` stage alias) and the runtime stage uses an untagged nginx image. Both FROM lines float, so every rebuild can silently pull a different base. VC112 must fire on both.",
+  "expectedFindings": [
+    {
+      "rule": "VC112",
+      "file": "Dockerfile",
+      "lineRange": [1, 5],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC112",
+      "file": "Dockerfile",
+      "lineRange": [13, 17],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

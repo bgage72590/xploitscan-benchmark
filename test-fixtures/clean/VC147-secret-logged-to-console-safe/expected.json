@@ -1,0 +1,5 @@
+{
+  "description": "The same login route, Stripe client and Supabase admin client with redacted logging, as VC147's fix recommends: secrets are reported only as presence booleans, a live/test mode, or the last 4 characters, and log messages that merely mention 'token' or 'credentials' carry no secret value. An S3 helper logs a presence boolean (hasS3Credentials) and the NextContinuationToken pagination cursor, neither of which is a credential. VC147 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC147"]
+}

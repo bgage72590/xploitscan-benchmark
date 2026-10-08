@@ -1,0 +1,9 @@
+{
+  "description": "Heavy synchronous work on the main thread of a client app. lib/sudoku.ts retries puzzle generation in a `while (true)` loop with a brute-force uniqueness check, called from a click handler in SudokuBoard. lib/outbox.ts busy-waits in `while (true)` for edits to finish uploading: the awaits are inside the forEach's async callbacks, which suspend each callback but never the loop, so the fetches can never complete and the tab freezes. ContactImport runs an O(n^2) pairwise edit-distance comparison over every CSV row inside the parse callback; the rule only recognises `while (true)`, so deeply nested iteration is a known gap.",
+  "expectedFindings": [
+    { "rule": "VC102", "file": "lib/sudoku.ts", "lineRange": [65, 71], "severityAtLeast": "medium" },
+    { "rule": "VC102", "file": "lib/outbox.ts", "lineRange": [5, 7], "severityAtLeast": "medium" },
+    { "rule": "VC102", "file": "components/ContactImport.tsx", "lineRange": [33, 40], "severityAtLeast": "medium", "knownGap": true }
+  ],
+  "mustNotFire": []
+}

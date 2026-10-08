@@ -1,0 +1,12 @@
+{
+  "description": "An Express API for a React SPA enables CORS with a bare cors() call, which answers every origin with Access-Control-Allow-Origin: *. Any website can call the API from a visitor's browser. VC009 must fire on the cors() line.",
+  "expectedFindings": [
+    {
+      "rule": "VC009",
+      "file": "server.js",
+      "lineRange": [9, 15],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

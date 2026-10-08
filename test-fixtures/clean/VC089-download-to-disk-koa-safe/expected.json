@@ -1,0 +1,5 @@
+{
+  "description": "Koa app that DOWNLOADS files to disk — an exchange-rate snapshot fetched at boot and a CSV import fetched from a member's link, both piped into fs.createWriteStream — while its only responses are JSON bodies and the single-page app's own index.html. Nothing user-supplied is served as a file. VC089 must not fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC089"]
+}

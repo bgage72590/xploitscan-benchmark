@@ -1,0 +1,24 @@
+{
+  "description": "Plivo auth tokens committed to source: positional in new plivo.Client(authId, authToken) as the Node quickstart shows, as auth_token= in Python's plivo.RestClient, and as a PLIVO_AUTH_TOKEN config constant. Each lets anyone send SMS and place calls billed to the account — VC183 must fire on all three.",
+  "expectedFindings": [
+    {
+      "rule": "VC183",
+      "file": "lib/sms.ts",
+      "lineRange": [2, 6],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC183",
+      "file": "services/voice_alerts.py",
+      "lineRange": [2, 6],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC183",
+      "file": "lib/plivo-config.js",
+      "lineRange": [3, 7],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

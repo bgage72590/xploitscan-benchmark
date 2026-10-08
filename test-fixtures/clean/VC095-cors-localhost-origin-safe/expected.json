@@ -1,0 +1,5 @@
+{
+  "description": "Same Express + Socket.IO server reading allowed CORS origins from the environment (CORS_ORIGINS / APP_ORIGIN); the Socket.IO list adds the Vite dev server only behind a NODE_ENV !== \"production\" condition. VC095 must not fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC095"]
+}

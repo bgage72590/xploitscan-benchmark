@@ -1,0 +1,12 @@
+{
+  "description": "The stock Vite React .gitignore that AI app builders scaffold: it ignores *.local but not .env, so the .env holding the app's keys is committed with everything else. VC014 must fire on the .gitignore.",
+  "expectedFindings": [
+    {
+      "rule": "VC014",
+      "file": ".gitignore",
+      "lineRange": [1, 5],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

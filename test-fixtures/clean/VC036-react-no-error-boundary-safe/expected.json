@@ -1,0 +1,5 @@
+{
+  "description": "Same Vite React SPA with react-error-boundary wrapping <App /> in main.tsx and the routes in App.tsx, and a generic fallback that never renders the error — VC036 must not fire. Today VC036 does not evaluate this main.tsx + App.tsx layout at all (App.tsx has no createRoot; see the knownGap in vulnerable/VC036-react-no-error-boundary), so this pins the no-FP side for when that gap is closed. clean/VC036-app-mounts-itself-safe is the counterpart the rule does evaluate.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC036"]
+}

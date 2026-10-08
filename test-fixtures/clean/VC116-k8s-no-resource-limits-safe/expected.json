@@ -1,0 +1,5 @@
+{
+  "description": "The same web Deployment with CPU/memory requests and limits, written in the order the Kubernetes docs use (requests first, then limits), plus the HorizontalPodAutoscaler, PodDisruptionBudget and kustomization a production setup ships beside it. The HPA and the kustomization patch only reference the Deployment (scaleTargetRef / patch target) and the PDB defines no pods, so none of them is a pod spec. VC116 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC116"]
+}

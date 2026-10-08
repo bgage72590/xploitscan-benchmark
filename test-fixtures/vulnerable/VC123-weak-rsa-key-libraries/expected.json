@@ -1,0 +1,15 @@
+{
+  "description": "Sub-2048-bit RSA keys generated through the other common key-generation APIs: node-rsa `new NodeRSA({ b: 512 })` for license signing, Web Crypto `crypto.subtle.generateKey` RSA-OAEP with modulusLength 1024 for end-to-end encryption, node-forge `pki.rsa.generateKeyPair({ bits: 1024 })` for a SAML signing certificate, python-rsa `rsa.newkeys(512)`, PHP `openssl_pkey_new(['private_key_bits' => 1024])` in a Laravel command, Ruby `OpenSSL::PKey::RSA.new(1024)` in a Rails initializer, Java `KeyPairGenerator.getInstance(\"RSA\")` + `initialize(1024)` on the next line (and the same with the BouncyCastle provider, `getInstance(\"RSA\", \"BC\")`), and Go `rsa.GenerateKey` written one argument per line. VC123 must fire on each.",
+  "expectedFindings": [
+    { "rule": "VC123", "file": "src/lib/license.js", "lineRange": [9, 15], "severityAtLeast": "high" },
+    { "rule": "VC123", "file": "src/lib/e2e-keys.ts", "lineRange": [4, 9], "severityAtLeast": "high" },
+    { "rule": "VC123", "file": "scripts/generate-saml-cert.js", "lineRange": [3, 7], "severityAtLeast": "high" },
+    { "rule": "VC123", "file": "scripts/license_keys.py", "lineRange": [8, 13], "severityAtLeast": "high" },
+    { "rule": "VC123", "file": "app/Console/Commands/GenerateJwtKeys.php", "lineRange": [14, 19], "severityAtLeast": "high" },
+    { "rule": "VC123", "file": "config/initializers/jwt.rb", "lineRange": [4, 9], "severityAtLeast": "high" },
+    { "rule": "VC123", "file": "src/main/java/com/acme/auth/KeyService.java", "lineRange": [12, 16], "severityAtLeast": "high" },
+    { "rule": "VC123", "file": "src/main/java/com/acme/saml/SamlSigningKeys.java", "lineRange": [16, 19], "severityAtLeast": "high" },
+    { "rule": "VC123", "file": "internal/auth/signing.go", "lineRange": [10, 14], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

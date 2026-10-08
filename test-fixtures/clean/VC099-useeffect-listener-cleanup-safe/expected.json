@@ -1,0 +1,5 @@
+{
+  "description": "The same components with every listener cleaned up: removeEventListener in each effect's cleanup (ReadingProgress, in a useLayoutEffect, removes both the scroll and the resize listener it adds), AbortController ({ signal } + controller.abort()) in OnlineBadge and on NotificationBell's focus listener, and a WebSocket listener released by ws.close() in useNotifications (in a file that also removes a document listener elsewhere, so the close() cleanup itself is what's under test). Listeners on objects the effect creates itself go away with them: useSound's new Audio(), useScript's document.createElement(\"script\"). ResizableSidebar's drag handler removes its mousemove listener on mouseup, and the mouseup listener is { once: true }.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC099"]
+}

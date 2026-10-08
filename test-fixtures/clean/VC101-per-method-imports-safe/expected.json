@@ -1,0 +1,5 @@
+{
+  "description": "The same features importing only what they use: per-method lodash paths (lodash/debounce, lodash/groupBy), date-fns instead of moment, and a type-only `import type { DebouncedFunc } from \"lodash\"` that TypeScript erases.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC101"]
+}

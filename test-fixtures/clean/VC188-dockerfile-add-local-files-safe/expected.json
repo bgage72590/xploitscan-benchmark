@@ -1,0 +1,5 @@
+{
+  "description": "Same Express API image using COPY for every local file. The one remaining ADD is a legitimate, checksum-pinned URL fetch of the tini binary (flags first, source on a continuation line). VC188 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC188"]
+}

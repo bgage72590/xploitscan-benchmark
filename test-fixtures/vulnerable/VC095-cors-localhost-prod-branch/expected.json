@@ -1,0 +1,18 @@
+{
+  "description": "Express + Socket.IO server whose localhost origins apply in production: the CORS list inside if (!isDev) { ... } (a production branch, after a one-line development-only if), and a Socket.IO origin on the line after a one-line if (process.env.DEBUG) log statement, which does not guard it. VC095 must fire on both",
+  "expectedFindings": [
+    {
+      "rule": "VC095",
+      "file": "src/app.ts",
+      "lineRange": [18, 18],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC095",
+      "file": "src/realtime.ts",
+      "lineRange": [9, 9],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

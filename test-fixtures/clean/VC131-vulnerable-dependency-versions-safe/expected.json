@@ -1,0 +1,5 @@
+{
+  "description": "The same API with current dependency ranges: axios ^1.7.7, jsonwebtoken ^9.0.2, lodash ^4.17.21, and node-fetch ^2.7.0 (still the usual pin for CommonJS code; the range excludes every version before the 2.6.7 fix). No declared range admits a version VC131 knows to be vulnerable, so it must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC131"]
+}

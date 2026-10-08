@@ -1,0 +1,5 @@
+{
+  "description": "Postmark token read from Deno.env / process.env, with Postmark's public POSTMARK_API_TEST sandbox token for local dev. The safe counterpart to VC165 — must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC165"]
+}

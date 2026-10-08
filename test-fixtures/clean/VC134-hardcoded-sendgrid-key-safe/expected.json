@@ -1,0 +1,5 @@
+{
+  "description": "The same email helpers reading the SendGrid key from the environment (process.env.SENDGRID_API_KEY, os.environ[\"SENDGRID_API_KEY\"]) as VC134's fix recommends. No key literal is in source, so VC134 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC134"]
+}

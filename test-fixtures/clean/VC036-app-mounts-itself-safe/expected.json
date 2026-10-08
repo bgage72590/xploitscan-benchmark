@@ -1,0 +1,5 @@
+{
+  "description": "Same self-mounting App.jsx with the tree wrapped in react-error-boundary and a generic fallback — VC036 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC036"]
+}

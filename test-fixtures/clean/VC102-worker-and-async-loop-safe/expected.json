@@ -1,0 +1,5 @@
+{
+  "description": "Puzzle generation moved into a Web Worker (lib/sudoku.worker.ts) so the UI thread only posts a message, and a chat panel that reads a streamed fetch body with `while (true) { await reader.read() }` — a loop that awaits every pass hands the thread back and cannot freeze the page.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC102"]
+}

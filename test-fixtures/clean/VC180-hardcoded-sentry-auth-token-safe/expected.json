@@ -1,0 +1,5 @@
+{
+  "description": "Same Sentry build config and admin issues route with both tokens read from the environment (SENTRY_AUTH_TOKEN for source-map upload, SENTRY_API_TOKEN for the API call). VC180 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC180"]
+}

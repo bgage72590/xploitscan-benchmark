@@ -1,0 +1,5 @@
+{
+  "description": "The same features written with authenticated encryption as VC124's fix recommends: Node aes-256-gcm, PyCryptodome AES.new(key, AES.MODE_GCM), the cryptography package's AESGCM, Go aes.NewCipher + cipher.NewGCM, Java AES/GCM/NoPadding, Web Crypto AES-GCM in the React vault page, Ruby OpenSSL::Cipher::AES.new(256, :GCM) / OpenSSL::Cipher.new(\"aes-256-gcm\"), and PHP openssl_encrypt with 'aes-256-gcm'. AES.new, aes.NewCipher and new SecretKeySpec(key, \"AES\") are used by every AES mode, so none may be reported as ECB on its own.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC124"]
+}

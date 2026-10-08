@@ -1,0 +1,17 @@
+# Service account the GitHub Actions deploy job uses. The token Secret below
+# is empty on purpose: the control plane fills it in, so no credential is
+# ever written to this file.
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: ci-deployer
+  namespace: production
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ci-deployer-token
+  namespace: production
+  annotations:
+    kubernetes.io/service-account.name: ci-deployer
+type: kubernetes.io/service-account-token

@@ -1,0 +1,12 @@
+{
+  "description": "The standard Next.js App Router upload route: read the multipart file into memory with arrayBuffer() and writeFile it to public/uploads. Nothing caps the size, so one large (or repeated) upload exhausts memory or fills the disk. VC024 must fire on the writeFile call.",
+  "expectedFindings": [
+    {
+      "rule": "VC024",
+      "file": "app/api/upload/route.ts",
+      "lineRange": [19, 25],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

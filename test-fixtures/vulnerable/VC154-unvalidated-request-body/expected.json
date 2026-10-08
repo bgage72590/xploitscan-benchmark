@@ -1,0 +1,7 @@
+{
+  "description": "Next.js App Router POST handler that spreads the raw request.json() body straight into a Supabase insert with no schema validation — a caller can set any column (published, featured, view_count…) or send a non-string title that crashes slugify(). VC154 must fire on the POST handler.",
+  "expectedFindings": [
+    { "rule": "VC154", "file": "app/api/posts/route.ts", "lineRange": [10, 16], "severityAtLeast": "medium" }
+  ],
+  "mustNotFire": []
+}

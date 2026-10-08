@@ -1,0 +1,24 @@
+{
+  "description": "Django settings that disable Host-header validation: ALLOWED_HOSTS = [\"*\"] in settings.py; a production settings file whose env-var fallback is \"*\" (so an unset ALLOWED_HOSTS env var yields ['*']); and a staging settings file that appends \"*\" after the loopback entries, including the IPv6 \"[::1]\" whose `]` used to end the list match early. VC196 must fire on all three.",
+  "expectedFindings": [
+    {
+      "rule": "VC196",
+      "file": "mysite/settings.py",
+      "lineRange": [12, 18],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC196",
+      "file": "mysite/settings_production.py",
+      "lineRange": [10, 16],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC196",
+      "file": "mysite/settings_staging.py",
+      "lineRange": [2, 8],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

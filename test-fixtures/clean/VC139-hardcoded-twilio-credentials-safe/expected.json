@@ -1,0 +1,5 @@
+{
+  "description": "The same Twilio clients built from environment variables (TWILIO_API_KEY_SID / TWILIO_API_KEY_SECRET / TWILIO_ACCOUNT_SID / TWILIO_AUTH_TOKEN), as VC139's fix recommends, including a status callback that validates X-Twilio-Signature with the env-sourced auth token. No credential literal is in source, so VC139 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC139"]
+}

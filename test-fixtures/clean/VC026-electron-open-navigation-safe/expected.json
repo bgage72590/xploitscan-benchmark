@@ -1,0 +1,5 @@
+{
+  "description": "The same Electron reader with navigation locked down the way VC026's fix says: will-navigate cancels any navigation away from the app's own pages, setWindowOpenHandler denies every new window, and only https links are handed to the system browser. VC026 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC026"]
+}

@@ -1,0 +1,5 @@
+{
+  "description": "The same receivers letting the framework frame the body, as VC128's fix recommends: express.raw({ limit }) and Flask request.get_json with MAX_CONTENT_LENGTH. Setting a Content-Length response header is not parsing a request header, and neither is reading Content-Length off a downloaded *response* for a progress bar (https.get callback `res.headers`, requests + tqdm `r.headers`); none may be flagged.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC128"]
+}

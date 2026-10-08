@@ -1,0 +1,5 @@
+{
+  "description": "Django settings that list the React dev server as a CORS origin only inside the if DEBUG: block (beside the debug toolbar), while production reads CORS_ALLOWED_ORIGINS from the environment in the else branch. VC095 must not fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC095"]
+}

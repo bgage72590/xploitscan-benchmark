@@ -1,0 +1,30 @@
+name: Fly deploy (reusable)
+
+on:
+  workflow_call:
+    inputs:
+      app-name:
+        required: true
+        type: string
+      working-directory:
+        required: true
+        type: string
+    secrets:
+      FLY_API_TOKEN:
+        required: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Installs flyctl only; it is never given the token.
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+
+      - name: Deploy
+        working-directory: ${{ inputs.working-directory }}
+        run: flyctl deploy --remote-only --app "$APP_NAME"
+        env:
+          APP_NAME: ${{ inputs.app-name }}
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}

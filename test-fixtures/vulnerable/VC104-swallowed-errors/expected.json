@@ -1,0 +1,10 @@
+{
+  "description": "Errors silently swallowed: an empty catch around the order update and confirmation email in a checkout route, empty catch blocks around localStorage access, and a promise `.catch(() => {})` on an analytics call.",
+  "expectedFindings": [
+    { "rule": "VC104", "file": "app/api/checkout/route.ts", "lineRange": [27, 33], "severityAtLeast": "info" },
+    { "rule": "VC104", "file": "lib/cart.ts", "lineRange": [6, 12], "severityAtLeast": "info" },
+    { "rule": "VC104", "file": "lib/cart.ts", "lineRange": [13, 19], "severityAtLeast": "info" },
+    { "rule": "VC104", "file": "lib/cart.ts", "lineRange": [22, 26], "severityAtLeast": "info" }
+  ],
+  "mustNotFire": []
+}

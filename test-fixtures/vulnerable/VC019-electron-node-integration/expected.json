@@ -1,0 +1,12 @@
+{
+  "description": "An Electron markdown editor's main process turns on nodeIntegration and turns off contextIsolation so the renderer can require('fs') directly. Any script that runs in the window — a malicious note rendered as HTML, an XSS — gets full Node.js and therefore code execution on the user's machine. VC019 must fire on the webPreferences block.",
+  "expectedFindings": [
+    {
+      "rule": "VC019",
+      "file": "main.js",
+      "lineRange": [11, 17],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

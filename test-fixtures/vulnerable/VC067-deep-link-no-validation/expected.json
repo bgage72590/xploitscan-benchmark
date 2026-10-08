@@ -1,0 +1,7 @@
+{
+  "description": "Expo / React Navigation hook that acts on every incoming fitpal:// link with no scheme, host or route check: it signs the user in with a token from the link, opens any URL from the link in the in-app browser, and navigates to any screen named in the link. VC067 must fire on the Linking.getInitialURL / Linking.addEventListener(\"url\") wiring.",
+  "expectedFindings": [
+    { "rule": "VC067", "file": "src/hooks/useDeepLinks.ts", "lineRange": [34, 39], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

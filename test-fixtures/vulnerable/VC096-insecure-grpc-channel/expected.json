@@ -1,0 +1,24 @@
+{
+  "description": "gRPC clients calling services on other hosts over plaintext channels: Node grpc.credentials.createInsecure(), Python grpc.insecure_channel(), and Go grpc.WithTransportCredentials(insecure.NewCredentials()) — VC096 must fire on all three",
+  "expectedFindings": [
+    {
+      "rule": "VC096",
+      "file": "src/lib/payments-client.ts",
+      "lineRange": [16, 21],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC096",
+      "file": "worker/inference_client.py",
+      "lineRange": [12, 16],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC096",
+      "file": "gateway/users_client.go",
+      "lineRange": [21, 25],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

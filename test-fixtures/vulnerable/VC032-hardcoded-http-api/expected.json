@@ -1,0 +1,11 @@
+{
+  "description": "Next.js app calling its own API, a weather provider and a CMS over hardcoded http:// URLs, and a newsletter form posting to an http:// endpoint — VC032 must fire on each. testimonials.tsx guards the old substring path skip (\"test\" in the filename); site-footer.tsx guards the old whole-file skip for any component with an inline <svg xmlns>. station-specs.tsx guards the review fix: a product file named -specs is product code, not a spec/test file, and is still scanned.",
+  "expectedFindings": [
+    { "rule": "VC032", "file": "lib/api.ts", "lineRange": [3, 9], "severityAtLeast": "high" },
+    { "rule": "VC032", "file": "lib/api.ts", "lineRange": [17, 23], "severityAtLeast": "high" },
+    { "rule": "VC032", "file": "components/testimonials.tsx", "lineRange": [8, 14], "severityAtLeast": "high" },
+    { "rule": "VC032", "file": "components/site-footer.tsx", "lineRange": [5, 11], "severityAtLeast": "high" },
+    { "rule": "VC032", "file": "components/station-specs.tsx", "lineRange": [3, 5], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,5 @@
+{
+  "description": "The same create-post route with a zod schema and safeParse before the insert, inserting only the validated fields — the fix VC154 recommends. VC154 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC154"]
+}

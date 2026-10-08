@@ -1,0 +1,12 @@
+{
+  "description": "A one-off deploy script (promote preview to production + upsert a production env var) with a Vercel access token hardcoded as const VERCEL_TOKEN. Anyone with repo access can redeploy production and read/overwrite every environment variable. VC142 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC142",
+      "file": "scripts/promote-preview.ts",
+      "lineRange": [3, 7],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

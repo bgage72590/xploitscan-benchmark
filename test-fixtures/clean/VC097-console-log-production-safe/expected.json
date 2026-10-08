@@ -1,0 +1,5 @@
+{
+  "description": "Same login route using a pino structured logger that records only the outcome and user id, with password fields redacted and the level set per environment — no console.log. VC097 must not fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC097"]
+}

@@ -1,0 +1,25 @@
+{
+  "description": "Loops API key hardcoded as a LOOPS_API_KEY constant in a Next.js server action (detected), as a quoted \"LOOPS_API_KEY\" entry in the committed dev container containerEnv (detected only since the rule accepts a quoted key), and inline in `new LoopsClient(\"…\")` from the official SDK. The constructor form has no LOOPS_API_KEY name for the context-anchored rule to key on — known gap.",
+  "expectedFindings": [
+    {
+      "rule": "VC167",
+      "file": "app/actions/subscribe.ts",
+      "lineRange": [4, 10],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC167",
+      "file": ".devcontainer/devcontainer.json",
+      "lineRange": [6, 10],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC167",
+      "file": "lib/loops.ts",
+      "lineRange": [3, 7],
+      "severityAtLeast": "high",
+      "knownGap": true
+    }
+  ],
+  "mustNotFire": []
+}

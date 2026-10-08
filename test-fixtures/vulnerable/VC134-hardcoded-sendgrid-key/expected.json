@@ -1,0 +1,8 @@
+{
+  "description": "SendGrid API keys (SG.<22>.<43>) committed in source: passed straight to sgMail.setApiKey() in a Next.js email helper, and assigned to a module constant in a Flask notifications module. Either key can send mail as the verified domain. VC134 must fire on both.",
+  "expectedFindings": [
+    { "rule": "VC134", "file": "lib/email.ts", "lineRange": [1, 5], "severityAtLeast": "high" },
+    { "rule": "VC134", "file": "app/notifications.py", "lineRange": [3, 7], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

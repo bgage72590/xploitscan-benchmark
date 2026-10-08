@@ -1,0 +1,5 @@
+{
+  "description": "A Next.js Pages Router upload route that parses the multipart body with formidable({ maxFileSize: 5 MB, maxFiles: 1 }). formidable aborts an oversized upload while streaming it, so the readFile/writeFile copy into public/uploads only ever handles a capped file. VC024 must not fire. It used to: the size check recognised only a literal number or the names maxSize / MAX_SIZE, not formidable's maxFileSize option.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC024"]
+}

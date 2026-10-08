@@ -1,0 +1,5 @@
+{
+  "description": "The same Next.js upload route with a size cap: file.size is compared against a MAX_FILE_SIZE constant (and the type against an allowlist) before the file is copied into a Buffer and written to disk. VC024 must not fire. It used to: the size check recognised only a literal number or the names maxSize / MAX_SIZE, not the MAX_FILE_SIZE constant such checks are usually written against.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC024"]
+}

@@ -1,0 +1,8 @@
+{
+  "description": "Framework-less request handlers behind a reverse proxy that frame the body themselves from the Content-Length header: a Node http.createServer webhook receiver (parseInt(req.headers['content-length'])) and a Python http.server handler (int(self.headers['Content-Length'])). Neither honours Transfer-Encoding, the CL/TE disagreement request smuggling exploits. VC128 must fire on both.",
+  "expectedFindings": [
+    { "rule": "VC128", "file": "webhook-server.js", "lineRange": [7, 12], "severityAtLeast": "high" },
+    { "rule": "VC128", "file": "ingest_server.py", "lineRange": [11, 15], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,14 @@
+{
+  "description": "Forgot-password flows as AI builders write them: an Express route and a Next.js App Router handler that mint the reset token from Math.random()/Date.now() and answer 404 'User not found' / 'No account found with that email address'; a FastAPI router that emails a random.randint() 6-digit code and answers 'Email not registered'; and a requestPasswordReset() helper whose token is sha256(email + Date.now()) and which throws 'No user with that email exists'. The tokens are guessable and the messages tell an attacker which emails are registered. VC125 must fire on both the predictable token and the enumeration response in each file.",
+  "expectedFindings": [
+    { "rule": "VC125", "file": "routes/auth.js", "lineRange": [13, 17], "severityAtLeast": "high" },
+    { "rule": "VC125", "file": "routes/auth.js", "lineRange": [18, 22], "severityAtLeast": "high" },
+    { "rule": "VC125", "file": "app/api/auth/forgot-password/route.ts", "lineRange": [9, 13], "severityAtLeast": "high" },
+    { "rule": "VC125", "file": "app/api/auth/forgot-password/route.ts", "lineRange": [15, 19], "severityAtLeast": "high" },
+    { "rule": "VC125", "file": "app/routers/password_reset.py", "lineRange": [27, 30], "severityAtLeast": "high" },
+    { "rule": "VC125", "file": "app/routers/password_reset.py", "lineRange": [31, 34], "severityAtLeast": "high" },
+    { "rule": "VC125", "file": "lib/auth/passwordReset.ts", "lineRange": [5, 9], "severityAtLeast": "high" },
+    { "rule": "VC125", "file": "lib/auth/passwordReset.ts", "lineRange": [10, 14], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

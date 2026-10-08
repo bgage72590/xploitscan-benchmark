@@ -1,0 +1,5 @@
+{
+  "description": "Same Highlight setup with the source-map upload key taken from the build environment, plus the public browser project ID passed to HighlightInit (a client-side identifier by design, like a Sentry DSN). VC182 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC182"]
+}

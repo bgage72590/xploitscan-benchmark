@@ -1,0 +1,5 @@
+{
+  "description": "The same Firebase setup done the way VC012's fix says: every config value, the API key included, is read from VITE_FIREBASE_* environment variables instead of being hardcoded. VC012 must not fire. It used to be reported: any config object with an apiKey property counted, whatever its value.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC012"]
+}

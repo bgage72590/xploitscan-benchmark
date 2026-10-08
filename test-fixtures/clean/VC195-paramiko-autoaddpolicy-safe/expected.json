@@ -1,0 +1,5 @@
+{
+  "description": "Same deploy script and SFTP service loading pinned known_hosts and using RejectPolicy, so an unknown host key aborts the connection. AutoAddPolicy appears only in a comment. VC195 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC195"]
+}

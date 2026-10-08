@@ -1,0 +1,14 @@
+{
+  "description": "React listeners that are never removed. CommandMenu cleans up its resize listener but not its Cmd+K keydown listener in a second effect (the old file-wide check let the first effect's removeEventListener vouch for the second); ReadingProgress removes its scroll listener but not the resize listener added beside it in the same effect; Navbar's scroll listener has no cleanup at all; hooks/useWindowSize.ts is the same leak in a custom hook living in a .ts file, which the rule used to skip. NotificationBell aborts its fetch with an AbortController, but the focus listener was registered without that signal, so the abort doesn't release it. ScrollDepthTracker's only effect is react-use's useEffectOnce, with no cleanup returned. ResizableSidebar adds document mousemove/mouseup listeners in a mousedown handler, outside any effect, and never removes them, so every drag adds two more.",
+  "expectedFindings": [
+    { "rule": "VC099", "file": "components/CommandMenu.tsx", "lineRange": [31, 37], "severityAtLeast": "high" },
+    { "rule": "VC099", "file": "components/ReadingProgress.tsx", "lineRange": [15, 17], "severityAtLeast": "high" },
+    { "rule": "VC099", "file": "components/Navbar.tsx", "lineRange": [17, 23], "severityAtLeast": "high" },
+    { "rule": "VC099", "file": "hooks/useWindowSize.ts", "lineRange": [9, 15], "severityAtLeast": "high" },
+    { "rule": "VC099", "file": "components/NotificationBell.tsx", "lineRange": [19, 21], "severityAtLeast": "high" },
+    { "rule": "VC099", "file": "components/ScrollDepthTracker.tsx", "lineRange": [11, 13], "severityAtLeast": "high" },
+    { "rule": "VC099", "file": "components/ResizableSidebar.tsx", "lineRange": [18, 20], "severityAtLeast": "high" },
+    { "rule": "VC099", "file": "components/ResizableSidebar.tsx", "lineRange": [21, 23], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,5 @@
+{
+  "description": "The same chat route with the model checked against an ALLOWED_MODELS allowlist before the call, as VC028's fix recommends; the API key stays server-side. VC028 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC028"]
+}

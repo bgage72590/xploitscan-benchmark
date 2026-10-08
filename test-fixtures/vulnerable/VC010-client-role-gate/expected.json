@@ -1,0 +1,12 @@
+{
+  "description": "A Lovable-style Vite + Supabase admin page hides its Make admin / Delete buttons behind profile?.role === \"admin\" in the browser. The handlers write straight to the profiles table from the client; nothing on the server checks the role, so anyone can call them from DevTools. VC010 must fire on the role-gated render.",
+  "expectedFindings": [
+    {
+      "rule": "VC010",
+      "file": "src/pages/AdminUsers.tsx",
+      "lineRange": [67, 75],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

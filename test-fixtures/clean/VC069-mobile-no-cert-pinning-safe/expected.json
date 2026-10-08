@@ -1,0 +1,5 @@
+{
+  "description": "Same monorepo with the mobile API client pinning its host's public keys via react-native-ssl-public-key-pinning and uploads routed through that client, plus the Next.js web app's axios client in apps/web/lib/axios.ts — a browser app, where pinning does not apply. VC069 must not fire (the old rule flagged the web client because \"ios\" matched axios.ts and \"expo\" matched `export`).",
+  "expectedFindings": [],
+  "mustNotFire": ["VC069"]
+}

@@ -1,0 +1,10 @@
+{
+  "description": "Unnamed numbers in an upload route and a toast: a byte limit and a daily quota compared inline, a day in milliseconds computed inline, and a toast timeout on the closing `}, 4000);` line that Prettier gives any multi-statement timer callback (the old timer check only matched single-line calls). Arithmetic constants such as `Date.now() - 86400000` are not detected — a known gap, since flagging large literals in arithmetic would also hit every unit conversion.",
+  "expectedFindings": [
+    { "rule": "VC106", "file": "app/api/upload/route.ts", "lineRange": [15, 21], "severityAtLeast": "info" },
+    { "rule": "VC106", "file": "app/api/upload/route.ts", "lineRange": [23, 29], "severityAtLeast": "info" },
+    { "rule": "VC106", "file": "app/api/upload/route.ts", "lineRange": [23, 25], "severityAtLeast": "info", "knownGap": true },
+    { "rule": "VC106", "file": "components/Toast.tsx", "lineRange": [9, 15], "severityAtLeast": "info" }
+  ],
+  "mustNotFire": []
+}

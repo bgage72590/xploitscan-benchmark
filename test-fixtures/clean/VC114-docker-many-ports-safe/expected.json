@@ -1,0 +1,5 @@
+{
+  "description": "The same Express + Prisma image exposing only the one HTTP port it serves (websockets share it); no debugger or admin tooling ports. Plus the coturn relay image for its video calls, exposing its two service ports over both UDP and TCP (`3478/udp 3478/tcp`, `5349/udp 5349/tcp`): two ports, four protocol entries. VC114 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC114"]
+}

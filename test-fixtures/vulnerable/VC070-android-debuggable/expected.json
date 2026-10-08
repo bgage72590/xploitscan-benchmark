@@ -1,0 +1,12 @@
+{
+  "description": "Capacitor Android manifest that hardcodes android:debuggable=\"true\" on <application>, so the release APK lets anyone attach a debugger and read app memory — VC070 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC070",
+      "file": "android/app/src/main/AndroidManifest.xml",
+      "lineRange": [14, 20],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

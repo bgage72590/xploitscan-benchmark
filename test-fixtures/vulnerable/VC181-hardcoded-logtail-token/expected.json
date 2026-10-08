@@ -1,0 +1,24 @@
+{
+  "description": "Better Stack (Logtail) source tokens committed to source the way the vendor quickstarts get pasted: positional in new Logtail(\"<token>\") for Node/winston, as source_token= in Python's LogtailHandler, and as a LOGTAIL_SOURCE_TOKEN constant for a fetch-based edge logger. Each lets anyone write to (and flood) the log source — VC181 must fire on all three.",
+  "expectedFindings": [
+    {
+      "rule": "VC181",
+      "file": "src/logger.ts",
+      "lineRange": [4, 8],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC181",
+      "file": "worker/logging_setup.py",
+      "lineRange": [5, 9],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC181",
+      "file": "src/edge-logger.ts",
+      "lineRange": [1, 4],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

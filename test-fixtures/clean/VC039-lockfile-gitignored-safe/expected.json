@@ -1,0 +1,5 @@
+{
+  "description": "Same .gitignore with the lockfile committed; it is only mentioned in a comment explaining why — VC039 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC039"]
+}

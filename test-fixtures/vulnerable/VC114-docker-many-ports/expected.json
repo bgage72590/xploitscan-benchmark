@@ -1,0 +1,12 @@
+{
+  "description": "Express + Prisma Dockerfile that exposes four ports in a single EXPOSE line — the app, a websocket server, Prisma Studio and the Node inspector (remote code execution if reachable). Many ports on one directive is the same attack surface as many directives. VC114 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC114",
+      "file": "Dockerfile",
+      "lineRange": [13, 19],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

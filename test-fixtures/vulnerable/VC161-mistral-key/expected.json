@@ -1,0 +1,25 @@
+{
+  "description": "Mistral API key hardcoded three times: as a MISTRAL_API_KEY module constant in a Python assistant (detected), as a quoted \"MISTRAL_API_KEY\" entry in the env block of the committed Claude Code project settings (.claude/settings.json; detected only since the rule accepts a quoted key), and inline in `new Mistral({ apiKey: \"…\" })` in a Next.js lib file. The last is the SDK constructor shape, with no MISTRAL_API_KEY name for the context-anchored rule to key on — a known gap.",
+  "expectedFindings": [
+    {
+      "rule": "VC161",
+      "file": "app/assistant.py",
+      "lineRange": [6, 12],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC161",
+      "file": ".claude/settings.json",
+      "lineRange": [4, 8],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC161",
+      "file": "lib/mistral.ts",
+      "lineRange": [4, 9],
+      "severityAtLeast": "high",
+      "knownGap": true
+    }
+  ],
+  "mustNotFire": []
+}

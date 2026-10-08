@@ -1,0 +1,5 @@
+{
+  "description": "The same four LLM endpoints with rate limiting in front of the provider call: @upstash/ratelimit (sliding window per IP, 429 + Retry-After; fixed window per signed-in user) in the Next.js routes, and express-rate-limit middleware on both Express routes — the fix VC155 recommends. A fifth, rate-limited route (app/api/describe) calls a Gemini helper in lib/gemini.ts; that helper is not a route, and its Map cache's cache.get() must not be mistaken for an Express GET handler. VC155 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC155"]
+}

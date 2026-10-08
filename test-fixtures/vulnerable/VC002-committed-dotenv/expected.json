@@ -1,0 +1,12 @@
+{
+  "description": "A Next.js SaaS app's real .env (database password, NextAuth secret, Google OAuth secret, Stripe and OpenAI keys) sitting in the repository. Anything in a committed .env is in git history for good. VC002 must fire on the file.",
+  "expectedFindings": [
+    {
+      "rule": "VC002",
+      "file": ".env",
+      "lineRange": [1, 5],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

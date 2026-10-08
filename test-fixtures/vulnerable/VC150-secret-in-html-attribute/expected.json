@@ -1,0 +1,8 @@
+{
+  "description": "A static support page that ships a live Stripe secret key in <meta name=\"api-key\"> (read by inline JS to list prices straight from api.stripe.com) and an OpenAI project key in a chat widget's data-api-key attribute. Both are readable by every visitor and crawler via View Source. VC150 must fire on both.",
+  "expectedFindings": [
+    { "rule": "VC150", "file": "public/index.html", "lineRange": [5, 9], "severityAtLeast": "high" },
+    { "rule": "VC150", "file": "public/index.html", "lineRange": [16, 20], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

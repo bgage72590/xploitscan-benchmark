@@ -1,0 +1,9 @@
+{
+  "description": "Express app that gates /admin, internal endpoints and a payment webhook on IP lists hardcoded in source: a TypeScript-annotated array (`const ADMIN_ALLOWED_IPS: string[] = [...]`), a Set (`new Set([...])`) and a plain array. The original rule only matched `[` directly after `=`/`:`, so the first two were missed. VC053 must fire on all three.",
+  "expectedFindings": [
+    { "rule": "VC053", "file": "src/middleware/adminIpAllowlist.ts", "lineRange": [5, 9], "severityAtLeast": "medium" },
+    { "rule": "VC053", "file": "src/middleware/internalApi.ts", "lineRange": [2, 6], "severityAtLeast": "medium" },
+    { "rule": "VC053", "file": "src/routes/paymentWebhook.js", "lineRange": [7, 11], "severityAtLeast": "medium" }
+  ],
+  "mustNotFire": []
+}

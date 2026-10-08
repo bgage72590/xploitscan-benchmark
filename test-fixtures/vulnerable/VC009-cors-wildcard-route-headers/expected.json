@@ -1,0 +1,13 @@
+{
+  "description": "A Next.js App Router route handler sets wildcard CORS through a headers object (\"Access-Control-Allow-Origin\": \"*\") — the usual way route handlers and edge functions set CORS, since there is no res.setHeader. It is the same wildcard VC009 reports for cors() and setHeader(\"Access-Control-Allow-Origin\", \"*\"), so VC009 should fire on the header line: this fixture records that form gap, at the same risk level as those forms. The route answers for the signed-in seller, but the wildcard alone does not let another site read that: browsers refuse to share a credentialed response under \"*\", and the Auth.js session cookie (SameSite=Lax) is not sent on a cross-site fetch. KNOWN GAP: VC009 matches only the call form setHeader(\"Access-Control-Allow-Origin\", \"*\"), not the object-literal form. Matching it would also report the corsHeaders block of every Supabase Edge Function (Supabase's own template, present in several existing fixtures) — a noise/consistency decision for the product owner, not a contained rule fix.",
+  "expectedFindings": [
+    {
+      "rule": "VC009",
+      "file": "app/api/products/route.ts",
+      "lineRange": [5, 10],
+      "severityAtLeast": "medium",
+      "knownGap": true
+    }
+  ],
+  "mustNotFire": []
+}

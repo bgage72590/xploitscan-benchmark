@@ -1,0 +1,8 @@
+{
+  "description": "Nightly database backups that put the database password on the command line: a Next.js cron route builds `mysqldump ... -p${DB_PASSWORD}` for execSync, and a Python script passes a postgresql://user:password@host URL as a pg_dump argument via subprocess.run. Both are visible to every local user in `ps aux` / /proc/<pid>/cmdline while the dump runs. VC151 must fire on both.",
+  "expectedFindings": [
+    { "rule": "VC151", "file": "app/api/cron/backup/route.ts", "lineRange": [13, 17], "severityAtLeast": "high" },
+    { "rule": "VC151", "file": "scripts/backup_to_s3.py", "lineRange": [17, 23], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

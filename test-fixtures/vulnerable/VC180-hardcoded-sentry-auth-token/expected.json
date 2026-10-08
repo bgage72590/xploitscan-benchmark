@@ -1,0 +1,18 @@
+{
+  "description": "Sentry auth tokens committed to source: an organization token (sntrys_) pasted into withSentryConfig's authToken in next.config.mjs, and a personal user auth token (sntryu_, the kind created under User Settings → Auth Tokens) in an admin route that reads issues from the Sentry API. VC180 must fire on both.",
+  "expectedFindings": [
+    {
+      "rule": "VC180",
+      "file": "next.config.mjs",
+      "lineRange": [11, 15],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC180",
+      "file": "app/api/admin/errors/route.ts",
+      "lineRange": [11, 15],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

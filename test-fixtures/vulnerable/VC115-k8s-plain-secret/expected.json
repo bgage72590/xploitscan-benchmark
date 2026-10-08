@@ -1,0 +1,18 @@
+{
+  "description": "Kubernetes Secret manifests committed to the repo: the database URL, Stripe key and JWT secret as plain base64 under `data:`, and a registry pull secret whose credentials sit in plain text under `stringData:` in a multi-document file (after an empty service-account-token Secret, which stores nothing). Anyone with repo access reads them. VC115 must fire on both secrets that carry values.",
+  "expectedFindings": [
+    {
+      "rule": "VC115",
+      "file": "k8s/secrets.yaml",
+      "lineRange": [1, 7],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC115",
+      "file": "k8s/registry.yaml",
+      "lineRange": [11, 16],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

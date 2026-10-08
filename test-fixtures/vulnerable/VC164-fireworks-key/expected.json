@@ -1,0 +1,12 @@
+{
+  "description": "Fireworks AI key (fw_ + 24) hardcoded as api_key in an OpenAI-compatible client pointed at api.fireworks.ai, in a FastAPI service. VC164 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC164",
+      "file": "app/llm.py",
+      "lineRange": [9, 15],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,5 @@
+{
+  "description": "A Vite app wrapped with Capacitor for mobile (the usual route from an AI-built web app to the app stores). The root .gitignore ignores .env; `npx cap add android` / `ios` generate android/.gitignore and ios/.gitignore that cover native build output only. No .env ever lives in those native project folders, so VC014 must not report them. Both native .gitignore files used to be reported.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC014"]
+}

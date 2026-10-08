@@ -1,0 +1,87 @@
+{
+  "description": "RAG ingestion that stores embeddings with no owner tag, so every tenant's chunks land in one pool that query-time filters can't separate: a Next.js route upserting prebuilt Pinecone records whose metadata has no userId; a sync job upserting an inline notes.map(...) with no workspace/user key; a FastAPI/LangChain endpoint calling vector_store.add_documents() on PDF chunks that carry only loader metadata; a Next.js/LangChain JS route whose splitter.createDocuments() metadata has only the file name before vectorStore.addDocuments(); a Chroma store whose prebuilt metadatas list has no user_id; a Qdrant upsert whose point-builder helper never receives the owner; and a note re-embedder writing every user's notes into one shared Pinecone namespace via index.namespace(\"notes\").upsert(). Plus two writes whose only 'owner-looking' text is not an owner tag: a Qdrant upsert into a shared \"customer_docs\" collection whose payload is text, filename and source \"user_upload\", and Pinecone upload records whose metadata has source \"user-upload\" but no owner key. VC202 must fire on all nine.",
+  "expectedFindings": [
+    {
+      "rule": "VC202",
+      "file": "app/api/documents/route.ts",
+      "lineRange": [
+        35,
+        41
+      ],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC202",
+      "file": "lib/notes-sync.ts",
+      "lineRange": [
+        15,
+        21
+      ],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC202",
+      "file": "services/ingest.py",
+      "lineRange": [
+        29,
+        35
+      ],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC202",
+      "file": "app/api/knowledge/route.ts",
+      "lineRange": [
+        22,
+        28
+      ],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC202",
+      "file": "rag/chroma_store.py",
+      "lineRange": [
+        18,
+        24
+      ],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC202",
+      "file": "lib/qdrant-points.ts",
+      "lineRange": [
+        14,
+        20
+      ],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC202",
+      "file": "lib/embed-note.ts",
+      "lineRange": [
+        14,
+        20
+      ],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC202",
+      "file": "rag/qdrant_store.py",
+      "lineRange": [
+        16,
+        20
+      ],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC202",
+      "file": "lib/upload-embeddings.ts",
+      "lineRange": [
+        12,
+        16
+      ],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": ["Bash(python app/assistant.py:*)", "Bash(pytest:*)"]
+  },
+  "env": {
+    "MISTRAL_API_KEY": "FAKE0000FAKE0000FAKE0000FAKE0000"
+  }
+}

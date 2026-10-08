@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acme Support</title>
+    <!-- Per-session CSRF token from Flask-WTF, rendered for each response. -->
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <main class="hero">
+      <h1>How can we help?</h1>
+      <p>Ask our assistant anything about your account.</p>
+    </main>
+
+    <!-- The widget talks to our own backend; the OpenAI key stays server-side.
+         It fetches a short-lived session token from data-token-endpoint. -->
+    <div
+      id="support-chat"
+      data-endpoint="/api/support-chat"
+      data-token-endpoint="/api/support-chat/session"
+      data-model="gpt-4o-mini"
+      data-position="bottom-right"
+    ></div>
+
+    <script>
+      const csrf = document.querySelector('meta[name="csrf-token"]').content;
+      fetch("/api/plans", {
+        credentials: "same-origin",
+        headers: { "X-CSRF-Token": csrf },
+      })
+        .then((r) => r.json())
+        .then((plans) => console.log("plans", plans.length));
+    </script>
+    <script src="{{ url_for('static', filename='chat-widget.js') }}" defer></script>
+  </body>
+</html>

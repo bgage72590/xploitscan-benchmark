@@ -1,0 +1,18 @@
+{
+  "description": "Fastly API token hardcoded as a FASTLY_API_TOKEN constant in a CI purge script, and as a literal in the Fastly-Key request header of a Django signal (Fastly's own auth header name — missed before the rule recognised it). VC169 must fire on both.",
+  "expectedFindings": [
+    {
+      "rule": "VC169",
+      "file": "scripts/purge-cdn.mjs",
+      "lineRange": [2, 8],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC169",
+      "file": "blog/signals.py",
+      "lineRange": [16, 22],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,5 @@
+{
+  "description": "mcp.json that interpolates ${env:QDRANT_API_KEY} instead of embedding the key, a QdrantClient keyed from os.environ, and a map from env vars to Azure Key Vault secret names (\"QDRANT_API_KEY\": \"acme-prod-qdrant-cloud-api-key\"). The safe counterpart to VC174 — must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC174"]
+}

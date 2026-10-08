@@ -1,0 +1,5 @@
+{
+  "description": "Mistral key read from os.environ / a typed t3-env schema; the client takes env.MISTRAL_API_KEY. The safe counterpart to VC161 — must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC161"]
+}

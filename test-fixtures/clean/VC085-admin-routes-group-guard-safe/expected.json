@@ -1,0 +1,5 @@
+{
+  "description": "Express API whose admin routes are guarded once for the whole group instead of per route: app.use(\"/api/admin\", verifyToken, verifyAdmin) mounted on the prefix in server.js, and router.use(verifyToken, verifyAdmin) at the top of the orders router. The route lines carry no middleware of their own, so a check that only reads the route line would call them unguarded. VC085 must not fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC085"]
+}

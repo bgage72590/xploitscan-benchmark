@@ -1,0 +1,5 @@
+{
+  "description": "Same profile API with linear-time validation: URLs checked with the WHATWG URL parser and display names with a flat, length-capped character class — no nested quantifiers. VC080 must not fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC080"]
+}

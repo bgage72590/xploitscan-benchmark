@@ -1,0 +1,8 @@
+{
+  "description": "Database admin UIs shipped to production in a small monorepo: the web app's package.json start script runs Prisma Studio alongside next start (Railway/Render run `npm start`), and the reporting service's compose.yaml (Compose's default file name, as `docker init` generates it) runs Drizzle Studio bound to 0.0.0.0 with its port published. Either gives anyone who finds the port full read/write access to every table. VC157 must fire on both.",
+  "expectedFindings": [
+    { "rule": "VC157", "file": "package.json", "lineRange": [6, 10], "severityAtLeast": "high" },
+    { "rule": "VC157", "file": "services/reporting/compose.yaml", "lineRange": [14, 20], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

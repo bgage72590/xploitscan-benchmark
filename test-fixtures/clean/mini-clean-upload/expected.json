@@ -1,5 +1,5 @@
 {
-  "description": "Clean upload: magic-byte sniff + size cap + boundary-checked path. VC038 and VC025 must not fire.",
+  "description": "Clean upload: magic-byte sniff + size cap + boundary-checked path. VC038, VC025 and VC024 must not fire. VC024 used to be reported: its size check did not recognise multer's limits.fileSize option.",
   "expectedFindings": [],
-  "mustNotFire": ["VC038", "VC025"]
+  "mustNotFire": ["VC038", "VC025", "VC024"]
 }

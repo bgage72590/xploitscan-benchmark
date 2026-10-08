@@ -1,0 +1,19 @@
+{
+  "description": "Next.js profile API validating user-supplied input with catastrophic-backtracking regexes: the widely copied URL regex with a nested ([\\/\\w .-]*)* path group (VC080 must fire), and the OWASP textbook display-name pattern ([a-zA-Z]+\\s?)*. The second is a known gap: VC080 only recognises a group whose LAST token is quantified with + or *, so a repeated group ending in an optional \\s? is not seen. VC080 is being rewritten in PR #828; drop knownGap once it detects this",
+  "expectedFindings": [
+    {
+      "rule": "VC080",
+      "file": "lib/validators.ts",
+      "lineRange": [6, 12],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC080",
+      "file": "lib/names.ts",
+      "lineRange": [6, 12],
+      "severityAtLeast": "high",
+      "knownGap": true
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,19 @@
+{
+  "description": "Postmark server token hardcoded in the X-Postmark-Server-Token header of a Supabase Edge Function (detected once the rule accepts a quoted key), and inline in `new postmark.ServerClient(\"…\")` in a Node mailer. The SDK constructor carries no token-name for the context-anchored rule to key on — known gap.",
+  "expectedFindings": [
+    {
+      "rule": "VC165",
+      "file": "supabase/functions/send-welcome/index.ts",
+      "lineRange": [11, 17],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC165",
+      "file": "lib/mailer.ts",
+      "lineRange": [3, 7],
+      "severityAtLeast": "high",
+      "knownGap": true
+    }
+  ],
+  "mustNotFire": []
+}

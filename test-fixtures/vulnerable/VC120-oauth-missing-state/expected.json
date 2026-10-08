@@ -1,0 +1,34 @@
+{
+  "description": "Hand-rolled OAuth logins in Express with no `state`, so the callback accepts any `code` and an attacker can log the victim into the attacker's account (login CSRF). GitHub: the authorize URL is built from URLSearchParams with client_id/redirect_uri/scope. Google: the same request built with new URL(GOOGLE_AUTH_URL) + searchParams.set(). Flask: a params dict appended with f\"https://github.com/login/oauth/authorize?{urlencode(params)}\". VC120 must fire on all three. The Google file is a knownGap: VC120 only examines an endpoint string ending in `authorize?` / `/auth?`, `/oauth/authorize` or `authorization_endpoint`, and Google's bare `/o/oauth2/v2/auth` constant (no `?`) is none of these. Widening the endpoint match would also pick up authlib / requests-oauthlib `authorize_url=` client config, which generate and check state themselves.",
+  "expectedFindings": [
+    {
+      "rule": "VC120",
+      "file": "src/routes/github-auth.js",
+      "lineRange": [
+        11,
+        18
+      ],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC120",
+      "file": "app/github_login.py",
+      "lineRange": [
+        11,
+        17
+      ],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC120",
+      "file": "src/routes/google-auth.js",
+      "lineRange": [
+        6,
+        17
+      ],
+      "severityAtLeast": "high",
+      "knownGap": true
+    }
+  ],
+  "mustNotFire": []
+}

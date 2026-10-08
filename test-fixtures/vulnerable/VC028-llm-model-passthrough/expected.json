@@ -1,0 +1,12 @@
+{
+  "description": "A Next.js chat route destructures the model name from the request body (`const { messages, model } = await req.json()`) and passes it straight to OpenAI on the server's own API key. Any signed-in user can pick the most expensive model, or any model the key can reach, by editing the request. VC028 must fire on the destructuring line. It used to miss this: it only recognised the member-access form `model: req.body.model`, not the destructured shape route handlers and Express apps actually use.",
+  "expectedFindings": [
+    {
+      "rule": "VC028",
+      "file": "app/api/chat/route.ts",
+      "lineRange": [11, 18],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,12 @@
+{
+  "description": "The Firebase console's copy-paste snippet committed as src/lib/firebase.ts: the web config, API key included, hardcoded in client code. The key ships to every visitor and stays usable against any API it isn't restricted from. VC012 must fire on the config object.",
+  "expectedFindings": [
+    {
+      "rule": "VC012",
+      "file": "src/lib/firebase.ts",
+      "lineRange": [6, 12],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

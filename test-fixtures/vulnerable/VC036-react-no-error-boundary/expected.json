@@ -1,0 +1,13 @@
+{
+  "description": "Standard Vite/Lovable React SPA with no error boundary anywhere: main.tsx calls createRoot, App.tsx holds providers and routes. VC036 should fire on App.tsx but only fires when App.tsx itself calls createRoot/ReactDOM.render, which no Vite or CRA scaffold does. Known gap: where the boundary lives (main.tsx, App.tsx or a router errorElement) is a cross-file question a per-file rule cannot answer without false positives.",
+  "expectedFindings": [
+    {
+      "rule": "VC036",
+      "file": "src/App.tsx",
+      "lineRange": [1, 5],
+      "severityAtLeast": "medium",
+      "knownGap": true
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,5 @@
+{
+  "description": "The same mailers reading the Mailgun key and domain from the environment (MAILGUN_API_KEY / MAILGUN_DOMAIN), as VC140's fix recommends. A UUID campaign id in the same Mailgun file is not a key (8-4-4-4-12, not 32-8-8), so VC140 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC140"]
+}

@@ -1,0 +1,18 @@
+{
+  "description": "paramiko clients that silently trust unknown host keys: deploy script with set_missing_host_key_policy(paramiko.AutoAddPolicy()), and an SFTP service passing the AutoAddPolicy class (paramiko instantiates it). VC195 must fire on both.",
+  "expectedFindings": [
+    {
+      "rule": "VC195",
+      "file": "scripts/deploy.py",
+      "lineRange": [17, 23],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC195",
+      "file": "app/services/sftp_sync.py",
+      "lineRange": [9, 15],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

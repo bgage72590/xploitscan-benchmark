@@ -1,0 +1,10 @@
+{
+  "description": "Credential endpoints with no rate limiting, as AI builders generate them: an Express auth router (POST /register, /login), a RealWorld-spec users router (POST /users/login), and a Next.js App Router login handler (app/api/auth/login/route.ts). Each lets an attacker try passwords as fast as the server answers. VC130 must fire on the Express routes. The Next.js handler is a known gap: VC130 only recognises app/router/server.post(...) route registration, and a file-level check would be blind to the rate limiting Next.js apps often do in middleware.ts.",
+  "expectedFindings": [
+    { "rule": "VC130", "file": "routes/auth.js", "lineRange": [9, 15], "severityAtLeast": "high" },
+    { "rule": "VC130", "file": "routes/auth.js", "lineRange": [18, 24], "severityAtLeast": "high" },
+    { "rule": "VC130", "file": "src/routes/users.ts", "lineRange": [7, 13], "severityAtLeast": "high" },
+    { "rule": "VC130", "file": "app/api/auth/login/route.ts", "lineRange": [6, 12], "severityAtLeast": "high", "knownGap": true }
+  ],
+  "mustNotFire": []
+}

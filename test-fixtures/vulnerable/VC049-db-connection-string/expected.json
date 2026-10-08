@@ -1,0 +1,11 @@
+{
+  "description": "Database credentials committed in the shapes AI-built apps actually use: a MERN config/db.js passing a MongoDB Atlas mongodb+srv:// string to mongoose.connect, a Supabase postgresql:// pooler string in a pg Pool, Sequelize's generated config/config.json with real passwords, and a mysql2 pool with the password on its own line. The original rule caught none of them (it needed a connection/database/db word before the URL on the same line, and a host on the same line as the password). VC049 must fire on each.",
+  "expectedFindings": [
+    { "rule": "VC049", "file": "config/db.js", "lineRange": [8, 12], "severityAtLeast": "critical" },
+    { "rule": "VC049", "file": "src/lib/database.ts", "lineRange": [6, 10], "severityAtLeast": "critical" },
+    { "rule": "VC049", "file": "config/config.json", "lineRange": [2, 6], "severityAtLeast": "critical" },
+    { "rule": "VC049", "file": "config/config.json", "lineRange": [16, 20], "severityAtLeast": "critical" },
+    { "rule": "VC049", "file": "server/db.js", "lineRange": [8, 12], "severityAtLeast": "critical" }
+  ],
+  "mustNotFire": []
+}

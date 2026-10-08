@@ -1,0 +1,5 @@
+{
+  "description": "The same schemas following VC129's fix: SSN / tax ID stored only as app-encrypted ciphertext (encrypted_ssn, encryptedTaxId, ssnEncrypted, ssn_encrypted LargeBinary) plus a last-4 column for display, or encrypted transparently by a field-encryption library (prisma-field-encryption `/// @encrypted`, the mongoose-field-encryption plugin, django-encrypted-model-fields EncryptedCharField); cards tokenized by Stripe, bank details held by Stripe Connect / Plaid. Mongoose and Sequelize fields the schema encrypts itself (a Mongoose `set: encrypt, get: decrypt` pair, the Sequelize docs' set()/get() pattern, Mongoose CSFLE `encrypt: { keyId, algorithm }`) are protected too, and the GraphQL SDL of an Apollo server that also uses Mongoose (`type Customer { ssn: String }`, resolved to a masked value) stores nothing. Columns named as ciphertext or last-4, and fields a declared encryption layer covers, must not be read as plaintext PII.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC129"]
+}

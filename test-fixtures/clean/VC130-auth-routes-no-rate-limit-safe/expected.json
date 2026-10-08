@@ -1,0 +1,5 @@
+{
+  "description": "The same credential endpoints rate limited as VC130's fix recommends: express-rate-limit passed per route (authLimiter / loginLimiter), a limiter mounted once with router.use(rateLimit(...)) above every route in a password-reset router (however far below the routes sit), and an Upstash Ratelimit check at the top of the Next.js login handler.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC130"]
+}

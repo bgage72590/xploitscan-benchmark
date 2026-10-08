@@ -1,0 +1,5 @@
+{
+  "description": "The same code handling every error: logged with context and a 500 response, a logged warning where failure is tolerable, and a promise .catch that logs the dropped analytics event.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC104"]
+}

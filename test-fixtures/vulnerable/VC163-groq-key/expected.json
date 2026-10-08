@@ -1,0 +1,19 @@
+{
+  "description": "Groq API key (gsk_ + 52) hardcoded in a browser-side Groq client (detected), and assigned into os.environ in a Python batch script. The second is skipped because the placeholder filter drops any line mentioning os.environ — even one that writes a literal key into it. Known gap.",
+  "expectedFindings": [
+    {
+      "rule": "VC163",
+      "file": "src/lib/groq.ts",
+      "lineRange": [4, 9],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC163",
+      "file": "scripts/transcribe.py",
+      "lineRange": [8, 13],
+      "severityAtLeast": "high",
+      "knownGap": true
+    }
+  ],
+  "mustNotFire": []
+}

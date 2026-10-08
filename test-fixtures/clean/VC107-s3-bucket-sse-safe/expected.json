@@ -1,0 +1,5 @@
+{
+  "description": "Every bucket is encrypted. In infra/s3.tf both buckets have their own aws_s3_bucket_server_side_encryption_configuration (SSE-S3 for the access-log bucket, KMS for uploads), each referencing its bucket by name. The reusable module declares it inline as a `dynamic \"server_side_encryption_configuration\"` block (the terraform-aws-modules style). The per-tenant buckets are encrypted by a for_each config whose `bucket = each.value.id` can't be tied to a name, so nothing in that file is reported. The legacy bucket marks the setting `ignore_changes` because its config resource lives in legacy_encryption.tf.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC107"]
+}

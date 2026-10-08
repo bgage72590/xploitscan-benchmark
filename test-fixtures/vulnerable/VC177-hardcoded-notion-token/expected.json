@@ -1,0 +1,18 @@
+{
+  "description": "Notion internal integration tokens committed to source: a current-format ntn_ token (issued for every integration since Sept 2024) in the Next.js blog's Notion client, and a legacy secret_ token in a Python export script. Either grants access to every page the integration is connected to — VC177 must fire on both.",
+  "expectedFindings": [
+    {
+      "rule": "VC177",
+      "file": "lib/notion.ts",
+      "lineRange": [4, 8],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC177",
+      "file": "scripts/export_waitlist.py",
+      "lineRange": [9, 13],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

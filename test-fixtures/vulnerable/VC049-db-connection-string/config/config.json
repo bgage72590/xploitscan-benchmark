@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "devpass123",
+    "database": "bookings_development",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "bookings_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "bookings_app",
+    "password": "Pr0d-Bk9#xW2mQ",
+    "database": "bookings_production",
+    "host": "bookings-db.c9akciq32xyz.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}

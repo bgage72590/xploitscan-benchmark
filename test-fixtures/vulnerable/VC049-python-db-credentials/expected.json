@@ -1,0 +1,8 @@
+{
+  "description": "Python repo with a Django storefront and a FastAPI analytics service, both with committed database passwords: Django's multi-line DATABASES dict (PASSWORD on its own line) and a SQLAlchemy postgresql+asyncpg:// URL. The original rule missed both (same-line host/password only; no +driver URL schemes). VC049 must fire on each.",
+  "expectedFindings": [
+    { "rule": "VC049", "file": "storefront/storefront/settings.py", "lineRange": [28, 34], "severityAtLeast": "critical" },
+    { "rule": "VC049", "file": "analytics/app/database.py", "lineRange": [4, 8], "severityAtLeast": "critical" }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Same Notion blog client and waitlist export with the integration token read from NOTION_TOKEN (process.env / os.environ) — no ntn_ or secret_ literal in source. VC177 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC177"]
+}

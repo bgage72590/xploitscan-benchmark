@@ -1,0 +1,8 @@
+{
+  "description": "Expo app in a monorepo (apps/mobile) whose axios clients — the main API client and a separate upload client — rely on the device trust store with no certificate pinning. VC069 must fire on both.",
+  "expectedFindings": [
+    { "rule": "VC069", "file": "apps/mobile/src/api/client.ts", "lineRange": [6, 10], "severityAtLeast": "medium" },
+    { "rule": "VC069", "file": "apps/mobile/src/api/uploads.ts", "lineRange": [3, 7], "severityAtLeast": "medium" }
+  ],
+  "mustNotFire": []
+}

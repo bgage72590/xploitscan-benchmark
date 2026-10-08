@@ -1,0 +1,5 @@
+{
+  "description": "Same Capacitor Android manifest with no debuggable attribute — debuggability comes from the Gradle build type, so release builds are never debuggable. VC070 must not fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC070"]
+}

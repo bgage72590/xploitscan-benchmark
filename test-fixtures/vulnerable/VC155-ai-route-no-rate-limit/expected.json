@@ -1,0 +1,10 @@
+{
+  "description": "Four LLM endpoints with no rate limiting: a Vercel AI SDK chat route (streamText + gpt-4o), an Express summarize route calling the Anthropic SDK, an Express proxy calling Gemini through Google's current @google/genai SDK, and an AI SDK route using the @ai-sdk/google provider (generateObject + gemini-2.5-pro). Any caller can loop requests and run up the provider bill. VC155 must fire on every handler.",
+  "expectedFindings": [
+    { "rule": "VC155", "file": "app/api/chat/route.ts", "lineRange": [4, 10], "severityAtLeast": "high" },
+    { "rule": "VC155", "file": "server/routes/summarize.js", "lineRange": [5, 11], "severityAtLeast": "high" },
+    { "rule": "VC155", "file": "server.js", "lineRange": [9, 15], "severityAtLeast": "high" },
+    { "rule": "VC155", "file": "app/api/recipes/route.ts", "lineRange": [8, 14], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

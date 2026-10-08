@@ -1,0 +1,5 @@
+{
+  "description": "Same Apollo Server 4 API with a graphql-query-complexity check (getComplexity in didResolveOperation, max 1000) alongside the depth limit. VC205 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC205"]
+}

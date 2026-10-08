@@ -1,0 +1,9 @@
+{
+  "description": "package.json of an Express API scaffolded from a 2018-era tutorial and never upgraded: axios ^0.18.0 (SSRF via redirect, fixed in 0.21.1), jsonwebtoken ^7.4.3, and node-fetch ^2.1.2 (forwards Authorization/Cookie headers on cross-origin redirects, fixed in 2.6.7). VC131 must flag each declared range whose floor is a vulnerable version.",
+  "expectedFindings": [
+    { "rule": "VC131", "file": "package.json", "lineRange": [9, 13], "severityAtLeast": "high" },
+    { "rule": "VC131", "file": "package.json", "lineRange": [14, 17], "severityAtLeast": "high" },
+    { "rule": "VC131", "file": "package.json", "lineRange": [18, 21], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

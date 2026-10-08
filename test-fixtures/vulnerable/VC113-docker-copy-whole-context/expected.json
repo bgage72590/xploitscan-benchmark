@@ -1,0 +1,12 @@
+{
+  "description": "FastAPI Dockerfile that copies the entire build context into the image with `COPY . /app` and ships no .dockerignore, so the local .env, .git history and any credentials files land in an image layer. Same leak as `COPY . .` with an explicit destination. VC113 must fire.",
+  "expectedFindings": [
+    {
+      "rule": "VC113",
+      "file": "Dockerfile",
+      "lineRange": [9, 15],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

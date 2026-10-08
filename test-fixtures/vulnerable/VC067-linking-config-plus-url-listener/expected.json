@@ -1,0 +1,7 @@
+{
+  "description": "Expo App.tsx with a React Navigation linking config (prefixes + declared screens) and, beside it, a custom Linking.addEventListener(\"url\") handler that signs the user in with the access/refresh tokens read from any incoming link (login CSRF). The linking config's prefixes only constrain the URLs React Navigation itself routes, so they must not exempt the separate listener. The original rule reported it; the first version of the batch-2 change exempted the whole file on `prefixes: [`. VC067 must fire on the listener.",
+  "expectedFindings": [
+    { "rule": "VC067", "file": "App.tsx", "lineRange": [19, 21], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

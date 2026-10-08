@@ -1,0 +1,5 @@
+{
+  "description": "Same gRPC clients over TLS: Node grpc.credentials.createSsl(), Python grpc.secure_channel() with ssl_channel_credentials(), and Go credentials.NewTLS(); plus plaintext connections that never leave the pod — the OpenTelemetry exporter (otlptracegrpc.WithInsecure) and a flagd sidecar, both on localhost. VC096 must not fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC096"]
+}

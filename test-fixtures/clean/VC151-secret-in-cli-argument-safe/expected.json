@@ -1,0 +1,5 @@
+{
+  "description": "The same backups with the password passed through the child process environment (MYSQL_PWD via execFileSync's env option; PGPASSWORD via subprocess.run's env= dict), as VC151's fix recommends, plus a migration script that hands Alembic its DATABASE_URL — an f-string holding the password — through env=. Nothing secret is on argv. VC151 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC151"]
+}

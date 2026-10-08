@@ -1,0 +1,5 @@
+{
+  "description": "Same deploy script reading VERCEL_TOKEN (and team/project ids) from the environment, as VC142's fix recommends. VC142 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC142"]
+}

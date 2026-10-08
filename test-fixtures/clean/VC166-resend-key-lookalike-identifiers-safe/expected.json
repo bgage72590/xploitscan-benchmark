@@ -1,0 +1,5 @@
+{
+  "description": "Python digest module whose ordinary snake_case identifiers contain the letters re_ followed by 20+ word characters (restore_user_preferences_from_cache, _store_user_preferences_cache, compare_preferences_snapshots); the Resend key itself comes from os.environ. VC166's unanchored re_ match reported each of those names as a hardcoded Resend key — and the same match fires on bundler output now that the secret rules also read .mjs/.cjs files: through runCustomRules, the unanchored pattern reports over 1,600 'keys' in 90+ of the .mjs/.cjs files in this repo's own node_modules (130 in @tanstack/query-core's build/legacy/queryObserver.cjs alone, all of them require_classPrivateFieldSet2 or require_classPrivateMethodInitSpec helper references), and the anchored one reports none. VC166 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC166"]
+}

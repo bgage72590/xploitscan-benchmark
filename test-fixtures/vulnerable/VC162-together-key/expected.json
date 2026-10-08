@@ -1,0 +1,18 @@
+{
+  "description": "Together AI keys hardcoded in both formats: a current tgp_v1_ key inline in `new Together({ apiKey })` (missed before the rule learned the prefix), and a legacy 64-hex key in a TOGETHER_API_KEY constant. VC162 must fire on both.",
+  "expectedFindings": [
+    {
+      "rule": "VC162",
+      "file": "lib/together.ts",
+      "lineRange": [4, 9],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC162",
+      "file": "scripts/embed_docs.py",
+      "lineRange": [7, 12],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

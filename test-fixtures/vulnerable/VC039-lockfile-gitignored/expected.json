@@ -1,0 +1,8 @@
+{
+  "description": "Next.js .gitignore that excludes package-lock.json and yarn.lock \"to avoid merge conflicts\" — every install resolves fresh versions, so VC039 must fire on both entries.",
+  "expectedFindings": [
+    { "rule": "VC039", "file": ".gitignore", "lineRange": [4, 7], "severityAtLeast": "medium" },
+    { "rule": "VC039", "file": ".gitignore", "lineRange": [8, 11], "severityAtLeast": "medium" }
+  ],
+  "mustNotFire": []
+}

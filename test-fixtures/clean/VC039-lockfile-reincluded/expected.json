@@ -1,0 +1,5 @@
+{
+  "description": "Yarn project whose .gitignore keeps stray npm/pnpm lockfiles out and explicitly re-includes yarn.lock with `!yarn.lock` — the project's lockfile is committed, so VC039 must not fire (it used to flag all three lines, including the `!` re-include itself).",
+  "expectedFindings": [],
+  "mustNotFire": ["VC039"]
+}

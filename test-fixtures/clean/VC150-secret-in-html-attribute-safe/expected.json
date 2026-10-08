@@ -1,0 +1,5 @@
+{
+  "description": "The same support page with no secret in the markup, now rendered by the Flask backend: the chat widget points at same-origin endpoints (the provider key stays server-side; data-token-endpoint is the URL it fetches a short-lived session token from, not a token) and the only meta value is the per-session CSRF token Flask-WTF renders into each response, which is meant to be in the page. VC150 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC150"]
+}

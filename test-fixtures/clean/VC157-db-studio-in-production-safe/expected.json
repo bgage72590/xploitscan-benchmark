@@ -1,0 +1,5 @@
+{
+  "description": "The same monorepo with studio only in dev-only db:studio scripts (prisma studio in the web app, drizzle-kit studio in the reporting service), start scripts that run just the app, and a production compose.yaml with no studio service — the fix VC157 recommends. VC157 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC157"]
+}

@@ -1,0 +1,18 @@
+{
+  "description": "Express API Dockerfile that uses ADD to copy local files (the package manifests and the whole build context). ADD silently auto-extracts archives and can fetch URLs; for plain local copies COPY is the documented choice. VC188 must fire on both ADD lines.",
+  "expectedFindings": [
+    {
+      "rule": "VC188",
+      "file": "Dockerfile",
+      "lineRange": [6, 10],
+      "severityAtLeast": "low"
+    },
+    {
+      "rule": "VC188",
+      "file": "Dockerfile",
+      "lineRange": [10, 14],
+      "severityAtLeast": "low"
+    }
+  ],
+  "mustNotFire": []
+}

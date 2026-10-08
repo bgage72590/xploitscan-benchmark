@@ -1,0 +1,5 @@
+{
+  "description": "The same node-rsa, Web Crypto, node-forge, python-rsa, PHP openssl, Ruby OpenSSL, Java KeyPairGenerator (default and BouncyCastle provider) and Go rsa.GenerateKey key generation with 2048-, 3072- or 4096-bit moduli (and keys loaded from files or the environment). VC123 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC123"]
+}

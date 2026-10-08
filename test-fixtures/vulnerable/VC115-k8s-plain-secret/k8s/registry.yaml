@@ -1,0 +1,20 @@
+# Lets the cluster pull the private app image, plus the deploy job's
+# service account token.
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ci-deployer-token
+  namespace: production
+  annotations:
+    kubernetes.io/service-account.name: ci-deployer
+type: kubernetes.io/service-account-token
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ghcr-pull
+  namespace: production
+type: kubernetes.io/dockerconfigjson
+stringData:
+  .dockerconfigjson: |
+    {"auths":{"ghcr.io":{"username":"acme-bot","password":"Acm3-Registry-Pull-2024"}}}

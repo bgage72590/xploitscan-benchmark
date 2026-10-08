@@ -1,0 +1,13 @@
+{
+  "description": "Debug logging that writes real secrets to stdout (and from there to Vercel/Datadog logs): the JWT signing secret at module load, the user's plaintext password on every login attempt, the freshly issued session JWT, the Stripe secret key held in a camelCase variable, an env var read inline (process.env.OPENAI_API_KEY), the Supabase service-role key (which bypasses RLS) logged as an object shorthand property, and a customer's API key read straight from the x-api-key request header (req.headers.get(\"x-api-key\")) in the public API's auth helper. VC147 must fire on every one of those lines. The 'Invalid credentials for <email>' warning logs no secret and is not expected.",
+  "expectedFindings": [
+    { "rule": "VC147", "file": "app/api/auth/login/route.ts", "lineRange": [5, 8], "severityAtLeast": "high" },
+    { "rule": "VC147", "file": "app/api/auth/login/route.ts", "lineRange": [10, 13], "severityAtLeast": "high" },
+    { "rule": "VC147", "file": "app/api/auth/login/route.ts", "lineRange": [18, 22], "severityAtLeast": "high" },
+    { "rule": "VC147", "file": "lib/stripe.ts", "lineRange": [6, 8], "severityAtLeast": "high" },
+    { "rule": "VC147", "file": "lib/stripe.ts", "lineRange": [9, 11], "severityAtLeast": "high" },
+    { "rule": "VC147", "file": "lib/supabase/admin.ts", "lineRange": [5, 10], "severityAtLeast": "high" },
+    { "rule": "VC147", "file": "lib/api-auth.ts", "lineRange": [3, 7], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Code with long identifiers that contain or start with re_ but hold no Resend key: an oidc-provider config with the require_pushed_authorization_requests client default and a Clerk restrictions script with ignore_dots_for_gmail_addresses (both .mjs, which secret rules now read), a Python module whose compiled regexes use an re_ prefix, and a Resend client keyed from process.env. The safe counterpart to VC166 — must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC166"]
+}

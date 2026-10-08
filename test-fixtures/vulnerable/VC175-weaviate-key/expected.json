@@ -1,0 +1,25 @@
+{
+  "description": "Weaviate Cloud admin API key hardcoded as a WEAVIATE_API_KEY constant feeding weaviate.ApiKey() in a TS search module (detected), as a quoted \"weaviate_api_key\" entry in the JSON settings committed beside the ingest scripts (detected only since the rule accepts a quoted key), and inline in Auth.api_key(\"…\") in a Python ingest script. The constructor form has no WEAVIATE_API_KEY name for the context-anchored rule to key on — known gap.",
+  "expectedFindings": [
+    {
+      "rule": "VC175",
+      "file": "lib/weaviate.ts",
+      "lineRange": [4, 10],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC175",
+      "file": "ingest/config.json",
+      "lineRange": [1, 5],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC175",
+      "file": "ingest/load_articles.py",
+      "lineRange": [9, 14],
+      "severityAtLeast": "high",
+      "knownGap": true
+    }
+  ],
+  "mustNotFire": []
+}

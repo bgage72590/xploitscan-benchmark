@@ -1,0 +1,10 @@
+{
+  "name": "acme-landing",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
+  "forwardPorts": [3000],
+  "postCreateCommand": "npm install",
+  "containerEnv": {
+    "NEXT_PUBLIC_SITE_URL": "http://localhost:3000",
+    "LOOPS_API_KEY": "00000000000000000000000000c0ffee"
+  }
+}

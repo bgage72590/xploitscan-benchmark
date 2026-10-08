@@ -1,0 +1,12 @@
+{
+  "description": "Small Vite React app whose App.jsx is the entry module and mounts itself with createRoot, with no error boundary anywhere — the one layout the per-file VC036 check can judge on its own. VC036 must fire on App.jsx. (The standard main.tsx + App.tsx split is the known gap in VC036-react-no-error-boundary.)",
+  "expectedFindings": [
+    {
+      "rule": "VC036",
+      "file": "src/App.jsx",
+      "lineRange": [1, 5],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

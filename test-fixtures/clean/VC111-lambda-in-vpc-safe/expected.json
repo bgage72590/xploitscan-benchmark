@@ -1,0 +1,5 @@
+{
+  "description": "Every Lambda function declares its own vpc_config with private subnets and a security group: both functions in lambda.tf as a plain block, and the queue worker (a dashed resource name) as a `dynamic \"vpc_config\"` block generated per environment.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC111"]
+}

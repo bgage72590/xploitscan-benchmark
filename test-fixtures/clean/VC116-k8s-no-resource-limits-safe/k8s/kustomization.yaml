@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: production
+resources:
+  - deployment.yaml
+  - hpa.yaml
+  - pdb.yaml
+images:
+  - name: ghcr.io/acme/web
+    newTag: 1.4.2
+patches:
+  - target:
+      kind: Deployment
+      name: web
+    patch: |-
+      - op: replace
+        path: /spec/replicas
+        value: 4

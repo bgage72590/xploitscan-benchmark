@@ -1,0 +1,5 @@
+{
+  "description": "Groq called only from a server route keyed by process.env.GROQ_API_KEY; the browser calls the proxy. The safe counterpart to VC163 — must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC163"]
+}

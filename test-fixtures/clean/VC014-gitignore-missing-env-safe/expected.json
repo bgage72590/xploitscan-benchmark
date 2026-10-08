@@ -1,0 +1,5 @@
+{
+  "description": "The same Vite .gitignore with the fix applied: .env and .env.* are ignored and only the .env.example template is re-included. VC014 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC014"]
+}

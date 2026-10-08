@@ -1,0 +1,18 @@
+{
+  "description": "Production Express + Socket.IO server whose credentialed CORS config still trusts the dev server: origin: [\"http://localhost:5173\", ...] and origin: \"http://localhost:3000\" — VC095 must fire on both",
+  "expectedFindings": [
+    {
+      "rule": "VC095",
+      "file": "src/app.ts",
+      "lineRange": [16, 20],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC095",
+      "file": "src/socket.ts",
+      "lineRange": [7, 11],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

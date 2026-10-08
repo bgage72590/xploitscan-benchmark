@@ -1,0 +1,12 @@
+{
+  "description": "Apollo Server 4 with a depth limit but no complexity/cost limit; every list field takes a client-controlled `first`, so a 3-level query can resolve billions of rows. VC205 must fire (VC204 is satisfied by depthLimit).",
+  "expectedFindings": [
+    {
+      "rule": "VC205",
+      "file": "src/server.ts",
+      "lineRange": [33, 39],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

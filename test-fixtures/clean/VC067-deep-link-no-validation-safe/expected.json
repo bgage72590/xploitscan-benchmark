@@ -1,0 +1,5 @@
+{
+  "description": "Same deep-link handling written safely: the hook checks the link's scheme and host against ALLOWED_SCHEMES / ALLOWED_HOSTS, maps paths through a fixed route table, only opens https URLs on its own hosts and never signs in from a link; the React Navigation linking config routes only URLs matching its `prefixes` to the screens declared under `config`. The old rule flagged both files (it only knew camelCase allowedHosts and had no notion of React Navigation's prefixes). VC067 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC067"]
+}

@@ -1,0 +1,13 @@
+{
+  "ConnectDatabase": {
+    "title": "Conectar base de datos",
+    "description": "Introduce los datos de conexión de tu base de datos PostgreSQL.",
+    "host": "Servidor",
+    "port": "Puerto",
+    "username": "Usuario",
+    "password": "Contraseña",
+    "database": "Base de datos",
+    "ssl": "Usar SSL",
+    "submit": "Conectar"
+  }
+}

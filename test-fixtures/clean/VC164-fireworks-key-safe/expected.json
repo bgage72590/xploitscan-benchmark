@@ -1,0 +1,5 @@
+{
+  "description": "Fireworks client keyed from os.environ[\"FIREWORKS_API_KEY\"]. The safe counterpart to VC164 — must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC164"]
+}

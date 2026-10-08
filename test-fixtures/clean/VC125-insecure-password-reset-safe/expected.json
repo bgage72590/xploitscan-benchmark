@@ -1,0 +1,5 @@
+{
+  "description": "The same forgot-password flows written the way VC125's fix recommends: crypto.randomBytes(32) / secrets.randbelow tokens stored hashed, a 15-60 minute expiry computed with Date.now() (including a one-line Prisma `data: { resetToken, resetTokenExpiry: new Date(Date.now() + ...) }`), single-use clearing, attempt limits on the 6-digit code, and one generic response whether or not the account exists. The anti-enumeration handlers explain themselves the way real ones do, and none of that is a response: a server-side console.log / logger.info line saying no user was found, a trailing comment on the generic return, a FastAPI docstring, and a generic message that itself reads \"If no account exists for that address, nothing will be sent\". A single-file Express server.js that also has a game-room endpoint keeps its Math.random() roomCode (a join code, not a reset token) next to the forgot-password route.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC125"]
+}

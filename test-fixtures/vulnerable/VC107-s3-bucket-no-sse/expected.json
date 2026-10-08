@@ -1,0 +1,7 @@
+{
+  "description": "Two S3 buckets where only the uploads bucket has an aws_s3_bucket_server_side_encryption_configuration. The access-log bucket has none; the old rule accepted any \"server_side_encryption\" text within 2000 characters of a bucket, so the uploads bucket's config just below vouched for it.",
+  "expectedFindings": [
+    { "rule": "VC107", "file": "infra/s3.tf", "lineRange": [1, 6], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

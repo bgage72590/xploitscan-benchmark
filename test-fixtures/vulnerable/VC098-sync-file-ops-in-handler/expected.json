@@ -1,0 +1,18 @@
+{
+  "description": "Express report route that calls fs.readFileSync / mkdirSync / writeFileSync inside the request handler, blocking the event loop for every other request — VC098 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC098",
+      "file": "routes/reports.js",
+      "lineRange": [17, 23],
+      "severityAtLeast": "info"
+    },
+    {
+      "rule": "VC098",
+      "file": "routes/reports.js",
+      "lineRange": [23, 29],
+      "severityAtLeast": "info"
+    }
+  ],
+  "mustNotFire": []
+}

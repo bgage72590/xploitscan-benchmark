@@ -1,0 +1,5 @@
+{
+  "description": "The same todo app with the work done. Its comments talk about todos as a feature (`// Todo list for the dashboard`, `// todo titles are 1-200 chars`), which the old case-insensitive match reported as leftover TODO markers, and TodoItem documents its `todo` prop with `// todo: the item rendered in this row` — a field doc in a todo app, not a marker. The README's `// TODO: replace priority with your field` sits in a docs snippet telling readers what to edit — prose, not unfinished code.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC103"]
+}

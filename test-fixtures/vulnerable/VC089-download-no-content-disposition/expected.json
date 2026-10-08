@@ -1,0 +1,12 @@
+{
+  "description": "Express workspace file-download route that streams user-uploaded files back with the uploader's MIME type and no Content-Disposition: attachment, so uploaded HTML/SVG renders inline on the app origin (stored XSS) — VC089 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC089",
+      "file": "routes/files.js",
+      "lineRange": [21, 26],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

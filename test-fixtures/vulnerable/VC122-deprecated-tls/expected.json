@@ -1,0 +1,24 @@
+{
+  "description": "Three clients downgraded to TLS 1.0 to reach a legacy server, each through its language's own minimum-version setting: Node mssql `cryptoCredentialsDetails.minVersion: \"TLSv1\"`, Python `ssl.TLSVersion.TLSv1` on an SSLContext, and Go `tls.VersionTLS10` in a tls.Config. VC122 must fire on all three.",
+  "expectedFindings": [
+    {
+      "rule": "VC122",
+      "file": "db.js",
+      "lineRange": [11, 17],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC122",
+      "file": "legacy_client.py",
+      "lineRange": [5, 11],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC122",
+      "file": "tlsclient.go",
+      "lineRange": [13, 19],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

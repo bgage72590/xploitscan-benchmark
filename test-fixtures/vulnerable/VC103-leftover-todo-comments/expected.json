@@ -1,0 +1,10 @@
+{
+  "description": "Unfinished-work markers left in a todo app: own-line `// TODO` and `// HACK` comments (which findMatches used to drop as comment lines, so the usual form was never reported), a trailing `// FIXME`, and a JSX block comment `{/* TODO */}`.",
+  "expectedFindings": [
+    { "rule": "VC103", "file": "app/api/todos/route.ts", "lineRange": [4, 10], "severityAtLeast": "low" },
+    { "rule": "VC103", "file": "app/api/todos/route.ts", "lineRange": [19, 25], "severityAtLeast": "low" },
+    { "rule": "VC103", "file": "components/TodoList.tsx", "lineRange": [9, 15], "severityAtLeast": "low" },
+    { "rule": "VC103", "file": "components/TodoList.tsx", "lineRange": [19, 25], "severityAtLeast": "low" }
+  ],
+  "mustNotFire": []
+}

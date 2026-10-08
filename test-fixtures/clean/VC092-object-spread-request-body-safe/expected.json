@@ -1,0 +1,5 @@
+{
+  "description": "Same profile routes that destructure an explicit allowlist of fields from req.body and build the saved object from those alone, plus a posts route that merges the body with the route id inside updatePostSchema.safeParse({ ...req.body, id }) — z.object() strips undeclared keys before anything is saved. VC092 must not fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC092"]
+}

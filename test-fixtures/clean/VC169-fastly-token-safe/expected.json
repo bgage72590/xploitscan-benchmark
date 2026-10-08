@@ -1,0 +1,5 @@
+{
+  "description": "Fastly token read from the CI environment / Django settings and passed to the Fastly-Key header by reference. The safe counterpart to VC169 — must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC169"]
+}

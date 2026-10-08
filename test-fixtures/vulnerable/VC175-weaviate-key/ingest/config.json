@@ -1,0 +1,6 @@
+{
+  "weaviate_url": "https://rx8ja1qxtkmhc0bqbyw7aq.c0.us-west3.gcp.weaviate.cloud",
+  "weaviate_api_key": "FAKE0000FAKE0000FAKE0000FAKE0000FAKE0000",
+  "collection": "Article",
+  "batch_size": 200
+}

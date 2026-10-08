@@ -1,0 +1,5 @@
+{
+  "description": "Same Expo app with the access/refresh tokens in expo-secure-store and no stored password; AsyncStorage keeps only non-secret state — the cached profile, a remembered email, the Expo push token (a push address, not a credential), the onboarding flag and the theme. VC068 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC068"]
+}

@@ -1,0 +1,5 @@
+{
+  "description": "A committed .env.template — the documented-variables file meant to be in git, holding only placeholder values. VC002 already exempted .env.example; .env.template and .env.sample are the same thing under another common name and must not be reported as a committed secrets file.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC002"]
+}

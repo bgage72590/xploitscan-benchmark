@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acme Support</title>
+    <meta name="api-key" content="sk_live_51NvQx2Lk8RtYp3Wm7ZcB4dFhJ6sTu9Ae" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="hero">
+      <h1>How can we help?</h1>
+      <p>Ask our assistant anything about your account.</p>
+    </main>
+
+    <div
+      id="support-chat"
+      data-api-key="sk-proj-Rk7Tq2Wx9Lm4Np8Vb3Yc6Hd1Gf5Js0Ue"
+      data-model="gpt-4o-mini"
+      data-position="bottom-right"
+    ></div>
+
+    <script>
+      const apiKey = document.querySelector('meta[name="api-key"]').content;
+      fetch("https://api.stripe.com/v1/prices?active=true", {
+        headers: { Authorization: "Bearer " + apiKey },
+      })
+        .then((r) => r.json())
+        .then((prices) => console.log("plans", prices.data.length));
+    </script>
+    <script src="/chat-widget.js" defer></script>
+  </body>
+</html>

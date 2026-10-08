@@ -1,0 +1,9 @@
+{
+  "description": "Twilio credentials committed in source, in the three shapes Twilio's own quickstarts produce: an API key SID + secret passed to twilio() in a Next.js SMS helper, the `const accountSid = \"AC...\"; const authToken = \"...\"` pair from the Node quickstart, and Client(\"AC...\", \"<auth token>\") inline in a Python cron job. Each can send SMS and place calls on the account. VC139 must fire on all three. The auth token has no prefix of its own (32 hex), so the two auth-token cases were missed until VC139 learned the assignment and inline shapes.",
+  "expectedFindings": [
+    { "rule": "VC139", "file": "lib/sms.ts", "lineRange": [2, 6], "severityAtLeast": "high" },
+    { "rule": "VC139", "file": "server/notify.js", "lineRange": [3, 6], "severityAtLeast": "high" },
+    { "rule": "VC139", "file": "app/reminders.py", "lineRange": [2, 6], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,18 @@
+{
+  "description": "Block ciphers in ECB mode used to encrypt data at rest: Node crypto.createCipheriv('aes-256-ecb'), crypto-js mode.ECB for localStorage and inline in a React (.jsx) vault page, PyCryptodome AES.MODE_ECB, the Python cryptography package's modes.ECB(), Java Cipher.getInstance(\"AES\") (the provider default is AES/ECB/PKCS5Padding), Go's usual hand-rolled ECB (aes.NewCipher, then block.Encrypt over each 16-byte slice, no cipher mode), Ruby OpenSSL::Cipher::AES.new(256, :ECB) and OpenSSL::Cipher.new(\"aes-256-ecb\"), and PHP openssl_encrypt/openssl_decrypt with 'aes-256-ecb'. Identical plaintext blocks encrypt to identical ciphertext. VC124 must fire on each.",
+  "expectedFindings": [
+    { "rule": "VC124", "file": "lib/encryption.ts", "lineRange": [5, 12], "severityAtLeast": "high" },
+    { "rule": "VC124", "file": "lib/secureStorage.ts", "lineRange": [6, 11], "severityAtLeast": "high" },
+    { "rule": "VC124", "file": "app/services/field_crypto.py", "lineRange": [10, 15], "severityAtLeast": "high" },
+    { "rule": "VC124", "file": "app/services/token_vault.py", "lineRange": [10, 16], "severityAtLeast": "high" },
+    { "rule": "VC124", "file": "internal/secure/fields.go", "lineRange": [38, 44], "severityAtLeast": "high" },
+    { "rule": "VC124", "file": "internal/secure/fields.go", "lineRange": [56, 62], "severityAtLeast": "high" },
+    { "rule": "VC124", "file": "src/main/java/com/acme/billing/security/CardCipher.java", "lineRange": [15, 19], "severityAtLeast": "high" },
+    { "rule": "VC124", "file": "src/pages/Vault.jsx", "lineRange": [12, 16], "severityAtLeast": "high" },
+    { "rule": "VC124", "file": "lib/field_crypto.rb", "lineRange": [8, 10], "severityAtLeast": "high" },
+    { "rule": "VC124", "file": "lib/field_crypto.rb", "lineRange": [15, 17], "severityAtLeast": "high" },
+    { "rule": "VC124", "file": "api/card_crypto.php", "lineRange": [7, 9], "severityAtLeast": "high" },
+    { "rule": "VC124", "file": "api/card_crypto.php", "lineRange": [13, 15], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

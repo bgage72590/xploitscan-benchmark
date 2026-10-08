@@ -1,0 +1,18 @@
+{
+  "description": "Highlight.io source-map upload API keys committed to source: passed as withHighlightConfig's apiKey option in next.config.js (Highlight's documented Next.js integration point) and as a HIGHLIGHT_API_KEY constant fed to the sourcemap-uploader CLI. VC182 must fire on both. The public browser project ID in app/highlight.tsx is not a secret and is not an expected finding.",
+  "expectedFindings": [
+    {
+      "rule": "VC182",
+      "file": "next.config.js",
+      "lineRange": [10, 14],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC182",
+      "file": "scripts/upload-sourcemaps.js",
+      "lineRange": [3, 7],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

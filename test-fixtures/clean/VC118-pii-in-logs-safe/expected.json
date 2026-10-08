@@ -1,0 +1,7 @@
+{
+  "description": "The same Express, FastAPI and Flask auth routes logging the way the fix recommends: a masked email or the client IP on attempts/failures, the user id on success and on reset, and the error name on JWT failure. The words 'password' and 'token' appear only as prose inside the log message text \u2014 no password, token or header value is logged. Next.js middleware: logs the path and whether an Authorization header is present (`request.headers.has(\"authorization\")`, a boolean), not the header. VC118 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": [
+    "VC118"
+  ]
+}

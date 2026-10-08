@@ -1,0 +1,5 @@
+{
+  "description": "Same workspace file-download route using res.attachment() (Content-Disposition: attachment) plus X-Content-Type-Options: nosniff, and an import-from-URL service that downloads a linked file to disk with res.pipe(fileStream) — fetching a file, not serving one. VC089 must not fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC089"]
+}

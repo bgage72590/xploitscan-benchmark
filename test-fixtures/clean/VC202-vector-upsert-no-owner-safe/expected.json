@@ -1,0 +1,7 @@
+{
+  "description": "Same ingestion paths with every embedding tagged with its owner, or written into a per-owner partition, before the write: prebuilt Pinecone records with metadata.userId, the inline notes.map(...) carrying workspaceId, LangChain chunks given metadata[\"user_id\"] before vector_store.add_documents(), splitter.createDocuments() metadata carrying userId, a prebuilt Chroma metadatas list with user_id passed as metadatas=metadatas, a Qdrant point-builder helper handed the userId it writes into the payload, the note re-embedder writing into a per-user Pinecone namespace, index.namespace(note.userId); a LangChain JS store opened on the organization's own namespace (PineconeStore.fromExistingIndex(..., { pineconeIndex, namespace: orgId })), a FastAPI note endpoint that builds metadata = {\"user_id\": ...} first and passes metadatas=[metadata] to create_documents(), a helper that stamps each document with Object.assign(doc.metadata, { userId }) before addDocuments(), and one Chroma collection per user (get_or_create_collection(name=f\"user_{user_id}_notes\")). VC202 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": [
+    "VC202"
+  ]
+}

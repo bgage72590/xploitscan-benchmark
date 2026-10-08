@@ -1,0 +1,18 @@
+{
+  "description": "Intercom access tokens committed to source: once as an INTERCOM_ACCESS_TOKEN constant used for the REST API, and once pasted into the official intercom-client SDK constructor (new IntercomClient({ token })) as its quickstart shows. Either exposes every customer conversation and contact record — VC179 must fire on both.",
+  "expectedFindings": [
+    {
+      "rule": "VC179",
+      "file": "lib/intercom.ts",
+      "lineRange": [1, 5],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC179",
+      "file": "app/api/support/route.ts",
+      "lineRange": [4, 8],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,5 @@
+{
+  "description": "FP lock-in for VC049: the knexfile.js that `knex init` generates (placeholder `password: 'password'` under client 'postgresql'), a Go worker building its DSN with fmt.Sprintf(\"postgres://%s:%s@…\") from os.Getenv, and a Python ETL job formatting \"postgresql+psycopg2://%s:%s@…\" from os.environ. None contains a credential; VC049 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC049"]
+}

@@ -1,0 +1,8 @@
+{
+  "description": "Mailgun private API keys committed in source: a legacy key-<32> key in a mailgun-js invoice mailer, and a current-format key (prefix-less <32 hex>-<8 hex>-<8 hex>, the shape the dashboard issues today) passed to mailgun.js client(). Either can send mail as the verified domain. VC140 must fire on both; the current-format key was missed while VC140 only knew the key- prefix.",
+  "expectedFindings": [
+    { "rule": "VC140", "file": "lib/mailer.js", "lineRange": [1, 5], "severityAtLeast": "high" },
+    { "rule": "VC140", "file": "src/lib/email.ts", "lineRange": [7, 11], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

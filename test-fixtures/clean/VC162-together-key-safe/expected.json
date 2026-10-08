@@ -1,0 +1,5 @@
+{
+  "description": "Together AI client keyed from process.env / the SDK's own TOGETHER_API_KEY env lookup. The safe counterpart to VC162 — must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC162"]
+}

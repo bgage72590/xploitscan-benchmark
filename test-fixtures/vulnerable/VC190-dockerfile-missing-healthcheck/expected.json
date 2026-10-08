@@ -1,0 +1,12 @@
+{
+  "description": "Multi-stage Next.js standalone Dockerfile whose final runner stage starts the server with CMD but declares no HEALTHCHECK, so a hung server stays in rotation. VC190 must fire (reported at the final CMD).",
+  "expectedFindings": [
+    {
+      "rule": "VC190",
+      "file": "Dockerfile",
+      "lineRange": [30, 34],
+      "severityAtLeast": "low"
+    }
+  ],
+  "mustNotFire": []
+}

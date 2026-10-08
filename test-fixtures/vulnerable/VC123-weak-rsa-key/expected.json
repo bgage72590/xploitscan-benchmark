@@ -1,0 +1,18 @@
+{
+  "description": "JWT signing keys generated as 1024-bit RSA — in Node with crypto.generateKeyPairSync('rsa', { modulusLength: 1024 }) and in Python with cryptography's rsa.generate_private_key(key_size=1024), the standard key-generation call in each ecosystem. A 1024-bit modulus is within reach of well-funded attackers, so tokens can be forged. VC123 must fire on both.",
+  "expectedFindings": [
+    {
+      "rule": "VC123",
+      "file": "keys.ts",
+      "lineRange": [11, 16],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC123",
+      "file": "keygen.py",
+      "lineRange": [9, 15],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

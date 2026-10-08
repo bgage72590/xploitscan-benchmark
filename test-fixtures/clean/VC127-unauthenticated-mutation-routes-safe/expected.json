@@ -1,0 +1,5 @@
+{
+  "description": "The same routers with auth applied, as VC127's fix recommends: per-route `requireAuth, requireAdmin` on PUT/DELETE, a router-wide `router.use(protect)` registered before PATCH/DELETE routes that act only on req.user, Clerk's requireAuth() on every notes mutation with the write scoped to the caller's userId, a Passport app whose global passport.authenticate(\"session\") is followed by app.use(\"/api/todos\", requireUser) (the rate limiter is mounted on /login only), and an express-openid-connect app with auth({ authRequired: false }) that puts requiresAuth() on each PATCH / DELETE.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC127"]
+}

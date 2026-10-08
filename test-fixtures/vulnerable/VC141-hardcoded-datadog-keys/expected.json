@@ -1,0 +1,18 @@
+{
+  "description": "Datadog API key (32 hex) and application key (40 hex) hardcoded as DD_API_KEY / DD_APP_KEY constants feeding the official @datadog/datadog-api-client. The app key is the more dangerous of the two (it can read every dashboard and edit monitors), so VC141 must fire on both lines.",
+  "expectedFindings": [
+    {
+      "rule": "VC141",
+      "file": "lib/metrics.ts",
+      "lineRange": [3, 6],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC141",
+      "file": "lib/metrics.ts",
+      "lineRange": [7, 10],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

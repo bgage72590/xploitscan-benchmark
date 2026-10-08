@@ -1,0 +1,30 @@
+{
+  "description": "Workflows that run third-party code referenced by branch. deploy.yml hands the production SSH private key to two actions pinned to `@master`; ci.yml calls a shared reusable workflow at `@main` with `secrets: inherit` and runs CodeQL's init/analyze sub-actions at `@main`. Whoever can push to those branches — or compromise the maintainer — runs code with those secrets on the next run. VC121 must fire on each.",
+  "expectedFindings": [
+    {
+      "rule": "VC121",
+      "file": ".github/workflows/deploy.yml",
+      "lineRange": [19, 24],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC121",
+      "file": ".github/workflows/deploy.yml",
+      "lineRange": [28, 33],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC121",
+      "file": ".github/workflows/ci.yml",
+      "lineRange": [9, 13],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC121",
+      "file": ".github/workflows/ci.yml",
+      "lineRange": [20, 24],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

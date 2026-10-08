@@ -1,0 +1,5 @@
+{
+  "description": "Same Intercom contact sync and support route with the access token read from process.env.INTERCOM_ACCESS_TOKEN in both the REST helper and the IntercomClient constructor. VC179 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC179"]
+}

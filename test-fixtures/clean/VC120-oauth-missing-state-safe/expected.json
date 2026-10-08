@@ -1,0 +1,5 @@
+{
+  "description": "OAuth logins protected against login CSRF. GitHub (Express): a crypto-random `state` stored in an httpOnly cookie, sent on the authorize URL, and compared in constant time on the callback before the code is exchanged. Next.js route handler: the authorization-code flow with PKCE (S256 code_challenge, verifier kept in an httpOnly cookie), which RFC 9700 allows a client to rely on instead of `state` when the authorization server supports PKCE. Flask: Authlib's `oauth.register(client_id=…, authorize_url=\"…/login/oauth/authorize\")` client config with authorize_redirect() (Authlib generates and checks state itself). Express: a Discord callback whose state is checked by the verifyOAuthState middleware, redirecting to the app's own `/auth?error=…` page after its token exchange. VC120 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC120"]
+}

@@ -1,0 +1,5 @@
+{
+  "description": "A Next.js app where every lodash/moment import is harmless to the client bundle. Next rewrites named lodash imports to lodash/<name> by default (a built-in modularizeImports entry), so the \"use client\" search box and the data table (which imports from next/navigation) import only debounce and orderBy. lib/types.ts names only a type, which TypeScript erases. The route handler and the CommonJS seed script run on the server and never reach a browser bundle.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC101"]
+}

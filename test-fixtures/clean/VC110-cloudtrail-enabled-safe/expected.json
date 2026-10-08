@@ -1,0 +1,5 @@
+{
+  "description": "The same root module with a multi-region aws_cloudtrail trail writing to an encrypted bucket whose policy lets CloudTrail deliver logs.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC110"]
+}

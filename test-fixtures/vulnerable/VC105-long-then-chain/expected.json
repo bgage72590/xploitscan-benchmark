@@ -1,0 +1,8 @@
+{
+  "description": "Hard-to-follow async code. Profile.jsx chains four .then() calls with arrow callbacks such as `.then((res) => res.json())` — the old regex read call arguments as `[^)]*` and stopped at the first `)`, so it missed nearly every real chain. server/routes/avatar.js nests four error-first Node callbacks; the rule only follows .then() chains, so nested callbacks are a known gap.",
+  "expectedFindings": [
+    { "rule": "VC105", "file": "src/pages/Profile.jsx", "lineRange": [9, 15], "severityAtLeast": "medium" },
+    { "rule": "VC105", "file": "server/routes/avatar.js", "lineRange": [10, 16], "severityAtLeast": "medium", "knownGap": true }
+  ],
+  "mustNotFire": []
+}

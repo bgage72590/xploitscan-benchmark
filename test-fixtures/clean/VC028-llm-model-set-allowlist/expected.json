@@ -1,0 +1,5 @@
+{
+  "description": "A Next.js chat route that takes the model from the request body but rejects anything not in an ALLOWED_MODELS Set (ALLOWED_MODELS.has(model)) before calling OpenAI on the server's key; the response echoes completion.model. VC028 must not fire: Set.has is as much an allowlist as Array.includes.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC028"]
+}

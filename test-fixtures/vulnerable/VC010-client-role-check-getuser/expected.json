@@ -1,0 +1,12 @@
+{
+  "description": "The classic client-only admin gate in a Vite + Supabase app: the page calls supabase.auth.getUser() in the browser, reads profiles.role, and renders the orders panel and Refund buttons only when it is 'admin'. Refunds are written straight to the orders table from the client. getUser() here is a browser call, not a server-side permission check, so VC010 must still fire on the isAdmin-gated render. It used to be missed: any mention of getUser counted as a server-side check, so the supabase.auth.getUser() call silenced the rule.",
+  "expectedFindings": [
+    {
+      "rule": "VC010",
+      "file": "src/pages/Admin.tsx",
+      "lineRange": [45, 52],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

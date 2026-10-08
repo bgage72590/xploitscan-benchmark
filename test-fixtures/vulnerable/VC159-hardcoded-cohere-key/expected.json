@@ -1,0 +1,8 @@
+{
+  "description": "A real Cohere API key pasted into the SDK quickstart shape in both halves of a help-center semantic search: `new CohereClientV2({ token: \"...\" })` in the Next.js lib and `cohere.ClientV2(api_key=\"...\")` in the Python indexing script. Anyone with repo access can run embed/rerank/chat on the owner's bill. Neither line names COHERE_API_KEY, which is all the rule used to anchor on. VC159 must fire on both.",
+  "expectedFindings": [
+    { "rule": "VC159", "file": "lib/cohere.ts", "lineRange": [3, 8], "severityAtLeast": "high" },
+    { "rule": "VC159", "file": "scripts/index_articles.py", "lineRange": [8, 13], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

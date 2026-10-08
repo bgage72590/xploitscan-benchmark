@@ -1,0 +1,5 @@
+{
+  "description": "The same app done the way VC002's fix says: real values live only in an untracked .env (ignored via .env* in .gitignore) and the repo carries a .env.example template with empty placeholders. VC002 must not fire on the template.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC002", "VC014"]
+}

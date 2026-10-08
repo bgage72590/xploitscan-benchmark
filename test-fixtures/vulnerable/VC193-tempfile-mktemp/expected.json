@@ -1,0 +1,18 @@
+{
+  "description": "Flask upload handler and CSV export build temp paths with tempfile.mktemp() (module call and `from tempfile import mktemp` bare call) and then open them — a symlink/TOCTOU race. VC193 must fire on both.",
+  "expectedFindings": [
+    {
+      "rule": "VC193",
+      "file": "app.py",
+      "lineRange": [22, 27],
+      "severityAtLeast": "medium"
+    },
+    {
+      "rule": "VC193",
+      "file": "reports/export.py",
+      "lineRange": [8, 14],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

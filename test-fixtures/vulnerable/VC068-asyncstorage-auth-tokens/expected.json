@@ -1,0 +1,33 @@
+{
+  "description": "Expo/React Native app that keeps credentials in unencrypted AsyncStorage: access and refresh tokens under camelCase keys (\"accessToken\", \"refreshToken\"), a refreshed access token written through a key constant (ACCESS_TOKEN_KEY), and a \"remember me\" that saves the raw password. The original rule only matched keys that START with token/access_token/…, so it caught the password but none of the tokens. VC068 must fire on each write.",
+  "expectedFindings": [
+    {
+      "rule": "VC068",
+      "file": "src/context/AuthContext.tsx",
+      "lineRange": [
+        27,
+        32
+      ],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC068",
+      "file": "src/api/client.ts",
+      "lineRange": [
+        17,
+        21
+      ],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC068",
+      "file": "src/screens/LoginScreen.tsx",
+      "lineRange": [
+        15,
+        19
+      ],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Weaviate client keyed from process.env / os.environ in both the TS search module and the Python ingest script, plus two files that only name the key: a map from env vars to Google Secret Manager secret IDs (\"WEAVIATE_API_KEY\": \"weaviate-api-key-production\") and a ternary choosing which env var to read. The safe counterpart to VC175 — must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC175"]
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Same Plivo SMS, voice-alert and config modules with the auth ID and token read from the environment in every client constructor. VC183 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC183"]
+}

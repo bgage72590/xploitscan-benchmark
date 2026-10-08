@@ -1,0 +1,5 @@
+{
+  "description": "Same configs reading every credential from the environment — MONGODB_URI, a postgresql:// URL assembled from ${DB_USER}/${DB_PASSWORD} at runtime, a Sequelize config.js using process.env / use_env_variable, and a mysql2 pool built from process.env. VC049 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC049"]
+}

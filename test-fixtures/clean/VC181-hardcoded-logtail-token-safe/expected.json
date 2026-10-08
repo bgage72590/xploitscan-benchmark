@@ -1,0 +1,5 @@
+{
+  "description": "Same Better Stack logging setup (Node/winston, Python worker, edge fetch logger) with the source token read from the environment everywhere. VC181 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC181"]
+}

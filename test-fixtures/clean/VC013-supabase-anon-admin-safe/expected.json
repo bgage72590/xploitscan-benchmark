@@ -1,0 +1,5 @@
+{
+  "description": "The same user-deletion feature done the way VC013's fix says. The browser keeps the anon client for RLS-scoped reads and an ordinary rpc('has_role') check; the admin call runs in a Supabase Edge Function that verifies the caller is an admin and only then uses the service_role key, server-side. VC013 must not fire on either file. It used to be reported on the has_role call: every .rpc( on an anon-key client counted as an admin operation.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC013"]
+}

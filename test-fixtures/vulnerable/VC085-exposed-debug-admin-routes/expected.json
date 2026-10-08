@@ -1,0 +1,18 @@
+{
+  "description": "Express API with two leftover unauthenticated routes: GET /debug dumps process.env and GET /admin/users lists every customer with their bookings — VC085 must fire on both",
+  "expectedFindings": [
+    {
+      "rule": "VC085",
+      "file": "server.js",
+      "lineRange": [27, 33],
+      "severityAtLeast": "high"
+    },
+    {
+      "rule": "VC085",
+      "file": "server.js",
+      "lineRange": [38, 42],
+      "severityAtLeast": "high"
+    }
+  ],
+  "mustNotFire": []
+}

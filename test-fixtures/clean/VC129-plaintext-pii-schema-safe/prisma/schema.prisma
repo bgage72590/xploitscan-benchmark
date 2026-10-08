@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  taxProfile TaxProfile?
+}
+
+// Tax ID is encrypted with field-level encryption (KMS data key) before it is
+// written; payouts go through Stripe Connect, so no bank details are stored.
+model TaxProfile {
+  id              String   @id @default(cuid())
+  userId          String   @unique
+  user            User     @relation(fields: [userId], references: [id])
+  legalName       String
+  encryptedTaxId  String
+  taxIdLast4      String
+  stripeAccountId String
+  dependents      Dependent[]
+  updatedAt       DateTime @updatedAt
+}
+
+// Dependents' SSNs are encrypted transparently by prisma-field-encryption
+// (registered on the client in lib/prisma.ts); `/// @encrypted` marks them.
+model Dependent {
+  id        String   @id @default(cuid())
+  profileId String
+  profile   TaxProfile @relation(fields: [profileId], references: [id])
+  fullName  String
+  ssn       String /// @encrypted
+}

@@ -1,0 +1,7 @@
+{
+  "description": "Two Lambda functions where only the API function has a vpc_config. The image resizer has none; the old rule read the 2000 characters after each function, so the API function's vpc_config just below vouched for it.",
+  "expectedFindings": [
+    { "rule": "VC111", "file": "infra/lambda.tf", "lineRange": [1, 7], "severityAtLeast": "medium" }
+  ],
+  "mustNotFire": []
+}

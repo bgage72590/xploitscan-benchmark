@@ -1,0 +1,12 @@
+{
+  "description": "Windows ASP.NET Core image that copies its local publish output with ADD instead of COPY. The file starts with the `# escape=`` parser directive, so the trailing backslash of a Windows path (`C:\\temp\\`) is not a line continuation: the URL fetch on line 10 is a complete instruction, and the local ADD on the next line is its own instruction. VC188 must fire on that local ADD. (A joiner that always treats a trailing backslash as a continuation swallows it into the URL fetch and loses the finding.)",
+  "expectedFindings": [
+    {
+      "rule": "VC188",
+      "file": "Dockerfile",
+      "lineRange": [11, 11],
+      "severityAtLeast": "low"
+    }
+  ],
+  "mustNotFire": []
+}

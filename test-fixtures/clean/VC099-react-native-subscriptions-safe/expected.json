@@ -1,0 +1,5 @@
+{
+  "description": "An Expo / React Native app cleaning up the way React Native's APIs require. AppState, Dimensions, BackHandler and expo-linking's addEventListener return a subscription that is released with subscription.remove() (AppState's docs example in AppStateBanner.js, Dimensions in the Expo Router root layout, BackHandler inside React Navigation's useFocusEffect, Linking in useDeepLinks); NetInfo.addEventListener returns an unsubscribe function, returned as the effect's cleanup. None of these files ever calls removeEventListener.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC099"]
+}

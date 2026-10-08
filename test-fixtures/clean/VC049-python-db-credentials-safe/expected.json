@@ -1,0 +1,5 @@
+{
+  "description": "Same Django storefront and FastAPI analytics service reading every database credential from the environment (os.environ / dj_database_url), with the URL shape only described in a comment. VC049 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC049"]
+}

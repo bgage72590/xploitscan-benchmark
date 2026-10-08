@@ -1,0 +1,5 @@
+{
+  "description": "Loops key read from process.env.LOOPS_API_KEY in both the REST server action and the SDK helper. The safe counterpart to VC167 — must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC167"]
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Same Django project with ALLOWED_HOSTS pinned to loopback in dev (a wildcard entry left commented out in the list) and read from the environment, failing closed to an empty list, in production. VC196 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC196"]
+}

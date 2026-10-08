@@ -1,0 +1,12 @@
+{
+  "description": "Express API server with no helmet and no Strict-Transport-Security header, leaving browsers open to an HTTPS-to-HTTP downgrade — VC087 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC087",
+      "file": "src/server.ts",
+      "lineRange": [10, 16],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

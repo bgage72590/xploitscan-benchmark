@@ -1,0 +1,5 @@
+{
+  "description": "The same application secrets kept out of the repo three ways: a Bitnami SealedSecret (kubeseal output, asymmetrically encrypted for the in-cluster controller), a SecretProviderClass that mounts them from AWS Secrets Manager via the Secrets Store CSI driver, and a service-account-token Secret with no data that the control plane populates. None of them stores a base64 value in the manifest. VC115 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC115"]
+}

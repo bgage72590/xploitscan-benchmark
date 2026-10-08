@@ -1,0 +1,5 @@
+{
+  "description": "Express routes that spread req.body beside other keys into objects that are never saved as they are: the locals that re-render the signup form after a validation error, a payload that Joi validates with stripUnknown before Project.create() receives the validated value, and a webhook's log context. VC092 must not fire",
+  "expectedFindings": [],
+  "mustNotFire": ["VC092"]
+}

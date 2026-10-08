@@ -1,0 +1,13 @@
+{
+  "description": "The create-next-app 13/14 .gitignore: it ignores .env*.local only. A plain .env — where most tutorials and AI assistants put DATABASE_URL and API keys — matches no line and gets committed. The file mentions '.env' but does not ignore it, so VC014 must still fire. KNOWN GAP: VC014 accepts any line containing '.env', so '.env*.local' satisfies it. Fixing it means flagging every unmodified create-next-app 13/14 project at high severity — a product decision, not a contained rule fix.",
+  "expectedFindings": [
+    {
+      "rule": "VC014",
+      "file": ".gitignore",
+      "lineRange": [1, 5],
+      "severityAtLeast": "high",
+      "knownGap": true
+    }
+  ],
+  "mustNotFire": []
+}

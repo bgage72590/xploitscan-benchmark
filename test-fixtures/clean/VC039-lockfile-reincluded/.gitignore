@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+
+# Lockfiles — Yarn is this repo's package manager. Stray npm/pnpm lockfiles
+# are ignored so a second, conflicting one can't be committed by accident;
+# yarn.lock itself is explicitly kept.
+package-lock.json
+pnpm-lock.yaml
+!yarn.lock
+
+# build output
+dist/
+.next/
+
+# env
+.env
+.env*.local
+
+# misc
+.DS_Store
+*.log

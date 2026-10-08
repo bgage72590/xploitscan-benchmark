@@ -1,0 +1,12 @@
+{
+  "description": "Hosted landing pages: a customer's uploaded static site is served inline from the app's own origin with res.sendFile(path.join(SITES_DIR, req.params.siteId, \"index.html\")), so the customer's script runs with every visitor's session (stored XSS). The path comes from the request, so it is not a single-page-app fallback. VC089 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC089",
+      "file": "routes/sites.js",
+      "lineRange": [16, 18],
+      "severityAtLeast": "medium"
+    }
+  ],
+  "mustNotFire": []
+}

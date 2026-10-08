@@ -1,0 +1,5 @@
+{
+  "description": "Same multi-stage Next.js image with a HEALTHCHECK in the final stage that probes /api/health. VC190 must NOT fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC190"]
+}

@@ -1,0 +1,14 @@
+{
+  "description": "PII columns stored as plaintext in the schema formats AI-built apps actually use: a Supabase migration (ssn text, card_number varchar), a Prisma model with camelCase fields (taxId / bankAccountNumber / routingNumber String), a Drizzle table (ssn: varchar(...), driversLicense: text(...)), a SQLAlchemy model (ssn = Column(String(11))), a Mongoose schema (ssn: { type: String }, creditCardNumber: String, cvv: String), a Sequelize model (taxId: { type: DataTypes.STRING }), and a Django model (ssn = models.CharField(...)). VC129 must fire in every file.",
+  "expectedFindings": [
+    { "rule": "VC129", "file": "supabase/migrations/20240612090000_create_patients.sql", "lineRange": [5, 9], "severityAtLeast": "high" },
+    { "rule": "VC129", "file": "supabase/migrations/20240612090000_create_patients.sql", "lineRange": [14, 18], "severityAtLeast": "high" },
+    { "rule": "VC129", "file": "prisma/schema.prisma", "lineRange": [21, 26], "severityAtLeast": "high" },
+    { "rule": "VC129", "file": "src/db/schema.ts", "lineRange": [12, 16], "severityAtLeast": "high" },
+    { "rule": "VC129", "file": "app/models/applicant.py", "lineRange": [14, 18], "severityAtLeast": "high" },
+    { "rule": "VC129", "file": "server/models/Customer.js", "lineRange": [6, 11], "severityAtLeast": "high" },
+    { "rule": "VC129", "file": "server/models/payoutAccount.js", "lineRange": [5, 10], "severityAtLeast": "high" },
+    { "rule": "VC129", "file": "payroll/models.py", "lineRange": [6, 11], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}

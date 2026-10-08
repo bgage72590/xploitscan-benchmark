@@ -1,0 +1,5 @@
+{
+  "description": "The same FastAPI image built safely: a .dockerignore excludes .env/.git/keys and the Dockerfile copies only the application package, migrations and config it needs instead of the whole build context. VC113 must not fire.",
+  "expectedFindings": [],
+  "mustNotFire": ["VC113"]
+}

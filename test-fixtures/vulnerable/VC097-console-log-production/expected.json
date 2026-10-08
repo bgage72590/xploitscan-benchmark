@@ -1,0 +1,12 @@
+{
+  "description": "Next.js login route handler with a leftover console.log of the whole request body, writing every user's email and plaintext password to the production log stream — VC097 must fire",
+  "expectedFindings": [
+    {
+      "rule": "VC097",
+      "file": "app/api/auth/login/route.ts",
+      "lineRange": [10, 14],
+      "severityAtLeast": "info"
+    }
+  ],
+  "mustNotFire": []
+}

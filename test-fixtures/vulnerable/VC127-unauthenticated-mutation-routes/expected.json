@@ -1,0 +1,14 @@
+{
+  "description": "Express routers as AI builders generate them: a products router whose PUT and DELETE routes have no auth middleware and no session check, and a Clerk-backed notes API where GET/POST use requireAuth() but PUT and DELETE were left without it. app.use(clerkMiddleware()) only attaches auth state and lets anonymous requests through, so it does not protect the routes below it. A Passport app (the 0.6 tutorial's global app.use(passport.authenticate(\"session\")), which only loads req.user and passes anonymous requests, plus an express-rate-limit authLimiter mounted with app.use) and an Auth0 express-openid-connect app (app.use(auth({ authRequired: false })), the quickstart setup, where routes still need requiresAuth()) leave their PUT / PATCH / DELETE routes just as open: none of those middlewares rejects an anonymous request. Anyone can overwrite or delete any record. VC127 must fire on all eight.",
+  "expectedFindings": [
+    { "rule": "VC127", "file": "routes/products.js", "lineRange": [18, 22], "severityAtLeast": "high" },
+    { "rule": "VC127", "file": "routes/products.js", "lineRange": [25, 29], "severityAtLeast": "high" },
+    { "rule": "VC127", "file": "server/index.js", "lineRange": [21, 25], "severityAtLeast": "high" },
+    { "rule": "VC127", "file": "server/index.js", "lineRange": [29, 33], "severityAtLeast": "high" },
+    { "rule": "VC127", "file": "todos/app.js", "lineRange": [23, 27], "severityAtLeast": "high" },
+    { "rule": "VC127", "file": "todos/app.js", "lineRange": [31, 35], "severityAtLeast": "high" },
+    { "rule": "VC127", "file": "auth0/server.js", "lineRange": [21, 25], "severityAtLeast": "high" },
+    { "rule": "VC127", "file": "auth0/server.js", "lineRange": [29, 33], "severityAtLeast": "high" }
+  ],
+  "mustNotFire": []
+}
