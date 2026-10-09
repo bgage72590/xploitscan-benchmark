@@ -17,8 +17,8 @@ and scripts here are the same files the published scores are generated from.
 
 | Path | What it is |
 |---|---|
-| `test-fixtures/vulnerable/` | ~100 labeled vulnerable fixtures, each with an `expected.json` declaring which rules must fire, where |
-| `test-fixtures/clean/` | ~55 labeled clean fixtures with `mustNotFire` labels — the false-positive gate |
+| `test-fixtures/vulnerable/` | 326 labeled vulnerable fixtures, each with an `expected.json` declaring which rules must fire, where |
+| `test-fixtures/clean/` | 272 labeled clean fixtures with `mustNotFire` labels — the false-positive gate |
 | `test-fixtures/held-out/` | The honest set: real vulnerabilities excerpted from third-party projects (OWASP NodeGoat, Juice Shop, DVNA, …) that no XploitScan rule author wrote, with hint comments stripped. See [`NOTICE.md`](test-fixtures/held-out/NOTICE.md) for per-fixture attribution |
 | `scripts/benchmark.js` | Scores XploitScan on the main corpus → precision / recall / F1, overall and per rule |
 | `scripts/semgrep-benchmark.js` | Scores Semgrep on the main corpus (pinned community rulesets, listed in the script) |
